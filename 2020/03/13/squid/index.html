@@ -20,23 +20,21 @@
     var CONFIG = {"hostname":"blog.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Marchccc介绍 PHP技术交流">
-<meta property="og:type" content="website">
-<meta property="og:title" content="时间线">
-<meta property="og:url" content="http://blog.com/timeline/index.html">
+  <meta name="description" content="配置squid在代理服务器配置。 12debian：apt-get install squid3centos：yum install squid 安装完成后，默认路径为 &#x2F;etc&#x2F;squid，修改squid.conf配置文件。（如果没有配置文件，就新建一个，然后添加需要设置的配置） 1http_access allow all #允许所有请求代理 配置完成后，启动squid 12debian：se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="squid正向代理PHP-FPM HTTPS、HTTP请求">
+<meta property="og:url" content="http://blog.com/2020/03/13/squid/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="Marchccc介绍 PHP技术交流">
+<meta property="og:description" content="配置squid在代理服务器配置。 12debian：apt-get install squid3centos：yum install squid 安装完成后，默认路径为 &#x2F;etc&#x2F;squid，修改squid.conf配置文件。（如果没有配置文件，就新建一个，然后添加需要设置的配置） 1http_access allow all #允许所有请求代理 配置完成后，启动squid 12debian：se">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-04T07:51:30.000Z">
-<meta property="article:modified_time" content="2020-03-04T08:10:33.381Z">
+<meta property="article:published_time" content="2020-03-13T09:27:15.000Z">
+<meta property="article:modified_time" content="2020-03-13T09:49:02.051Z">
 <meta property="article:author" content="March">
-<meta property="article:tag" content="March">
-<meta property="article:tag" content=" PHP">
-<meta property="article:tag" content=" 博客">
-<meta property="article:tag" content=" Laravel">
+<meta property="article:tag" content="proxy">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.com/timeline/">
+<link rel="canonical" href="http://blog.com/2020/03/13/squid/">
 
 
 <script id="page-configurations">
@@ -44,12 +42,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false
+    isPost : true
   };
 </script>
 
-  <title>时间线 | Marchccc
-  </title>
+  <title>squid正向代理PHP-FPM HTTPS、HTTP请求 | Marchccc</title>
   
 
 
@@ -161,44 +158,106 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.com/2020/03/13/squid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="March">
+      <meta itemprop="description" content="Marchccc介绍 PHP技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          squid正向代理PHP-FPM HTTPS、HTTP请求
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">时间线
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2020-03-13 17:27:15 / 修改时间：17:49:02" itemprop="dateCreated datePublished" datetime="2020-03-13T17:27:15+08:00">2020-03-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/proxy/" itemprop="url" rel="index"><span itemprop="name">proxy</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="配置squid"><a href="#配置squid" class="headerlink" title="配置squid"></a>配置squid</h1><p>在代理服务器配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debian：apt-get install squid3</span><br><span class="line">centos：yum install squid</span><br></pre></td></tr></table></figure>
+<p>安装完成后，默认路径为 /etc/squid，修改squid.conf配置文件。（如果没有配置文件，就新建一个，然后添加需要设置的配置）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http_access allow all #允许所有请求代理</span><br></pre></td></tr></table></figure>
+<p>配置完成后，启动squid</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debian：service squid start</span><br><span class="line">centos：systemctl start squid.service</span><br></pre></td></tr></table></figure>
+<p>确保3128端口没有被防火墙屏蔽。</p>
+<h1 id="配置PHP-FPM"><a href="#配置PHP-FPM" class="headerlink" title="配置PHP-FPM"></a>配置PHP-FPM</h1><p>php-fpm.conf增加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env[https_proxy]&#x3D;http:&#x2F;&#x2F;代理服务器IP:3128</span><br></pre></td></tr></table></figure>
+<p>重启PHP-FPM</p>
+<p>如果想本机全部HTTP和HTTPS都经过代理服务器：<br>vim /etc/profile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export https_proxy&#x3D;&quot;http:&#x2F;&#x2F;代理服务器IP:3128&quot;</span><br><span class="line">export http_proxy&#x3D;&quot;http:&#x2F;&#x2F;代理服务器IP:3128&quot;</span><br></pre></td></tr></table></figure>
+<p>并使环境变量生效 <code>source ~/bashrc</code></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/proxy/" rel="tag"># proxy</a>
+              <a href="/tags/php/" rel="tag"># php</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/php-curl-proxy/" rel="prev" title="GuzzleHttp设置代理">
+      <i class="fa fa-chevron-left"></i> GuzzleHttp设置代理
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
   </div>
 
 
@@ -250,6 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置squid"><span class="nav-number">1.</span> <span class="nav-text">配置squid</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置PHP-FPM"><span class="nav-number">2.</span> <span class="nav-text">配置PHP-FPM</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
