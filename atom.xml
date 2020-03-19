@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.com/"/>
-  <updated>2020-03-19T03:27:45.908Z</updated>
+  <updated>2020-03-19T07:34:29.638Z</updated>
   <id>http://blog.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录好用的库</title>
+    <link href="http://blog.com/2020/03/19/amazing-lib/"/>
+    <id>http://blog.com/2020/03/19/amazing-lib/</id>
+    <published>2020-03-19T07:09:51.000Z</published>
+    <updated>2020-03-19T07:34:29.638Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;material-io&quot;&gt;&lt;a href=&quot;#material-io&quot; class=&quot;headerlink&quot; title=&quot;material.io&quot;&gt;&lt;/a&gt;material.io&lt;/h2&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="各种好用的库" scheme="http://blog.com/categories/%E5%90%84%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BA%93/"/>
+    
+    
+      <category term="PHP" scheme="http://blog.com/tags/PHP/"/>
+    
+      <category term="JavaScript" scheme="http://blog.com/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="http://blog.com/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>改进公司项目功能优化体验</title>
@@ -65,9 +96,9 @@
       <category term="proxy" scheme="http://blog.com/categories/proxy/"/>
     
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
-    
       <category term="php" scheme="http://blog.com/tags/php/"/>
+    
+      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
     
   </entry>
   
@@ -94,9 +125,9 @@
       <category term="php" scheme="http://blog.com/categories/php/"/>
     
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
-    
       <category term="php" scheme="http://blog.com/tags/php/"/>
+    
+      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
     
   </entry>
   
