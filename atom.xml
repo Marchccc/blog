@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.com/"/>
-  <updated>2020-03-13T09:49:02.051Z</updated>
+  <updated>2020-03-19T03:27:45.908Z</updated>
   <id>http://blog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>改进公司项目功能优化体验</title>
+    <link href="http://blog.com/2020/03/19/newcompany/"/>
+    <id>http://blog.com/2020/03/19/newcompany/</id>
+    <published>2020-03-19T02:51:30.000Z</published>
+    <updated>2020-03-19T03:27:45.908Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。&lt;br&gt;改进：mysql触发器+laravel
+        
+      
+    
+    </summary>
+    
+    
+      <category term="未分类" scheme="http://blog.com/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>squid正向代理PHP-FPM HTTPS、HTTP请求</title>

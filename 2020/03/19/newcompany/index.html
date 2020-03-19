@@ -20,13 +20,15 @@
     var CONFIG = {"hostname":"blog.com","root":"/","scheme":"Muse","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Marchccc介绍 PHP技术交流">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Marchccc">
-<meta property="og:url" content="http://blog.com/archives/index.html">
+  <meta name="description" content="问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。改进：mysql触发器+laravel console+crontab+钉钉机器人。 问题：无快捷登录，不方便。改进：新增微信扫码登录。用户在个人中心可绑定微信号，登录时可选择微信扫码登录。 问题：申请订单需要很多资料，很多用户无法一次成功。改进：增加了帮助小工具，会告诉用户每一步都需要什么资料。 问题：申请订单要填写的项很多。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="改进公司项目功能优化体验">
+<meta property="og:url" content="http://blog.com/2020/03/19/newcompany/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="Marchccc介绍 PHP技术交流">
+<meta property="og:description" content="问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。改进：mysql触发器+laravel console+crontab+钉钉机器人。 问题：无快捷登录，不方便。改进：新增微信扫码登录。用户在个人中心可绑定微信号，登录时可选择微信扫码登录。 问题：申请订单需要很多资料，很多用户无法一次成功。改进：增加了帮助小工具，会告诉用户每一步都需要什么资料。 问题：申请订单要填写的项很多。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-19T02:51:30.000Z">
+<meta property="article:modified_time" content="2020-03-19T03:27:45.908Z">
 <meta property="article:author" content="March">
 <meta property="article:tag" content="March">
 <meta property="article:tag" content=" PHP">
@@ -34,7 +36,7 @@
 <meta property="article:tag" content=" Laravel">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.com/archives/">
+<link rel="canonical" href="http://blog.com/2020/03/19/newcompany/">
 
 
 <script id="page-configurations">
@@ -42,11 +44,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false
+    isPost : true
   };
 </script>
 
-  <title>归档 | Marchccc</title>
+  <title>改进公司项目功能优化体验 | Marchccc</title>
   
 
 
@@ -162,129 +164,93 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.com/2020/03/19/newcompany/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="March">
+      <meta itemprop="description" content="Marchccc介绍 PHP技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          改进公司项目功能优化体验
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-19 10:51:30 / 修改时间：11:27:45" itemprop="dateCreated datePublished" datetime="2020-03-19T10:51:30+08:00">2020-03-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="name">未分类</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-19T10:51:30+08:00"
-              content="2020-03-19">
-          03-19
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/19/newcompany/" itemprop="url">
-            <span itemprop="name">改进公司项目功能优化体验</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-13T17:27:15+08:00"
-              content="2020-03-13">
-          03-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/13/squid/" itemprop="url">
-            <span itemprop="name">squid正向代理PHP-FPM HTTPS、HTTP请求</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-13T17:27:01+08:00"
-              content="2020-03-13">
-          03-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/13/php-curl-proxy/" itemprop="url">
-            <span itemprop="name">GuzzleHttp设置代理</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-13T17:10:27+08:00"
-              content="2020-03-13">
-          03-13
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/13/gpg/" itemprop="url">
-            <span itemprop="name">gpg</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-03-04T14:05:35+08:00"
-              content="2020-03-04">
-          03-04
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/04/hello-world/" itemprop="url">
-            <span itemprop="name">开发、管理工具推荐</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+        <p>问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。<br>改进：mysql触发器+laravel console+crontab+钉钉机器人。</p>
+<p>问题：无快捷登录，不方便。<br>改进：新增微信扫码登录。用户在个人中心可绑定微信号，登录时可选择微信扫码登录。</p>
+<p>问题：申请订单需要很多资料，很多用户无法一次成功。<br>改进：增加了帮助小工具，会告诉用户每一步都需要什么资料。</p>
+<p>问题：申请订单要填写的项很多。<br>改进：在网页增加【智能识别身份证正面自动补全信息】小工具，上传身份证照片后，自动补全页面填写项。</p>
+<p>其他：<br>改进示例图片预览体验。<br>依赖：<a href="https://github.com/terrymun/Fluidbox" target="_blank" rel="noopener">https://github.com/terrymun/Fluidbox</a></p>
+<p>改进协议勾选框、协议阅读体验。<br>依赖：<br><a href="https://material.io/develop/web/components/dialogs/" target="_blank" rel="noopener">https://material.io/develop/web/components/dialogs/</a><br><a href="https://material.io/develop/web/components/input-controls/checkboxes/" target="_blank" rel="noopener">https://material.io/develop/web/components/input-controls/checkboxes/</a></p>
+<p>改进页面跳转提示、表单填写项提示用户体验。<br>依赖：<br><a href="https://material.io/develop/web/components/snackbars/" target="_blank" rel="noopener">https://material.io/develop/web/components/snackbars/</a><br><a href="https://material.io/develop/web/components/dialogs/" target="_blank" rel="noopener">https://material.io/develop/web/components/dialogs/</a><br><a href="https://material.io/develop/web/components/buttons/" target="_blank" rel="noopener">https://material.io/develop/web/components/buttons/</a></p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/03/13/squid/" rel="prev" title="squid正向代理PHP-FPM HTTPS、HTTP请求">
+      <i class="fa fa-chevron-left"></i> squid正向代理PHP-FPM HTTPS、HTTP请求
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
