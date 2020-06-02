@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.com/"/>
-  <updated>2020-03-19T07:34:29.638Z</updated>
+  <updated>2020-06-02T06:53:28.428Z</updated>
   <id>http://blog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rpc</title>
+    <link href="http://blog.com/2020/06/02/rpc/"/>
+    <id>http://blog.com/2020/06/02/rpc/</id>
+    <published>2020-06-02T06:50:08.000Z</published>
+    <updated>2020-06-02T06:53:28.428Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;RPC是什么&quot;&gt;&lt;a href=&quot;#RPC是什么&quot; class=&quot;headerlink&quot; title=&quot;RPC是什么&quot;&gt;&lt;/a&gt;RPC是什么&lt;/h1&gt;&lt;p&gt;自己定义协议，比如name=xxx，count=xxx，list=xxx
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>记录好用的库</title>
@@ -96,9 +119,9 @@
       <category term="proxy" scheme="http://blog.com/categories/proxy/"/>
     
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
-    
       <category term="php" scheme="http://blog.com/tags/php/"/>
+    
+      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
     
   </entry>
   
@@ -125,9 +148,9 @@
       <category term="php" scheme="http://blog.com/categories/php/"/>
     
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
-    
       <category term="php" scheme="http://blog.com/tags/php/"/>
+    
+      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
     
   </entry>
   
@@ -163,7 +186,7 @@
     <link href="http://blog.com/2020/03/04/hello-world/"/>
     <id>http://blog.com/2020/03/04/hello-world/</id>
     <published>2020-03-04T06:05:35.462Z</published>
-    <updated>2020-05-14T03:11:05.010Z</updated>
+    <updated>2020-05-14T03:11:59.195Z</updated>
     
     <summary type="html">
     
