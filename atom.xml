@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.com/"/>
-  <updated>2020-06-02T06:53:28.428Z</updated>
+  <updated>2020-06-08T09:46:31.028Z</updated>
   <id>http://blog.com/</id>
   
   <author>
@@ -21,17 +21,11 @@
     <link href="http://blog.com/2020/06/02/rpc/"/>
     <id>http://blog.com/2020/06/02/rpc/</id>
     <published>2020-06-02T06:50:08.000Z</published>
-    <updated>2020-06-02T06:53:28.428Z</updated>
+    <updated>2020-06-08T09:46:31.028Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;RPC是什么&quot;&gt;&lt;a href=&quot;#RPC是什么&quot; class=&quot;headerlink&quot; title=&quot;RPC是什么&quot;&gt;&lt;/a&gt;RPC是什么&lt;/h1&gt;&lt;p&gt;自己定义协议，比如name=xxx，count=xxx，list=xxx
-        
-      
+      &lt;h1 id=&quot;RPC是什么&quot;&gt;&lt;a href=&quot;#RPC是什么&quot; class=&quot;headerlink&quot; title=&quot;RPC是什么&quot;&gt;&lt;/a&gt;RPC是什么&lt;/h1&gt;&lt;p&gt;自己定义协议，比如name=xxx，count=xxx，list=xxx 这样一组数据。然后走tcp或其他协议把数据发出去，远程调用指定API解析处理，然后返回结果。&lt;br&gt;别人把公共部分抽象出来了，就是RPC。&lt;/p&gt;
     
     </summary>
     
@@ -44,17 +38,11 @@
     <link href="http://blog.com/2020/03/19/amazing-lib/"/>
     <id>http://blog.com/2020/03/19/amazing-lib/</id>
     <published>2020-03-19T07:09:51.000Z</published>
-    <updated>2020-03-19T07:34:29.638Z</updated>
+    <updated>2020-06-08T09:27:31.007Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;material-io&quot;&gt;&lt;a href=&quot;#material-io&quot; class=&quot;headerlink&quot; title=&quot;material.io&quot;&gt;&lt;/a&gt;material.io&lt;/h2&gt;&lt;p&gt;&lt;a
-        
-      
+      &lt;h2 id=&quot;material-io&quot;&gt;&lt;a href=&quot;#material-io&quot; class=&quot;headerlink&quot; title=&quot;material.io&quot;&gt;&lt;/a&gt;material.io&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://material.io/develop/web/components/buttons/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/buttons/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://material.io/develop/web/components/dialogs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/dialogs/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://material.io/develop/web/components/snackbars/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/snackbars/&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -75,17 +63,12 @@
     <link href="http://blog.com/2020/03/19/newcompany/"/>
     <id>http://blog.com/2020/03/19/newcompany/</id>
     <published>2020-03-19T02:51:30.000Z</published>
-    <updated>2020-03-19T03:27:45.908Z</updated>
+    <updated>2020-06-08T09:27:12.747Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。&lt;br&gt;改进：mysql触发器+laravel
-        
-      
+      &lt;p&gt;问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。&lt;br&gt;改进：mysql触发器+laravel console+crontab+钉钉机器人。&lt;/p&gt;
+&lt;p&gt;问题：无快捷登录，不方便。&lt;br&gt;改进：新增微信扫码登录。用户在个人中心可绑定微信号，登录时可选择微信扫码登录。&lt;/p&gt;
     
     </summary>
     
@@ -100,18 +83,12 @@
     <link href="http://blog.com/2020/03/13/squid/"/>
     <id>http://blog.com/2020/03/13/squid/</id>
     <published>2020-03-13T09:27:15.000Z</published>
-    <updated>2020-03-13T09:49:02.051Z</updated>
+    <updated>2020-06-08T09:26:51.682Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;配置squid&quot;&gt;&lt;a href=&quot;#配置squid&quot; class=&quot;headerlink&quot; title=&quot;配置squid&quot;&gt;&lt;/a&gt;配置squid&lt;/h1&gt;&lt;p&gt;在代理服务器配置。&lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
+      &lt;h1 id=&quot;配置squid&quot;&gt;&lt;a href=&quot;#配置squid&quot; class=&quot;headerlink&quot; title=&quot;配置squid&quot;&gt;&lt;/a&gt;配置squid&lt;/h1&gt;&lt;p&gt;在代理服务器配置。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;debian：apt-get install squid3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;centos：yum install squid&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -130,17 +107,12 @@
     <link href="http://blog.com/2020/03/13/php-curl-proxy/"/>
     <id>http://blog.com/2020/03/13/php-curl-proxy/</id>
     <published>2020-03-13T09:27:01.000Z</published>
-    <updated>2020-03-13T09:40:26.731Z</updated>
+    <updated>2020-06-08T09:27:05.837Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;GuzzleHttp设置代理&quot;&gt;&lt;a href=&quot;#GuzzleHttp设置代理&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;GuzzleHttp设置代理&quot;&gt;&lt;a href=&quot;#GuzzleHttp设置代理&quot; class=&quot;headerlink&quot; title=&quot;GuzzleHttp设置代理&quot;&gt;&lt;/a&gt;GuzzleHttp设置代理&lt;/h2&gt;&lt;p&gt;水一篇.&lt;/p&gt;
+&lt;p&gt;人寿保险没提供保单查询API，搜了一下没相关代码，手动撸了一个自动查保工具。&lt;br&gt;用GuzzleHttp发请求，header设置的有问题导致和预期不一致，所以抓包和浏览器的请求对比。&lt;/p&gt;
     
     </summary>
     
@@ -159,17 +131,12 @@
     <link href="http://blog.com/2020/03/13/gpg/"/>
     <id>http://blog.com/2020/03/13/gpg/</id>
     <published>2020-03-13T09:10:27.000Z</published>
-    <updated>2020-03-13T09:21:13.372Z</updated>
+    <updated>2020-06-08T09:28:04.053Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;gpg基础使用&quot;&gt;&lt;a href=&quot;#gpg基础使用&quot; class=&quot;headerlink&quot; title=&quot;gpg基础使用&quot;&gt;&lt;/a&gt;gpg基础使用&lt;/h2&gt;&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;gpg基础使用&quot;&gt;&lt;a href=&quot;#gpg基础使用&quot; class=&quot;headerlink&quot; title=&quot;gpg基础使用&quot;&gt;&lt;/a&gt;gpg基础使用&lt;/h2&gt;&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.gnupg.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.gnupg.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h1&gt;
     
     </summary>
     
@@ -186,17 +153,11 @@
     <link href="http://blog.com/2020/03/04/hello-world/"/>
     <id>http://blog.com/2020/03/04/hello-world/</id>
     <published>2020-03-04T06:05:35.462Z</published>
-    <updated>2020-05-14T03:11:59.195Z</updated>
+    <updated>2020-06-08T09:27:17.975Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;March经常使用的工具推荐&quot;&gt;&lt;a href=&quot;#March经常使用的工具推荐&quot; class=&quot;headerlink&quot; title=&quot;March经常使用的工具推荐&quot;&gt;&lt;/a&gt;March经常使用的工具推荐&lt;/h2&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a
-        
-      
+      &lt;h2 id=&quot;March经常使用的工具推荐&quot;&gt;&lt;a href=&quot;#March经常使用的工具推荐&quot; class=&quot;headerlink&quot; title=&quot;March经常使用的工具推荐&quot;&gt;&lt;/a&gt;March经常使用的工具推荐&lt;/h2&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h3&gt;&lt;p&gt;vscode、postman、Termius、MAMP PRO、rdm、Navicat Premium、Charles、Cyberduck、Sourcetree&lt;/p&gt;
     
     </summary>
     
