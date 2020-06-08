@@ -96,9 +96,9 @@
       <category term="proxy" scheme="http://blog.com/categories/proxy/"/>
     
     
-      <category term="php" scheme="http://blog.com/tags/php/"/>
-    
       <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
+    
+      <category term="php" scheme="http://blog.com/tags/php/"/>
     
   </entry>
   
@@ -120,9 +120,9 @@
       <category term="php" scheme="http://blog.com/categories/php/"/>
     
     
-      <category term="php" scheme="http://blog.com/tags/php/"/>
-    
       <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
+    
+      <category term="php" scheme="http://blog.com/tags/php/"/>
     
   </entry>
   
