@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Marchccc</title>
-  <icon>http://blog.com/icon.png</icon>
-  <subtitle>PHP技术交流</subtitle>
+  <icon>https://marchccc.top/icon.png</icon>
+  <subtitle>编程技术交流</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.com/"/>
-  <updated>2020-06-09T10:00:06.452Z</updated>
-  <id>http://blog.com/</id>
+  <link href="https://marchccc.top/"/>
+  <updated>2020-06-09T10:01:13.183Z</updated>
+  <id>https://marchccc.top/</id>
   
   <author>
-    <name>March</name>
+    <name>Marchccc</name>
     
   </author>
   
@@ -18,10 +18,10 @@
   
   <entry>
     <title>bypass Medium</title>
-    <link href="http://blog.com/2020/06/09/bypass-Medium/"/>
-    <id>http://blog.com/2020/06/09/bypass-Medium/</id>
+    <link href="https://marchccc.top/2020/06/09/bypass-Medium/"/>
+    <id>https://marchccc.top/2020/06/09/bypass-Medium/</id>
     <published>2020-06-09T09:39:00.000Z</published>
-    <updated>2020-06-09T10:00:06.452Z</updated>
+    <updated>2020-06-09T10:01:13.183Z</updated>
     
     <summary type="html">
     
@@ -31,17 +31,17 @@
     </summary>
     
     
-      <category term="bypass" scheme="http://blog.com/categories/bypass/"/>
+      <category term="bypass" scheme="https://marchccc.top/categories/bypass/"/>
     
     
-      <category term="白嫖" scheme="http://blog.com/tags/%E7%99%BD%E5%AB%96/"/>
+      <category term="白嫖" scheme="https://marchccc.top/tags/%E7%99%BD%E5%AB%96/"/>
     
   </entry>
   
   <entry>
     <title>基于Rust+electron的多线程GUI跨平台子域扫描器</title>
-    <link href="http://blog.com/2020/06/09/rust-demo/"/>
-    <id>http://blog.com/2020/06/09/rust-demo/</id>
+    <link href="https://marchccc.top/2020/06/09/rust-demo/"/>
+    <id>https://marchccc.top/2020/06/09/rust-demo/</id>
     <published>2020-06-09T06:41:08.000Z</published>
     <updated>2020-06-09T07:04:55.348Z</updated>
     
@@ -57,8 +57,8 @@
   
   <entry>
     <title>rpc</title>
-    <link href="http://blog.com/2020/06/02/rpc/"/>
-    <id>http://blog.com/2020/06/02/rpc/</id>
+    <link href="https://marchccc.top/2020/06/02/rpc/"/>
+    <id>https://marchccc.top/2020/06/02/rpc/</id>
     <published>2020-06-02T06:50:08.000Z</published>
     <updated>2020-06-08T09:46:31.028Z</updated>
     
@@ -74,8 +74,8 @@
   
   <entry>
     <title>记录好用的库</title>
-    <link href="http://blog.com/2020/03/19/amazing-lib/"/>
-    <id>http://blog.com/2020/03/19/amazing-lib/</id>
+    <link href="https://marchccc.top/2020/03/19/amazing-lib/"/>
+    <id>https://marchccc.top/2020/03/19/amazing-lib/</id>
     <published>2020-03-19T07:09:51.000Z</published>
     <updated>2020-06-08T09:27:31.007Z</updated>
     
@@ -86,21 +86,21 @@
     </summary>
     
     
-      <category term="各种好用的库" scheme="http://blog.com/categories/%E5%90%84%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BA%93/"/>
+      <category term="各种好用的库" scheme="https://marchccc.top/categories/%E5%90%84%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BA%93/"/>
     
     
-      <category term="PHP" scheme="http://blog.com/tags/PHP/"/>
+      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
     
-      <category term="JavaScript" scheme="http://blog.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://marchccc.top/tags/JavaScript/"/>
     
-      <category term="CSS" scheme="http://blog.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://marchccc.top/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>改进公司项目功能优化体验</title>
-    <link href="http://blog.com/2020/03/19/newcompany/"/>
-    <id>http://blog.com/2020/03/19/newcompany/</id>
+    <link href="https://marchccc.top/2020/03/19/newcompany/"/>
+    <id>https://marchccc.top/2020/03/19/newcompany/</id>
     <published>2020-03-19T02:51:30.000Z</published>
     <updated>2020-06-08T09:27:12.747Z</updated>
     
@@ -112,15 +112,15 @@
     </summary>
     
     
-      <category term="未分类" scheme="http://blog.com/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://marchccc.top/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
   </entry>
   
   <entry>
     <title>squid正向代理PHP-FPM HTTPS、HTTP请求</title>
-    <link href="http://blog.com/2020/03/13/squid/"/>
-    <id>http://blog.com/2020/03/13/squid/</id>
+    <link href="https://marchccc.top/2020/03/13/squid/"/>
+    <id>https://marchccc.top/2020/03/13/squid/</id>
     <published>2020-03-13T09:27:15.000Z</published>
     <updated>2020-06-08T09:26:51.682Z</updated>
     
@@ -132,19 +132,19 @@
     </summary>
     
     
-      <category term="proxy" scheme="http://blog.com/categories/proxy/"/>
+      <category term="proxy" scheme="https://marchccc.top/categories/proxy/"/>
     
     
-      <category term="php" scheme="http://blog.com/tags/php/"/>
+      <category term="php" scheme="https://marchccc.top/tags/php/"/>
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
+      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   
   <entry>
     <title>GuzzleHttp设置代理</title>
-    <link href="http://blog.com/2020/03/13/php-curl-proxy/"/>
-    <id>http://blog.com/2020/03/13/php-curl-proxy/</id>
+    <link href="https://marchccc.top/2020/03/13/php-curl-proxy/"/>
+    <id>https://marchccc.top/2020/03/13/php-curl-proxy/</id>
     <published>2020-03-13T09:27:01.000Z</published>
     <updated>2020-06-08T09:27:05.837Z</updated>
     
@@ -156,19 +156,19 @@
     </summary>
     
     
-      <category term="php" scheme="http://blog.com/categories/php/"/>
+      <category term="php" scheme="https://marchccc.top/categories/php/"/>
     
     
-      <category term="php" scheme="http://blog.com/tags/php/"/>
+      <category term="php" scheme="https://marchccc.top/tags/php/"/>
     
-      <category term="proxy" scheme="http://blog.com/tags/proxy/"/>
+      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   
   <entry>
     <title>gpg</title>
-    <link href="http://blog.com/2020/03/13/gpg/"/>
-    <id>http://blog.com/2020/03/13/gpg/</id>
+    <link href="https://marchccc.top/2020/03/13/gpg/"/>
+    <id>https://marchccc.top/2020/03/13/gpg/</id>
     <published>2020-03-13T09:10:27.000Z</published>
     <updated>2020-06-08T09:28:04.053Z</updated>
     
@@ -180,17 +180,17 @@
     </summary>
     
     
-      <category term="加解密" scheme="http://blog.com/categories/%E5%8A%A0%E8%A7%A3%E5%AF%86/"/>
+      <category term="加解密" scheme="https://marchccc.top/categories/%E5%8A%A0%E8%A7%A3%E5%AF%86/"/>
     
     
-      <category term="gpg" scheme="http://blog.com/tags/gpg/"/>
+      <category term="gpg" scheme="https://marchccc.top/tags/gpg/"/>
     
   </entry>
   
   <entry>
     <title>开发、管理、常用工具推荐</title>
-    <link href="http://blog.com/2020/03/04/hello-world/"/>
-    <id>http://blog.com/2020/03/04/hello-world/</id>
+    <link href="https://marchccc.top/2020/03/04/hello-world/"/>
+    <id>https://marchccc.top/2020/03/04/hello-world/</id>
     <published>2020-03-04T06:05:35.462Z</published>
     <updated>2020-06-08T09:27:17.975Z</updated>
     
@@ -201,10 +201,10 @@
     </summary>
     
     
-      <category term="未分类" scheme="http://blog.com/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
+      <category term="未分类" scheme="https://marchccc.top/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
     
     
-      <category term="工具推荐" scheme="http://blog.com/tags/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+      <category term="工具推荐" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
