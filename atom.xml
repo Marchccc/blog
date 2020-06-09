@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.com/"/>
-  <updated>2020-06-09T07:04:55.348Z</updated>
+  <updated>2020-06-09T10:00:06.452Z</updated>
   <id>http://blog.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bypass Medium</title>
+    <link href="http://blog.com/2020/06/09/bypass-Medium/"/>
+    <id>http://blog.com/2020/06/09/bypass-Medium/</id>
+    <published>2020-06-09T09:39:00.000Z</published>
+    <updated>2020-06-09T10:00:06.452Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://medium.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://medium.com/&lt;/a&gt;&lt;br&gt;英文写作平台。内容质量高、体验好。&lt;br&gt;付费文章有五角星标志，每账号每月只能免费阅读几次付费文章。&lt;/p&gt;
+&lt;p&gt;当我们不想付费又想阅读，怎么办呢？&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="bypass" scheme="http://blog.com/categories/bypass/"/>
+    
+    
+      <category term="白嫖" scheme="http://blog.com/tags/%E7%99%BD%E5%AB%96/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Rust+electron的多线程GUI跨平台子域扫描器</title>
