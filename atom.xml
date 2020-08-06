@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-06-19T07:50:31.423Z</updated>
+  <updated>2020-08-06T03:52:42.484Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记 - curl请求raw.githubusercontent.com提示sslv3 alert handshake failure</title>
+    <link href="https://marchccc.top/2020/08/06/curl-sslv3-alert-handshake-failure/"/>
+    <id>https://marchccc.top/2020/08/06/curl-sslv3-alert-handshake-failure/</id>
+    <published>2020-08-06T03:45:00.000Z</published>
+    <updated>2020-08-06T03:52:42.484Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jun@192 ~ % curl https:&amp;#x2F;&amp;#x2F;raw.githubusercontent.com                             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl: (35) SSL peer handshake failed, the server most likely requires a client certificate to connect&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="curl" scheme="https://marchccc.top/categories/curl/"/>
+    
+    
+      <category term="curl" scheme="https://marchccc.top/tags/curl/"/>
+    
+      <category term="openssl" scheme="https://marchccc.top/tags/openssl/"/>
+    
+  </entry>
+  
+  <entry>
     <title>bypass Medium</title>
     <link href="https://marchccc.top/2020/06/09/bypass-Medium/"/>
     <id>https://marchccc.top/2020/06/09/bypass-Medium/</id>
     <published>2020-06-09T09:39:00.000Z</published>
-    <updated>2020-06-19T07:50:31.423Z</updated>
+    <updated>2020-08-05T06:36:46.932Z</updated>
     
     <summary type="html">
     
@@ -60,7 +83,7 @@
     <link href="https://marchccc.top/2020/06/02/rpc/"/>
     <id>https://marchccc.top/2020/06/02/rpc/</id>
     <published>2020-06-02T06:50:08.000Z</published>
-    <updated>2020-06-08T09:46:31.028Z</updated>
+    <updated>2020-08-05T06:43:15.172Z</updated>
     
     <summary type="html">
     
@@ -77,7 +100,7 @@
     <link href="https://marchccc.top/2020/03/19/amazing-lib/"/>
     <id>https://marchccc.top/2020/03/19/amazing-lib/</id>
     <published>2020-03-19T07:09:51.000Z</published>
-    <updated>2020-06-08T09:27:31.007Z</updated>
+    <updated>2020-08-05T06:43:26.800Z</updated>
     
     <summary type="html">
     
@@ -98,31 +121,11 @@
   </entry>
   
   <entry>
-    <title>改进公司项目功能优化体验</title>
-    <link href="https://marchccc.top/2020/03/19/newcompany/"/>
-    <id>https://marchccc.top/2020/03/19/newcompany/</id>
-    <published>2020-03-19T02:51:30.000Z</published>
-    <updated>2020-06-08T09:27:12.747Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;问题：用户新建订单后对运营人员无通知，无法快速响应，增加流失客户风险。&lt;br&gt;改进：mysql触发器+laravel console+crontab+钉钉机器人。&lt;/p&gt;
-&lt;p&gt;问题：无快捷登录，不方便。&lt;br&gt;改进：新增微信扫码登录。用户在个人中心可绑定微信号，登录时可选择微信扫码登录。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="未分类" scheme="https://marchccc.top/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>squid正向代理PHP-FPM HTTPS、HTTP请求</title>
     <link href="https://marchccc.top/2020/03/13/squid/"/>
     <id>https://marchccc.top/2020/03/13/squid/</id>
     <published>2020-03-13T09:27:15.000Z</published>
-    <updated>2020-06-08T09:26:51.682Z</updated>
+    <updated>2020-08-05T06:41:31.436Z</updated>
     
     <summary type="html">
     
@@ -146,12 +149,11 @@
     <link href="https://marchccc.top/2020/03/13/php-curl-proxy/"/>
     <id>https://marchccc.top/2020/03/13/php-curl-proxy/</id>
     <published>2020-03-13T09:27:01.000Z</published>
-    <updated>2020-06-08T09:27:05.837Z</updated>
+    <updated>2020-08-05T06:43:18.988Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;GuzzleHttp设置代理&quot;&gt;&lt;a href=&quot;#GuzzleHttp设置代理&quot; class=&quot;headerlink&quot; title=&quot;GuzzleHttp设置代理&quot;&gt;&lt;/a&gt;GuzzleHttp设置代理&lt;/h2&gt;&lt;p&gt;水一篇.&lt;/p&gt;
-&lt;p&gt;人寿保险没提供保单查询API，搜了一下没相关代码，手动撸了一个自动查保工具。&lt;br&gt;用GuzzleHttp发请求，header设置的有问题导致和预期不一致，所以抓包和浏览器的请求对比。&lt;/p&gt;
+      &lt;h2 id=&quot;GuzzleHttp设置代理&quot;&gt;&lt;a href=&quot;#GuzzleHttp设置代理&quot; class=&quot;headerlink&quot; title=&quot;GuzzleHttp设置代理&quot;&gt;&lt;/a&gt;GuzzleHttp设置代理&lt;/h2&gt;&lt;p&gt;人寿保险没提供保单查询API，搜了一下没相关代码，手动撸了一个自动查保工具。&lt;br&gt;用GuzzleHttp发请求，header设置的有问题导致和预期不一致，所以抓包和浏览器的请求对比。&lt;/p&gt;
     
     </summary>
     
@@ -170,7 +172,7 @@
     <link href="https://marchccc.top/2020/03/13/gpg/"/>
     <id>https://marchccc.top/2020/03/13/gpg/</id>
     <published>2020-03-13T09:10:27.000Z</published>
-    <updated>2020-06-08T09:28:04.053Z</updated>
+    <updated>2020-08-05T06:43:23.388Z</updated>
     
     <summary type="html">
     
@@ -192,11 +194,11 @@
     <link href="https://marchccc.top/2020/03/04/hello-world/"/>
     <id>https://marchccc.top/2020/03/04/hello-world/</id>
     <published>2020-03-04T06:05:35.462Z</published>
-    <updated>2020-06-08T09:27:17.975Z</updated>
+    <updated>2020-08-05T06:43:21.904Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;March经常使用的工具推荐&quot;&gt;&lt;a href=&quot;#March经常使用的工具推荐&quot; class=&quot;headerlink&quot; title=&quot;March经常使用的工具推荐&quot;&gt;&lt;/a&gt;March经常使用的工具推荐&lt;/h2&gt;&lt;h3 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h3&gt;&lt;p&gt;vscode、postman、Termius、MAMP PRO、rdm、Navicat Premium、Charles、Cyberduck、Sourcetree&lt;/p&gt;
+      &lt;h3 id=&quot;开发&quot;&gt;&lt;a href=&quot;#开发&quot; class=&quot;headerlink&quot; title=&quot;开发&quot;&gt;&lt;/a&gt;开发&lt;/h3&gt;&lt;p&gt;vscode、postman、Termius、MAMP PRO、rdm、Navicat Premium、Charles、Sourcetree&lt;/p&gt;
     
     </summary>
     
