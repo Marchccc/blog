@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-08-06T03:52:42.484Z</updated>
+  <updated>2020-08-10T04:53:26.390Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP执行原理学习：词法语法分析</title>
+    <link href="https://marchccc.top/2020/08/06/php-learn-1/"/>
+    <id>https://marchccc.top/2020/08/06/php-learn-1/</id>
+    <published>2020-08-06T07:33:04.000Z</published>
+    <updated>2020-08-10T04:53:26.390Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;PHP就像是一个乐高搭建出来的城堡，把城堡拆开，就是一个一个小零件，当我们把它重新按照不同的方式组装起来，就能创造另一个东西。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>记 - curl请求raw.githubusercontent.com提示sslv3 alert handshake failure</title>
