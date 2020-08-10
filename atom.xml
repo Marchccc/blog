@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-08-10T04:56:48.580Z</updated>
+  <updated>2020-08-10T09:18:56.520Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>IP-HTTP-DNS杂谈</title>
+    <link href="https://marchccc.top/2020/08/10/ip-http-dns/"/>
+    <id>https://marchccc.top/2020/08/10/ip-http-dns/</id>
+    <published>2020-08-10T06:47:00.000Z</published>
+    <updated>2020-08-10T09:18:56.520Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;用户键入网址并回车&lt;/li&gt;
+&lt;li&gt;DNS解析出IP&lt;/li&gt;
+&lt;li&gt;建立传输层连接&lt;/li&gt;
+&lt;li&gt;向Web服务器发出HTTP请求&lt;/li&gt;
+&lt;li&gt;Web服务器返回响应内容&lt;/li&gt;
+&lt;li&gt;Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）
+    
+    </summary>
+    
+    
+      <category term="HTTP" scheme="https://marchccc.top/categories/HTTP/"/>
+    
+    
+      <category term="IP" scheme="https://marchccc.top/tags/IP/"/>
+    
+      <category term="HTTP" scheme="https://marchccc.top/tags/HTTP/"/>
+    
+      <category term="DNS" scheme="https://marchccc.top/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PHP执行原理学习：词法语法分析</title>
     <link href="https://marchccc.top/2020/08/06/php-learn-1/"/>
     <id>https://marchccc.top/2020/08/06/php-learn-1/</id>
     <published>2020-08-06T07:33:04.000Z</published>
-    <updated>2020-08-10T04:56:48.580Z</updated>
+    <updated>2020-08-10T04:59:34.855Z</updated>
     
     <summary type="html">
     
@@ -170,7 +201,7 @@
     <link href="https://marchccc.top/2020/03/13/php-curl-proxy/"/>
     <id>https://marchccc.top/2020/03/13/php-curl-proxy/</id>
     <published>2020-03-13T09:27:01.000Z</published>
-    <updated>2020-08-05T06:43:18.988Z</updated>
+    <updated>2020-08-10T09:18:41.257Z</updated>
     
     <summary type="html">
     
