@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-08-10T09:18:56.520Z</updated>
+  <updated>2020-08-13T07:31:30.251Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RabbitMQ笔记</title>
+    <link href="https://marchccc.top/2020/08/11/RabbitMQ-learn/"/>
+    <id>https://marchccc.top/2020/08/11/RabbitMQ-learn/</id>
+    <published>2020-08-11T02:31:58.000Z</published>
+    <updated>2020-08-13T07:31:30.251Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;RabbitMQ是一个消息中间件，负责接收和转发消息，本篇主要梳理了交换机的direct、topic、fanout三种最常用的模式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="消息中间件" scheme="https://marchccc.top/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    
+      <category term="消息队列" scheme="https://marchccc.top/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
+    
+      <category term="消息中间件" scheme="https://marchccc.top/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+      <category term="mq" scheme="https://marchccc.top/tags/mq/"/>
+    
+      <category term="RabbitMQ" scheme="https://marchccc.top/tags/RabbitMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>IP-HTTP-DNS杂谈</title>
