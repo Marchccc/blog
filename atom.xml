@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-08-13T08:08:01.003Z</updated>
+  <updated>2020-08-14T07:02:59.901Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CN2、IPLC、PCCW等线路知识与线路类型判断</title>
+    <link href="https://marchccc.top/2020/08/14/net-line/"/>
+    <id>https://marchccc.top/2020/08/14/net-line/</id>
+    <published>2020-08-14T06:59:32.000Z</published>
+    <updated>2020-08-14T07:02:59.901Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;PCCW&lt;br&gt;PCCW 线路是香港电讯盈科提供的线路，到大陆走的是 PCCW 自己接的直连，目前来看是最热门的一条香港线路，线路质量也不错，电信、联通都是走直连，移动不定，一般来说商家会对移动再单独接一个移动的直连。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CN2&lt;br&gt;CN2 线路就是电信 CN2，全程为中国电信下一代承载网，简称 CNCN，再简称 CN2。一般来说走的是 59.43 开头的节点，目前来看，CN2 线路是质量最好的，当然价格也是很贵的一个线路。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="internet" scheme="https://marchccc.top/categories/internet/"/>
+    
+    
+      <category term="线路" scheme="https://marchccc.top/tags/%E7%BA%BF%E8%B7%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>测试两台服务器之间的带宽</title>
