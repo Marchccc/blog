@@ -40,37 +40,6 @@
   </entry>
   
   <entry>
-    <title>DNS污染</title>
-    <link href="https://marchccc.top/2020/08/27/dns-ollution/"/>
-    <id>https://marchccc.top/2020/08/27/dns-ollution/</id>
-    <published>2020-08-27T02:41:16.000Z</published>
-    <updated>2020-08-27T02:41:51.062Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;用户键入网址并回车&lt;/li&gt;
-&lt;li&gt;DNS解析出IP&lt;/li&gt;
-&lt;li&gt;建立传输层连接&lt;/li&gt;
-&lt;li&gt;向Web服务器发出HTTP请求&lt;/li&gt;
-&lt;li&gt;Web服务器返回响应内容&lt;/li&gt;
-&lt;li&gt;Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）
-    
-    </summary>
-    
-    
-      <category term="DNS" scheme="https://marchccc.top/categories/DNS/"/>
-    
-    
-      <category term="IP" scheme="https://marchccc.top/tags/IP/"/>
-    
-      <category term="HTTP" scheme="https://marchccc.top/tags/HTTP/"/>
-    
-      <category term="DNS" scheme="https://marchccc.top/tags/DNS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CN2、IPLC、PCCW等线路知识与线路类型判断</title>
     <link href="https://marchccc.top/2020/08/14/net-line/"/>
     <id>https://marchccc.top/2020/08/14/net-line/</id>
@@ -320,9 +289,9 @@
       <category term="proxy" scheme="https://marchccc.top/categories/proxy/"/>
     
     
-      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
-    
       <category term="php" scheme="https://marchccc.top/tags/php/"/>
+    
+      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   
@@ -343,9 +312,9 @@
       <category term="php" scheme="https://marchccc.top/categories/php/"/>
     
     
-      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
-    
       <category term="php" scheme="https://marchccc.top/tags/php/"/>
+    
+      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   
