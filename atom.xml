@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-09-22T02:21:31.016Z</updated>
+  <updated>2020-09-22T02:44:20.660Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://marchccc.top/2020/09/22/mysql-join/"/>
     <id>https://marchccc.top/2020/09/22/mysql-join/</id>
     <published>2020-09-22T01:35:45.000Z</published>
-    <updated>2020-09-22T02:21:31.016Z</updated>
+    <updated>2020-09-22T02:44:20.660Z</updated>
     
     <summary type="html">
     
@@ -153,7 +153,7 @@
 &lt;li&gt;建立传输层连接&lt;/li&gt;
 &lt;li&gt;向Web服务器发出HTTP请求&lt;/li&gt;
 &lt;li&gt;Web服务器返回响应内容&lt;/li&gt;
-&lt;li&gt;Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）
+&lt;li&gt;Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
