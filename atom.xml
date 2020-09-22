@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-09-21T03:53:20.634Z</updated>
+  <updated>2020-09-22T02:21:31.016Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mysql中要掌握的基础sql语法</title>
+    <link href="https://marchccc.top/2020/09/22/mysql-join/"/>
+    <id>https://marchccc.top/2020/09/22/mysql-join/</id>
+    <published>2020-09-22T01:35:45.000Z</published>
+    <updated>2020-09-22T02:21:31.016Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于一直不喜欢数据库，像mysql这种，一般除了迫不得否则不会主动了解这块，但是发现，基础的一些东西还是要掌握的，所以特地学习梳理mysql的基础要掌握的sql语句。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Mysql" scheme="https://marchccc.top/categories/Mysql/"/>
+    
+    
+      <category term="Mysql" scheme="https://marchccc.top/tags/Mysql/"/>
+    
+      <category term="Join" scheme="https://marchccc.top/tags/Join/"/>
+    
+  </entry>
   
   <entry>
     <title>在Linux服务器离线下载种子</title>
