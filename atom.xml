@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-09-23T09:40:29.435Z</updated>
+  <updated>2020-12-11T04:05:12.693Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>btc笔记</title>
+    <link href="https://marchccc.top/2020/12/11/btc/"/>
+    <id>https://marchccc.top/2020/12/11/btc/</id>
+    <published>2020-12-11T03:34:50.000Z</published>
+    <updated>2020-12-11T04:05:12.693Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;08年中本聪提出BTC白皮书，一个基于区块链的分布式去中心化记账系统，通过网络节点和共识算法记录比特币的流动，BTC是算力和电力资源的另一种价值形态，这种价值的流通不受现实世界中心化部门的约束。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="BTC" scheme="https://marchccc.top/categories/BTC/"/>
+    
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
+    
+      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP SPL笔记</title>
+    <link href="https://marchccc.top/2020/09/24/spl/"/>
+    <id>https://marchccc.top/2020/09/24/spl/</id>
+    <published>2020-09-24T04:11:28.000Z</published>
+    <updated>2020-09-24T09:51:50.675Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SPL = Standard PHP Library = PHP标准库&lt;br&gt;是用来解决典型问题的一组接口与类的集合。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="php" scheme="https://marchccc.top/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://marchccc.top/tags/php/"/>
+    
+      <category term="spl" scheme="https://marchccc.top/tags/spl/"/>
+    
+  </entry>
   
   <entry>
     <title>PHP面向对象整理</title>
