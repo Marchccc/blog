@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-12-11T04:05:12.693Z</updated>
+  <updated>2020-12-16T08:29:26.685Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,15 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>btc笔记</title>
-    <link href="https://marchccc.top/2020/12/11/btc/"/>
-    <id>https://marchccc.top/2020/12/11/btc/</id>
-    <published>2020-12-11T03:34:50.000Z</published>
-    <updated>2020-12-11T04:05:12.693Z</updated>
+    <title>区块链共识机制</title>
+    <link href="https://marchccc.top/2020/12/13/powpos/"/>
+    <id>https://marchccc.top/2020/12/13/powpos/</id>
+    <published>2020-12-13T11:24:41.000Z</published>
+    <updated>2020-12-16T08:29:26.685Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;08年中本聪提出BTC白皮书，一个基于区块链的分布式去中心化记账系统，通过网络节点和共识算法记录比特币的流动，BTC是算力和电力资源的另一种价值形态，这种价值的流通不受现实世界中心化部门的约束。&lt;/p&gt;
+      &lt;p&gt;区块链由区块和链组成，没有中心机构，一个新区块在接到链上之前，需要每个节点确认（达成共识）这个新区块内容是否合法，这个确认规则就是共识机制，目前主流有PoW和PoS两种共识机制。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
+    
+      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比特币（bitcoin）</title>
+    <link href="https://marchccc.top/2020/12/11/btc/"/>
+    <id>https://marchccc.top/2020/12/11/btc/</id>
+    <published>2020-12-11T03:34:50.000Z</published>
+    <updated>2020-12-16T03:14:34.559Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;08年中本聪提出BTC白皮书，一种基于区块链的P2P电子现金系统，通过网络节点和共识算法记录比特币的流动，BTC是算力和电力资源的另一种价值形态，这种价值的流通不受现实世界中心化部门的约束，有望以去中心化加密货币的方式来取代现代的货币系统控制权，往大了说可以说是一场货币革命。&lt;/p&gt;
     
     </summary>
     

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"marchccc.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="区块链由区块和链组成，没有中心机构，一个新区块在接到链上之前，需要每个节点确认（达成共识）这个新区块内容是否合法，这个确认规则就是共识机制，目前主流有PoW和PoS两种共识机制。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区块链共识机制">
+<meta property="og:url" content="https://marchccc.top/2020/12/13/powpos/index.html">
+<meta property="og:site_name" content="Marchccc">
+<meta property="og:description" content="区块链由区块和链组成，没有中心机构，一个新区块在接到链上之前，需要每个节点确认（达成共识）这个新区块内容是否合法，这个确认规则就是共识机制，目前主流有PoW和PoS两种共识机制。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://marchccc.top/2020/12/13/powpos/1.png">
+<meta property="og:image" content="https://marchccc.top/2020/12/13/powpos/2.png">
+<meta property="og:image" content="https://marchccc.top/2020/12/13/powpos/3.png">
+<meta property="og:image" content="https://marchccc.top/2020/12/13/powpos/4.png">
+<meta property="article:published_time" content="2020-12-13T11:24:41.000Z">
+<meta property="article:modified_time" content="2020-12-16T08:29:26.685Z">
+<meta property="article:author" content="Marchccc">
+<meta property="article:tag" content="BTC">
+<meta property="article:tag" content="区块链">
+<meta property="article:tag" content="共识机制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://marchccc.top/2020/12/13/powpos/1.png">
+
+<link rel="canonical" href="https://marchccc.top/2020/12/13/powpos/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>区块链共识机制 | Marchccc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Marchccc" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Marchccc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程技术交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2020/12/13/powpos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="达则兼济天下，穷则独善其身。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          区块链共识机制
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-13 19:24:41" itemprop="dateCreated datePublished" datetime="2020-12-13T19:24:41+08:00">2020-12-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-16 16:29:26" itemprop="dateModified" datetime="2020-12-16T16:29:26+08:00">2020-12-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index"><span itemprop="name">区块链</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>区块链由区块和链组成，没有中心机构，一个新区块在接到链上之前，需要每个节点确认（达成共识）这个新区块内容是否合法，这个确认规则就是共识机制，目前主流有PoW和PoS两种共识机制。</p>
+<a id="more"></a>
+
+<h2 id="PoW"><a href="#PoW" class="headerlink" title="PoW"></a>PoW</h2><p><font size="3">&emsp;工作量证明（Proof of Work），一种经济手段，要求请求资源方提供一些“工作”来证明它没有恶意，该工作需要花费一定资源。</font><br><font size="3">&emsp;比特币采用的是hashcash的工作量证明，它最初用作邮件过滤，假设发一封邮件需要计算1分钟得出证明，发1w封就需要计算1w分钟，1w分钟的计算量和需要的资源很大，增加垃圾邮件成本。</font><br><font size="3">&emsp;在比特币中，hashcash用来产生区块，在一个区块上链前，矿工必须完成工作量证明，但最后完成工作量证明成功记账的矿工只有一个。（为什么有矿工愿意干这个事，因为有每笔交易的手续费以及打包奖励）</font></p>
+<p><strong>矿工在进行工作量证明之前：</strong><br>    <font size="3">&emsp;1. 收集广播中的交易信息</font><br>    <font size="3">&emsp;2. 检查每笔交易是否合规（溯源）</font><br>    <font size="3">&emsp;3. 打包验证通过的交易信息</font><br>    <font size="3">&emsp;4. 添加一个奖励交易（新区块的首个交易）：给自己的地址增加比特币的交易。</font></p>
+<p><strong>之后就开始进行工作量证明：</strong><br>    <font size="3">&emsp;1. 把上个块的hash值与当前区块交易信息hash处理</font><br>    <font size="3">&emsp;2. 生成一个随机数</font><br>    <font size="3">&emsp;3. 当随机数与第一步的字符串hash后，满足前置N个0时，就是正确的随机数，就获得了工作证明。</font><br>    <font size="3">&emsp;4. 如果随机数与第一步的字符串hash后，前N个数不是N个0时，就不是正确的随机数，更改随机数再次hash，直到结果满足前置N个0。</font></p>
+<p><font size="3">&emsp;基于PoW共识机制的货币有比特币、以太坊币、莱特币等。 </font><br><font size="3">&emsp;优点：人人参与、权力均等、少数服从多数。</font><br><font size="3">&emsp;缺点：算力浪费，矿场导致算力集中，交易实时性不高（一笔交易10分钟才能确认），存在51%攻击（即某矿池联盟占全全网一半以上算力，根据少数服从多数，则可随意修改交易记录）。</font></p>
+<h2 id="PoS"><a href="#PoS" class="headerlink" title="PoS"></a>PoS</h2><p>持有量证明（Proof of stake），每个持币人选举出一个节点，由该节点创造新区块并接在链上。<br>如果把PoW比作地主，那么PoS就可以理解为合作社。<br>持币人将币质押，得到出块权利，指定时间内打包交易并广播，得到验证后，新区块生成。</p>
+<p>PoS共识机制有7个步骤：<br>    1. 运行节点<br>    2. 注册成为验证人<br>    3. 质押Stake（赌注）<br>    4. 选举验证人<br>    5. 打包交易<br>    6. 广播交易<br>    7. 验证人确认</p>
+<ol>
+<li><p>运行节点<br> 运行节点软件成为链上的一个节点，可用于资产管理，维护区块链以获得奖励。<br> 以NULS平台为例，利用NULS平台提供的模块可以实现跨链价值互换，新建链等，是一个提供可定制化服务区块链基础设施，可以理解为是一个框架或者区块链引擎，使用这个框架可以实现区块链的很多操作。<br> 下载钱包：<a href="https://github.com/nuls-io/nuls-v2/releases" target="_blank" rel="noopener">https://github.com/nuls-io/nuls-v2/releases</a><br> 新建或导入钱包<br> <img src="/2020/12/13/powpos/1.png" alt="1"><br> <img src="/2020/12/13/powpos/2.png" alt="2"><br> 然后就可以参与到共识任务，把挖矿权益委托给其他全节点，其他节点出块后给我分奖励，有个风险就是全节点可能会跑路。<br> <img src="/2020/12/13/powpos/3.png" alt="3"><br> <img src="/2020/12/13/powpos/4.png" alt="4"></p>
+</li>
+<li><p>注册成为验证人<br> 成为验证人有很多要求，当满足要求时即可注册成为验证人。</p>
+</li>
+<li><p>质押Stake<br> 通过下载的钱包或节点，操作把币进行质押，币转换为：Staking（赌注）</p>
+</li>
+<li><p>选举验证人<br> 系统会从候选验证人列表选择出块人，以DPoS为例，出块人由用户投票得出。</p>
+</li>
+<li><p>打包交易<br> 出块人从交易池挑选交易并验证（交易合法性、签名、），然后打包到区块内。</p>
+</li>
+<li><p>广播交易<br> 出块人打包完后，把新区块广播到其他节点，其他节点验证这个区块是否正确，如果正确就加上签名再次广播，不正确则不广播。</p>
+</li>
+<li><p>验证人确认<br> 网络所有验证人都确认这个块没问题之后，这个块就会接到链上。</p>
+</li>
+</ol>
+<p>若验证人长期不在线或有其他不利于链条稳定的行为都会扣除验证人在系统里交的押金。</p>
+<p>优点：节省算力资源，交易确认时间短。<br>缺点：币越多，持有时间越长，则奖励越多，不利于币流通。</p>
+<p><strong>PoS中的矿工</strong><br>PoS中的矿工不必具有特别大的算力，只要在合适的时间完成工作就可以获得奖励。<br>要求：24小时在线，不能随意分叉系统，代表委托人的权益，参与所有的治理（链、货币稳定性和未来发展）。<br>资格：持币量要很高、委托量要高（Staking）、要锁仓一定量的币、服务器配置要高、在社区要有知名度。</p>
+<h2 id="DPoS"><a href="#DPoS" class="headerlink" title="DPoS"></a>DPoS</h2><p>代理权益证明（Delegated Proof of Stake），每位持币人有权投票选出代理节点，得票最多的若干节点负责生成区块(验证和记账）。</p>
+<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>PoW共识机制介绍：<a href="https://krazymud.github.io/2018/10/21/pow/" target="_blank" rel="noopener">https://krazymud.github.io/2018/10/21/pow/</a><br>POW共识机制与优缺点探讨：<a href="https://palette25.github.io/2018/10/20/BlockChain-POW-Introduction-and-Discussion/" target="_blank" rel="noopener">https://palette25.github.io/2018/10/20/BlockChain-POW-Introduction-and-Discussion/</a><br>PoS持有量证明：<a href="https://zh.wikipedia.org/zh-cn/持有量證明" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-cn/持有量證明</a><br>PoS共识：<a href="https://github.com/wetez-project/pos-book" target="_blank" rel="noopener">https://github.com/wetez-project/pos-book</a><br>NULS文档：<a href="https://docs.nuls.io/zh/Guide/#nuls的愿景" target="_blank" rel="noopener">https://docs.nuls.io/zh/Guide/#nuls的愿景</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/BTC/" rel="tag"># BTC</a>
+              <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/" rel="tag"># 区块链</a>
+              <a href="/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/" rel="tag"># 共识机制</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/11/btc/" rel="prev" title="比特币（bitcoin）">
+      <i class="fa fa-chevron-left"></i> 比特币（bitcoin）
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PoW"><span class="nav-number">1.</span> <span class="nav-text">PoW</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PoS"><span class="nav-number">2.</span> <span class="nav-text">PoS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DPoS"><span class="nav-number">3.</span> <span class="nav-text">DPoS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资料"><span class="nav-number">4.</span> <span class="nav-text">资料</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Marchccc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Marchccc</p>
+  <div class="site-description" itemprop="description">达则兼济天下，穷则独善其身。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Marchccc" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Marchccc" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:0x00gc@gmail.com" title="E-Mail → mailto:0x00gc@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/rockjun3" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;rockjun3" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/channel/UC-3_tvxp9f8mofHMhrdzwFg/playlists?view_as=subscriber" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UC-3_tvxp9f8mofHMhrdzwFg&#x2F;playlists?view_as&#x3D;subscriber" rel="noopener" target="_blank"><i class="youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xiaozhou.net/" title="https:&#x2F;&#x2F;xiaozhou.net&#x2F;" rel="noopener" target="_blank">Timothy</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.kelu.org/" title="https:&#x2F;&#x2F;blog.kelu.org&#x2F;" rel="noopener" target="_blank">血衫非弧</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.wallesspku.space/blog/archives/hiaoxui" title="https:&#x2F;&#x2F;blog.wallesspku.space&#x2F;blog&#x2F;archives&#x2F;hiaoxui" rel="noopener" target="_blank">hiaoxui</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marchccc</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"display":{"position":"left"},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
