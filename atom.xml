@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2020-12-16T08:29:26.685Z</updated>
+  <updated>2020-12-24T07:10:30.515Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站接入海外第三方社交登录</title>
+    <link href="https://marchccc.top/2020/12/24/abroad-oauth/"/>
+    <id>https://marchccc.top/2020/12/24/abroad-oauth/</id>
+    <published>2020-12-24T06:45:11.000Z</published>
+    <updated>2020-12-24T07:10:30.515Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接入海外第三方登录，服务器需要与海外应用通信，服务器解决方式为：国内流量由国内服务器处理，国外流量由国外服务器处理，通过域名解析线路实现。&lt;br&gt;如果域名使用了CDN并且设置了全球加速，则需要把全球加速关闭，改为仅加速国内，否则国外DNS可能会解析到CDN，而CDN又回源到国内服务器了。&lt;br&gt;如果www前缀有设置CNAME，则需要再设置一条境外的。&lt;br&gt;国内访问  -&amp;gt;   DNS解析  -&amp;gt;   国内服务器&lt;br&gt;海外访问  -&amp;gt;   DNS解析  -&amp;gt;   海外服务器&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://marchccc.top/categories/web/"/>
+    
+    
+      <category term="web" scheme="https://marchccc.top/tags/web/"/>
+    
+      <category term="php" scheme="https://marchccc.top/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tezos</title>
+    <link href="https://marchccc.top/2020/12/24/Tezos/"/>
+    <id>https://marchccc.top/2020/12/24/Tezos/</id>
+    <published>2020-12-24T06:44:15.000Z</published>
+    <updated>2020-12-24T07:10:58.173Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Todo.待完善&lt;/p&gt;
+&lt;p&gt;Tezos是一个可以自我修复的区块链，使可以随着时间的推移自我升级，使用PoS共识机制，利益相关者可以就协议的修正案进行投票。就像以太坊一样，Tezos支持智能合约，并提供一个平台让其他人在其上建立去中心化的应用程序（Dapps）。&lt;br&gt;它特点是支持智能合约，拥有自己创建的智能合约语言，首次提出了通过数学证明的代码自制交易和网络共识机制，以解决目前棘手的网络升级分叉问题。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+    
+      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>区块链共识机制</title>
@@ -33,9 +78,9 @@
       <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
-    
       <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
       <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
     
@@ -58,9 +103,9 @@
       <category term="BTC" scheme="https://marchccc.top/categories/BTC/"/>
     
     
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
-    
       <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
   </entry>
   
@@ -432,49 +477,6 @@
       <category term="php" scheme="https://marchccc.top/tags/php/"/>
     
       <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gpg</title>
-    <link href="https://marchccc.top/2020/03/13/gpg/"/>
-    <id>https://marchccc.top/2020/03/13/gpg/</id>
-    <published>2020-03-13T09:10:27.000Z</published>
-    <updated>2020-08-05T06:43:23.388Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;gpg基础使用&quot;&gt;&lt;a href=&quot;#gpg基础使用&quot; class=&quot;headerlink&quot; title=&quot;gpg基础使用&quot;&gt;&lt;/a&gt;gpg基础使用&lt;/h2&gt;&lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.gnupg.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.gnupg.org/&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;常用命令&quot;&gt;&lt;a href=&quot;#常用命令&quot; class=&quot;headerlink&quot; title=&quot;常用命令&quot;&gt;&lt;/a&gt;常用命令&lt;/h1&gt;
-    
-    </summary>
-    
-    
-      <category term="加解密" scheme="https://marchccc.top/categories/%E5%8A%A0%E8%A7%A3%E5%AF%86/"/>
-    
-    
-      <category term="gpg" scheme="https://marchccc.top/tags/gpg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发、管理、常用工具推荐</title>
-    <link href="https://marchccc.top/2020/03/04/hello-world/"/>
-    <id>https://marchccc.top/2020/03/04/hello-world/</id>
-    <published>2020-03-04T06:05:35.462Z</published>
-    <updated>2020-08-05T06:43:21.904Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;开发&quot;&gt;&lt;a href=&quot;#开发&quot; class=&quot;headerlink&quot; title=&quot;开发&quot;&gt;&lt;/a&gt;开发&lt;/h3&gt;&lt;p&gt;vscode、postman、Termius、MAMP PRO、rdm、Navicat Premium、Charles、Sourcetree&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="未分类" scheme="https://marchccc.top/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-      <category term="工具推荐" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
