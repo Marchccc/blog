@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-01-02T07:15:45.187Z</updated>
+  <updated>2021-02-25T04:40:19.644Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021阅读书单</title>
+    <link href="https://marchccc.top/2021/02/25/2021-book/"/>
+    <id>https://marchccc.top/2021/02/25/2021-book/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-02-25T04:40:19.644Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;为人还是很生硬，希望在2021读一些社交技巧、感情更充沛，自我觉醒。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;故事&quot;&gt;&lt;a href=&quot;#故事&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="阅读" scheme="https://marchccc.top/categories/%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
+      <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-02-25T04:40:21.240Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·找star较高的python库写个入门的小东西&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>各类书籍阅读摘抄&amp;&amp;笔记</title>
@@ -425,55 +484,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>记录好用的库</title>
-    <link href="https://marchccc.top/2020/03/19/amazing-lib/"/>
-    <id>https://marchccc.top/2020/03/19/amazing-lib/</id>
-    <published>2020-03-19T07:09:51.000Z</published>
-    <updated>2020-08-05T06:43:26.800Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;material-io&quot;&gt;&lt;a href=&quot;#material-io&quot; class=&quot;headerlink&quot; title=&quot;material.io&quot;&gt;&lt;/a&gt;material.io&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://material.io/develop/web/components/buttons/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/buttons/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://material.io/develop/web/components/dialogs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/dialogs/&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://material.io/develop/web/components/snackbars/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://material.io/develop/web/components/snackbars/&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="各种好用的库" scheme="https://marchccc.top/categories/%E5%90%84%E7%A7%8D%E5%A5%BD%E7%94%A8%E7%9A%84%E5%BA%93/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-      <category term="JavaScript" scheme="https://marchccc.top/tags/JavaScript/"/>
-    
-      <category term="CSS" scheme="https://marchccc.top/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>squid正向代理PHP-FPM HTTPS、HTTP请求</title>
-    <link href="https://marchccc.top/2020/03/13/squid/"/>
-    <id>https://marchccc.top/2020/03/13/squid/</id>
-    <published>2020-03-13T09:27:15.000Z</published>
-    <updated>2020-08-05T06:41:31.436Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;配置squid&quot;&gt;&lt;a href=&quot;#配置squid&quot; class=&quot;headerlink&quot; title=&quot;配置squid&quot;&gt;&lt;/a&gt;配置squid&lt;/h1&gt;&lt;p&gt;在代理服务器配置。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;debian：apt-get install squid3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;centos：yum install squid&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="proxy" scheme="https://marchccc.top/categories/proxy/"/>
-    
-    
-      <category term="php" scheme="https://marchccc.top/tags/php/"/>
-    
-      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   
