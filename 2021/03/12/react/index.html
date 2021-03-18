@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"marchccc.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="React：一个javascript库，DOM的一个抽象层JSX：React的语法糖react bootstrap：react版的bootstrapformik：Form辅助库，Helperredux：组件间状态变化时的处理中心？route：处理路由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react学习笔记">
+<meta property="og:url" content="https://marchccc.top/2021/03/12/react/index.html">
+<meta property="og:site_name" content="Marchccc">
+<meta property="og:description" content="React：一个javascript库，DOM的一个抽象层JSX：React的语法糖react bootstrap：react版的bootstrapformik：Form辅助库，Helperredux：组件间状态变化时的处理中心？route：处理路由">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-12T01:58:46.000Z">
+<meta property="article:modified_time" content="2021-03-16T11:52:49.341Z">
+<meta property="article:author" content="Marchccc">
+<meta property="article:tag" content="react">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://marchccc.top/2021/03/12/react/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>react学习笔记 | Marchccc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Marchccc" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Marchccc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程技术交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-网站状态">
+
+    <a href="https://stats.marchccc.top/" rel="noopener" target="_blank"><i class=" fa-fw"></i>网站状态</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2021/03/12/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          react学习笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-12 09:58:46" itemprop="dateCreated datePublished" datetime="2021-03-12T09:58:46+08:00">2021-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-16 19:52:49" itemprop="dateModified" datetime="2021-03-16T19:52:49+08:00">2021-03-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>React：一个javascript库，DOM的一个抽象层<br>JSX：React的语法糖<br>react bootstrap：react版的bootstrap<br>formik：Form辅助库，Helper<br>redux：组件间状态变化时的处理中心？<br>route：处理路由</p>
+<a id="more"></a>
+
+<h1 id="初步了解"><a href="#初步了解" class="headerlink" title="初步了解"></a>初步了解</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;zh-hans.reactjs.org&#x2F;docs&#x2F;create-a-new-react-app.html#create-react-app</span><br><span class="line"></span><br><span class="line">npx create-react-app learn_react_bootstrap</span><br><span class="line">cd learn_react_bootstrap</span><br><span class="line">npm start</span><br><span class="line"></span><br><span class="line">入门文档：https:&#x2F;&#x2F;zh-hans.reactjs.org&#x2F;docs&#x2F;hello-world.html</span><br><span class="line"></span><br><span class="line">https:&#x2F;&#x2F;zh-hans.reactjs.org&#x2F;tutorial&#x2F;tutorial.html</span><br><span class="line"></span><br><span class="line">react bootstrap库：</span><br><span class="line">https:&#x2F;&#x2F;react-bootstrap.github.io&#x2F;getting-started&#x2F;introduction&#x2F;</span><br><span class="line">npm install react-bootstrap bootstrap</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">formik：https:&#x2F;&#x2F;formik.org&#x2F;docs&#x2F;tutorial</span><br><span class="line"></span><br><span class="line">redux：https:&#x2F;&#x2F;www.reduxjs.cn&#x2F;introduction&#x2F;getting-started</span><br><span class="line"></span><br><span class="line">react-router：https:&#x2F;&#x2F;reactrouter.com&#x2F;web&#x2F;guides&#x2F;quick-start</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="React中一些基础概念"><a href="#React中一些基础概念" class="headerlink" title="React中一些基础概念"></a>React中一些基础概念</h1><h2 id="元素渲染"><a href="#元素渲染" class="headerlink" title="元素渲染"></a>元素渲染</h2><p>React库会维护一个JS的虚拟DOM对象，并由React DOM模块负责让网页的DOM和虚拟DOM保持一致。<br>使用ReactDOM.render()方法可以将元素渲染到DOM树。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line"></span><br><span class="line">const element &#x3D; &lt;h1&gt;Hello&lt;&#x2F;h1&gt;;</span><br><span class="line">ReactDOM.render(element, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>把代码封装为方法，可在多处复用，可传参。<br>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line"></span><br><span class="line">class Welcome extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">      return &lt;h1&gt;Hello, &#123;this.props.name&#125;&lt;&#x2F;h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class User extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return &lt;Welcome name&#x3D;&quot;Zjs&quot; &#x2F;&gt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;User &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="动态更新组件内的参数值"><a href="#动态更新组件内的参数值" class="headerlink" title="动态更新组件内的参数值"></a>动态更新组件内的参数值</h2><p>组件生命周期有三种状态，1. mounting（安装）  2.updating（更新） 3. unmounting （卸载）<br>每种状态分别有类似构造和析构的函数，will和did，进入状态前调用will，进入状态后调用did。</p>
+<p>默认的组件就是render之后就完事了，想要动态更新就不行，如果想要动态更新（比如ajax）就要借助 this.state，组件内使用this.state的值，而this.state的值变化后，组件所使用的this.state值也会变，DOM就会重新渲染变化的值。</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; Button, Container, Row, Col &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line"></span><br><span class="line">class TimeExample extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 组件构造函数，组件创建时被调用</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props); &#x2F;&#x2F; 继承父类this对象，因为要使用this.state</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            date: new Date()</span><br><span class="line">        &#125;;</span><br><span class="line">        console.log(&#39;init TimeExample&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 组件挂载之后调用</span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        &#x2F;&#x2F; setInterval 函数的作用是周期性调用一个函数，相当于一个定时器</span><br><span class="line">        &#x2F;&#x2F; 将定时器的ID保存在this的变量中</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 可以理解为这里执行一个ajax，将返回值更新到this.state内，那么组件就可以从this.state内读取动态更新的值并更新DOM</span><br><span class="line">        this.LoopID &#x3D; setInterval(</span><br><span class="line">            () &#x3D;&gt; &#123;</span><br><span class="line">                    this.setState(&#123;</span><br><span class="line">                        date: new Date()</span><br><span class="line">                    &#125;);</span><br><span class="line">                    console.log(this.state);</span><br><span class="line">                &#125;,</span><br><span class="line">            1000</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 组件被卸载的时候调用，比如被close，被remove</span><br><span class="line">    componentWillUnmount() &#123;</span><br><span class="line">        &#x2F;&#x2F; 清除定时器</span><br><span class="line">        clearInterval(this.LoopID);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;h2&gt;Now: &#123;this.state.date.toLocaleTimeString()&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;TimeExample &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; Button, Modal, closeButton, Col &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line"></span><br><span class="line">class ClickExample extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 构造方法，在state存储值</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            modal_show: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 点击后改变state内的值，联动改变DOM</span><br><span class="line">    clickMe() &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            modal_show: true</span><br><span class="line">        &#125;)</span><br><span class="line">        &#x2F;&#x2F; alert();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 隐藏</span><br><span class="line">    handleClose() &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            modal_show: false</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 使用react bootstrap的Button、Modal</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">                &lt;Button variant&#x3D;&quot;success&quot; onClick&#x3D;&#123;() &#x3D;&gt; this.clickMe()&#125;&gt;绑定事件&lt;&#x2F;Button&gt;</span><br><span class="line">                &lt;Modal show&#x3D;&#123;this.state.modal_show&#125;</span><br><span class="line">                    onHide&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">                        this.handleClose();</span><br><span class="line">                    &#125;&#125;</span><br><span class="line">                &gt;</span><br><span class="line">                    &lt;Modal.Header closeButton&gt;</span><br><span class="line">                        &lt;Modal.Title&gt;Modal heading&lt;&#x2F;Modal.Title&gt;</span><br><span class="line">                    &lt;&#x2F;Modal.Header&gt;</span><br><span class="line">                    &lt;Modal.Body&gt;react bootstrap modal&lt;&#x2F;Modal.Body&gt;</span><br><span class="line">                    &lt;Modal.Footer&gt;</span><br><span class="line">                        &lt;Button</span><br><span class="line">                            variant&#x3D;&quot;secondary&quot;</span><br><span class="line">                            onClick&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">                                this.handleClose();</span><br><span class="line">                            &#125;&#125;</span><br><span class="line">                        &gt;</span><br><span class="line">                            Close</span><br><span class="line">                        &lt;&#x2F;Button&gt;</span><br><span class="line">                    &lt;&#x2F;Modal.Footer&gt;</span><br><span class="line">                &lt;&#x2F;Modal&gt;</span><br><span class="line">            &lt;&#x2F; &gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;ClickExample &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; Button, Modal, closeButton, Col &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line"></span><br><span class="line">class ClickExample extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 构造方法，在state存储值</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            login_status: false &#x2F;&#x2F; true-已登录 false-未登录</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    login() &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            login_status: true</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    logout() &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            login_status: false</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        const login_status &#x3D; this.state.login_status;</span><br><span class="line">        &#x2F;&#x2F; let buttons;</span><br><span class="line">        &#x2F;&#x2F; if (login_status) &#123;</span><br><span class="line">        &#x2F;&#x2F;     buttons &#x3D; &lt;Button variant&#x3D;&quot;success&quot; onClick&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">        &#x2F;&#x2F;                 this.logout();</span><br><span class="line">        &#x2F;&#x2F;             &#125;&#125;&gt;退出登录&lt;&#x2F;Button&gt;</span><br><span class="line">        &#x2F;&#x2F; &#125; else &#123;</span><br><span class="line">        &#x2F;&#x2F;     buttons &#x3D; &lt;Button variant&#x3D;&quot;success&quot; onClick&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">        &#x2F;&#x2F;                 this.login();</span><br><span class="line">        &#x2F;&#x2F;             &#125;&#125;&gt;登录&lt;&#x2F;Button&gt;</span><br><span class="line">        &#x2F;&#x2F; &#125;</span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">                &#123;this.state.login_status</span><br><span class="line">                    ? </span><br><span class="line">                    &lt;Button variant&#x3D;&quot;success&quot; onClick&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">                        this.logout();</span><br><span class="line">                    &#125;&#125;&gt;退出登录&lt;&#x2F;Button&gt;</span><br><span class="line">                    : </span><br><span class="line">                   &lt;Button variant&#x3D;&quot;success&quot; onClick&#x3D;&#123;() &#x3D;&gt; &#123;</span><br><span class="line">                       this.login();</span><br><span class="line">                   &#125;&#125;&gt;登录&lt;&#x2F;Button&gt;</span><br><span class="line">                &#125;</span><br><span class="line">            &lt;&#x2F; &gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;ClickExample &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据渲染"><a href="#数据渲染" class="headerlink" title="数据渲染"></a>数据渲染</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; Table &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line"></span><br><span class="line">import &#39;.&#x2F;index.css&#39;;</span><br><span class="line">&#x2F;*</span><br><span class="line">.table &#123;</span><br><span class="line">    width: 50%;</span><br><span class="line">    margin: 0 auto;</span><br><span class="line">    margin-top: 5%;</span><br><span class="line">&#125;</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">class Menu extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            data: []</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        &#x2F;&#x2F; ajax init data</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            data: [</span><br><span class="line">                &#123;</span><br><span class="line">                    &#39;id&#39;: 1,</span><br><span class="line">                    &#39;firstname&#39;: &#39;jun&#39;,</span><br><span class="line">                    &#39;lastname&#39;: &#39;zhang&#39;,</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    &#39;id&#39;: 5,</span><br><span class="line">                    &#39;firstname&#39;: &#39;jun2&#39;,</span><br><span class="line">                    &#39;lastname&#39;: &#39;zhang2&#39;,</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    &#39;id&#39;: 3,</span><br><span class="line">                    &#39;firstname&#39;: &#39;jun3&#39;,</span><br><span class="line">                    &#39;lastname&#39;: &#39;zhang3&#39;,</span><br><span class="line">                &#125;,</span><br><span class="line">            ]</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        const listItems &#x3D; this.state.data.map((data) &#x3D;&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;td&gt;&#123;data.id&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                &lt;td&gt;&#123;data.firstname&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                &lt;td&gt;&#123;data.lastname&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                &lt;td&gt;&#123;data.firstname&#125;.&#123;data.lastname&#125;&lt;&#x2F;td&gt;</span><br><span class="line">            &lt;&#x2F;tr&gt;</span><br><span class="line">        );</span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">                &lt;Table striped bordered hover className&#x3D;&quot;table&quot;&gt;</span><br><span class="line">                    &lt;thead&gt;</span><br><span class="line">                        &lt;tr&gt;</span><br><span class="line">                            &lt;th&gt;#&lt;&#x2F;th&gt;</span><br><span class="line">                            &lt;th&gt;First Name&lt;&#x2F;th&gt;</span><br><span class="line">                            &lt;th&gt;Last Name&lt;&#x2F;th&gt;</span><br><span class="line">                            &lt;th&gt;Username&lt;&#x2F;th&gt;</span><br><span class="line">                        &lt;&#x2F;tr&gt;</span><br><span class="line">                    &lt;&#x2F;thead&gt;</span><br><span class="line">                    &lt;tbody&gt;</span><br><span class="line">                        &#123;listItems&#125;</span><br><span class="line">                    &lt;&#x2F;tbody&gt;</span><br><span class="line">                &lt;&#x2F;Table&gt;</span><br><span class="line">            &lt;&#x2F; &gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Menu &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h2><p>使用formik这个form处理库<br>npm install formik<br><a href="https://formik.org/docs/tutorial#installation" target="_blank" rel="noopener">https://formik.org/docs/tutorial#installation</a></p>
+<p>使用yup做字段规则 校验<br>npm install yup<br><a href="https://github.com/jquense/yup" target="_blank" rel="noopener">https://github.com/jquense/yup</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; InputGroup, Col, Button, Form &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line">import &#39;.&#x2F;index.css&#39;;</span><br><span class="line">import &#123; Formik &#125; from &quot;formik&quot;;</span><br><span class="line">import * as yup from &quot;yup&quot;;</span><br><span class="line"></span><br><span class="line">const schema &#x3D; yup.object().shape(&#123;</span><br><span class="line">    username: yup.string().required(&#39;请填写用户名&#39;),</span><br><span class="line">    terms: yup.bool().required().oneOf([true], &#39;请先阅读并同意协议&#39;),</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">function FormExample() &#123;</span><br><span class="line"></span><br><span class="line">    function submitForm(values) &#123;</span><br><span class="line">        console.log(&#39;ajax 提交数据&#39;);</span><br><span class="line">        console.log(values);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return (</span><br><span class="line">        &lt;Formik</span><br><span class="line">            validationSchema&#x3D;&#123;schema&#125;</span><br><span class="line">            onSubmit&#x3D;&#123;(values) &#x3D;&gt; &#123; submitForm(values) &#125;&#125;</span><br><span class="line">            initialValues&#x3D;&#123;&#123;</span><br><span class="line">                username: &#39;&#39;,</span><br><span class="line">                terms: false,</span><br><span class="line">            &#125;&#125;</span><br><span class="line">        &gt;</span><br><span class="line">            &#123;(&#123;</span><br><span class="line">                handleSubmit,</span><br><span class="line">                handleChange,</span><br><span class="line">                handleBlur,</span><br><span class="line">                values,</span><br><span class="line">                touched,</span><br><span class="line">                isValid,</span><br><span class="line">                errors,</span><br><span class="line">            &#125;) &#x3D;&gt; (</span><br><span class="line">                &lt;Form noValidate onSubmit&#x3D;&#123;handleSubmit&#125;&gt;</span><br><span class="line">                    &lt;Form.Row&gt;</span><br><span class="line">                        &lt;Form.Group as&#x3D;&#123;Col&#125; md&#x3D;&quot;6&quot; controlId&#x3D;&quot;validationFormik03&quot;&gt;</span><br><span class="line">                            &lt;Form.Label&gt;用户名&lt;&#x2F;Form.Label&gt;</span><br><span class="line">                            &lt;Form.Control</span><br><span class="line">                                type&#x3D;&quot;text&quot;</span><br><span class="line">                                placeholder&#x3D;&quot;username&quot;</span><br><span class="line">                                name&#x3D;&quot;username&quot;</span><br><span class="line">                                value&#x3D;&#123;values.username&#125;</span><br><span class="line">                                onChange&#x3D;&#123;handleChange&#125;</span><br><span class="line">                                isInvalid&#x3D;&#123;!!errors.username&#125;</span><br><span class="line">                            &#x2F;&gt;</span><br><span class="line">                            &lt;Form.Control.Feedback type&#x3D;&quot;invalid&quot;&gt;</span><br><span class="line">                                &#123;errors.username&#125;</span><br><span class="line">                            &lt;&#x2F;Form.Control.Feedback&gt;</span><br><span class="line">                        &lt;&#x2F;Form.Group&gt;</span><br><span class="line">                    &lt;&#x2F;Form.Row&gt;</span><br><span class="line">                    &lt;Form.Group&gt;</span><br><span class="line">                        &lt;Form.Check</span><br><span class="line">                            required</span><br><span class="line">                            name&#x3D;&quot;terms&quot;</span><br><span class="line">                            label&#x3D;&quot;我已认真阅读并同意协议&quot;</span><br><span class="line">                            onChange&#x3D;&#123;handleChange&#125;</span><br><span class="line">                            isInvalid&#x3D;&#123;!!errors.terms&#125;</span><br><span class="line">                            feedback&#x3D;&#123;errors.terms&#125;</span><br><span class="line">                            id&#x3D;&quot;validationFormik0&quot;</span><br><span class="line">                        &#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;Form.Group&gt;</span><br><span class="line">                    &lt;Button type&#x3D;&quot;submit&quot;&gt;提交&lt;&#x2F;Button&gt;</span><br><span class="line">                &lt;&#x2F;Form&gt;</span><br><span class="line">            )&#125;</span><br><span class="line">        &lt;&#x2F;Formik&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;FormExample &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="组件间共享父类的-state"><a href="#组件间共享父类的-state" class="headerlink" title="组件间共享父类的 state"></a>组件间共享父类的 state</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#123; InputGroup, Col, Button, Form &#125; from &#39;react-bootstrap&#39;;</span><br><span class="line">import &#39;.&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">class CheckRate extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">                &#123;this.props.number &gt; 6.5 ?</span><br><span class="line">                    &lt;span&gt;汇率高&lt;&#x2F;span&gt;</span><br><span class="line">                    :</span><br><span class="line">                    &lt;span&gt;汇率低&lt;&#x2F;span&gt;&#125;</span><br><span class="line">            &lt;&#x2F;&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Rate extends React.Component &#123;</span><br><span class="line">    constructor(props) &#123;</span><br><span class="line">        super(props);</span><br><span class="line">        this.handleChange &#x3D; this.handleChange.bind(this);</span><br><span class="line">        this.state &#x3D; &#123;</span><br><span class="line">            input_rate: &#39;&#39;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handleChange(e) &#123;</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            input_rate: e.target.value</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        const input_rate &#x3D; this.state.input_rate;</span><br><span class="line"></span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">                &lt;h2&gt;汇率检测器，输入一个浮点值以检测汇率高低.&lt;&#x2F;h2&gt;</span><br><span class="line">                &lt;span&gt;输入汇率：&lt;&#x2F;span&gt;</span><br><span class="line">                &lt;input</span><br><span class="line">                    value&#x3D;&#123;input_rate&#125;</span><br><span class="line">                    onChange&#x3D;&#123;this.handleChange&#125; &#x2F;&gt;</span><br><span class="line">                &lt;CheckRate</span><br><span class="line">                    number&#x3D;&#123;input_rate&#125; &#x2F;&gt;</span><br><span class="line">            &lt;&#x2F;&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Rate &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#39;bootstrap&#x2F;dist&#x2F;css&#x2F;bootstrap.min.css&#39;;</span><br><span class="line">import &#39;.&#x2F;index.css&#39;;</span><br><span class="line"></span><br><span class="line">class Rate extends React.Component &#123;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 组件挂载后</span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">        fetch(&quot;http:&#x2F;&#x2F;api.apishop.net&#x2F;common&#x2F;hearthStone&#x2F;queryCardListByKeyword&quot;)</span><br><span class="line">            .then(res &#x3D;&gt; res.json())</span><br><span class="line">            .then(</span><br><span class="line">                (result) &#x3D;&gt; &#123;</span><br><span class="line">                    console.log(result);</span><br><span class="line">                &#125;,</span><br><span class="line">                (error) &#x3D;&gt; &#123;</span><br><span class="line">                    console.log(&quot;error&quot;);</span><br><span class="line">                    console.log(error);</span><br><span class="line">                &#125;</span><br><span class="line">            )</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;&gt;</span><br><span class="line">            &lt;&#x2F;&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;Rate &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+<h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">npm install redux</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import ReactDOM from &#39;react-dom&#39;;</span><br><span class="line">import &#123; createStore &#125; from &#39;redux&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 计数器</span><br><span class="line">function counter(state &#x3D; 0, action) &#123;</span><br><span class="line">    switch (action.type) &#123;</span><br><span class="line">        case &#39;ADD&#39;:</span><br><span class="line">            return state + 1;</span><br><span class="line">            break;</span><br><span class="line"></span><br><span class="line">        case &#39;DEL&#39;:</span><br><span class="line">            return state - 1;</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            return state;</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 创建一个状态对象</span><br><span class="line">let store &#x3D; createStore(counter);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 注册监听器,在状态改变时做对应处理</span><br><span class="line">store.subscribe(</span><br><span class="line">    () &#x3D;&gt; &#123;</span><br><span class="line">        console.log(store.getState())</span><br><span class="line">    &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 更新state</span><br><span class="line">store.dispatch(&#123;</span><br><span class="line">    type: &#39;ADD&#39;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">store.dispatch(&#123;</span><br><span class="line">    type: &#39;ADD&#39;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">store.dispatch(&#123;</span><br><span class="line">    type: &#39;DEL&#39;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="route"><a href="#route" class="headerlink" title="route"></a>route</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">npm install react-router-dom</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import reactDom from &#39;react-dom&#39;;</span><br><span class="line">import &#123;</span><br><span class="line">    BrowserRouter as Router,</span><br><span class="line">    Switch,</span><br><span class="line">    Route,</span><br><span class="line">    Link,</span><br><span class="line">    BrowserRouter</span><br><span class="line">&#125; from &quot;react-router-dom&quot;;</span><br><span class="line"></span><br><span class="line">function Home() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;h2&gt;首页&lt;&#x2F;h2&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function About() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;h2&gt;关于我们&lt;&#x2F;h2&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function Links() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;h2&gt;友情链接&lt;&#x2F;h2&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;nav&gt;</span><br><span class="line">                    &lt;ul&gt;</span><br><span class="line">                        &lt;li&gt;</span><br><span class="line">                            &lt;Link to&#x3D;&quot;&#x2F;&quot;&gt;Home&lt;&#x2F;Link&gt;</span><br><span class="line">                        &lt;&#x2F;li&gt;</span><br><span class="line">                        &lt;li&gt;</span><br><span class="line">                            &lt;Link to&#x3D;&quot;&#x2F;about&quot;&gt;About&lt;&#x2F;Link&gt;</span><br><span class="line">                        &lt;&#x2F;li&gt;</span><br><span class="line">                        &lt;li&gt;</span><br><span class="line">                            &lt;Link to&#x3D;&quot;&#x2F;links&quot;&gt;Links&lt;&#x2F;Link&gt;</span><br><span class="line">                        &lt;&#x2F;li&gt;</span><br><span class="line">                    &lt;&#x2F;ul&gt;</span><br><span class="line">                &lt;&#x2F;nav&gt;</span><br><span class="line"></span><br><span class="line">                &lt;Switch&gt;</span><br><span class="line">                    &lt;Router exact path&#x3D;&quot;&#x2F;&quot;&gt;</span><br><span class="line">                        &lt;Home &#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;Router&gt;</span><br><span class="line">                    &lt;Router path&#x3D;&quot;&#x2F;about&quot;&gt;</span><br><span class="line">                        &lt;About &#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;Router&gt;</span><br><span class="line">                    &lt;Router path&#x3D;&quot;&#x2F;links&quot;&gt;</span><br><span class="line">                        &lt;Links &#x2F;&gt;</span><br><span class="line">                    &lt;&#x2F;Router&gt;</span><br><span class="line">                &lt;&#x2F;Switch&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;Router&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">reactDom.render(&lt;App &#x2F;&gt;, document.getElementById(&#39;root&#39;));</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/react/" rel="tag"># react</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/25/2021-book/" rel="prev" title="2021阅读书单">
+      <i class="fa fa-chevron-left"></i> 2021阅读书单
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/16/%E6%88%91%E5%B8%8C%E6%9C%9B/" rel="next" title="我希望">
+      我希望 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#初步了解"><span class="nav-number">1.</span> <span class="nav-text">初步了解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#React中一些基础概念"><span class="nav-number">2.</span> <span class="nav-text">React中一些基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#元素渲染"><span class="nav-number">2.1.</span> <span class="nav-text">元素渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件"><span class="nav-number">2.2.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态更新组件内的参数值"><span class="nav-number">2.3.</span> <span class="nav-text">动态更新组件内的参数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">2.4.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if判断"><span class="nav-number">2.5.</span> <span class="nav-text">if判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据渲染"><span class="nav-number">2.6.</span> <span class="nav-text">数据渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表单处理"><span class="nav-number">2.7.</span> <span class="nav-text">表单处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件间共享父类的-state"><span class="nav-number">2.8.</span> <span class="nav-text">组件间共享父类的 state</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ajax"><span class="nav-number">2.9.</span> <span class="nav-text">ajax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redux"><span class="nav-number">2.10.</span> <span class="nav-text">redux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#route"><span class="nav-number">2.11.</span> <span class="nav-text">route</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Marchccc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Marchccc</p>
+  <div class="site-description" itemprop="description">编程技术交流</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Marchccc" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Marchccc" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:0x00gc@gmail.com" title="E-Mail → mailto:0x00gc@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/rockjun3" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;rockjun3" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.youtube.com/channel/UC-3_tvxp9f8mofHMhrdzwFg/playlists?view_as=subscriber" title="YouTube → https:&#x2F;&#x2F;www.youtube.com&#x2F;channel&#x2F;UC-3_tvxp9f8mofHMhrdzwFg&#x2F;playlists?view_as&#x3D;subscriber" rel="noopener" target="_blank"><i class="youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://xiaozhou.net/" title="https:&#x2F;&#x2F;xiaozhou.net&#x2F;" rel="noopener" target="_blank">Timothy</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://sizheng.org/" title="https:&#x2F;&#x2F;sizheng.org&#x2F;" rel="noopener" target="_blank">花開未央</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://ycik.com/" title="https:&#x2F;&#x2F;ycik.com&#x2F;" rel="noopener" target="_blank">单枪匹码</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.meowdan.com/" title="https:&#x2F;&#x2F;blog.meowdan.com&#x2F;" rel="noopener" target="_blank">超时空蛋蛋</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://annatarhe.github.io/" title="https:&#x2F;&#x2F;annatarhe.github.io&#x2F;" rel="noopener" target="_blank">AnnatarHe</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marchccc</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
