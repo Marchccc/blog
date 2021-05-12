@@ -20,22 +20,21 @@
     var CONFIG = {"hostname":"marchccc.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="用户键入网址并回车 DNS解析出IP 建立传输层连接 向Web服务器发出HTTP请求 Web服务器返回响应内容 Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）">
+  <meta name="description" content="由于最近需求有要用到ES，所以重新熟悉一下PHP和ES之间的调用。PHP框架：laravel 7.29ES：7.11.2Kibana：7.11.2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IP-HTTP-DNS杂谈">
-<meta property="og:url" content="https://marchccc.top/2020/08/10/ip-http-dns/index.html">
+<meta property="og:title" content="laravel&amp;es">
+<meta property="og:url" content="https://marchccc.top/2021/03/21/laravel-es/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="用户键入网址并回车 DNS解析出IP 建立传输层连接 向Web服务器发出HTTP请求 Web服务器返回响应内容 Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）">
+<meta property="og:description" content="由于最近需求有要用到ES，所以重新熟悉一下PHP和ES之间的调用。PHP框架：laravel 7.29ES：7.11.2Kibana：7.11.2">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-10T06:47:00.000Z">
-<meta property="article:modified_time" content="2020-08-10T09:18:56.520Z">
+<meta property="article:published_time" content="2021-03-21T10:01:02.000Z">
+<meta property="article:modified_time" content="2021-03-30T02:12:05.249Z">
 <meta property="article:author" content="Marchccc">
-<meta property="article:tag" content="IP">
-<meta property="article:tag" content="HTTP">
-<meta property="article:tag" content="DNS">
+<meta property="article:tag" content="PHP">
+<meta property="article:tag" content="ElasticSearch">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://marchccc.top/2020/08/10/ip-http-dns/">
+<link rel="canonical" href="https://marchccc.top/2021/03/21/laravel-es/">
 
 
 <script id="page-configurations">
@@ -48,7 +47,7 @@
   };
 </script>
 
-  <title>IP-HTTP-DNS杂谈 | Marchccc</title>
+  <title>laravel&es | Marchccc</title>
   
 
 
@@ -175,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2020/08/10/ip-http-dns/">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2021/03/21/laravel-es/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -188,7 +187,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          IP-HTTP-DNS杂谈
+          laravel&es
         </h1>
 
         <div class="post-meta">
@@ -197,17 +196,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-10 14:47:00 / 修改时间：17:18:56" itemprop="dateCreated datePublished" datetime="2020-08-10T14:47:00+08:00">2020-08-10</time>
+              <time title="创建时间：2021-03-21 18:01:02" itemprop="dateCreated datePublished" datetime="2021-03-21T18:01:02+08:00">2021-03-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-30 10:12:05" itemprop="dateModified" datetime="2021-03-30T10:12:05+08:00">2021-03-30</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/HTTP/" itemprop="url" rel="index"><span itemprop="name">HTTP</span></a>
+                  <a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a>
                 </span>
             </span>
 
@@ -222,30 +227,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol>
-<li>用户键入网址并回车</li>
-<li>DNS解析出IP</li>
-<li>建立传输层连接</li>
-<li>向Web服务器发出HTTP请求</li>
-<li>Web服务器返回响应内容</li>
-<li>Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）<a id="more"></a>
+        <p>由于最近需求有要用到ES，所以重新熟悉一下PHP和ES之间的调用。<br>PHP框架：laravel 7.29<br>ES：7.11.2<br>Kibana：7.11.2</p>
+<a id="more"></a>
 
-</li>
-</ol>
-<h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><p>IP，Internet Protocol Address，网络协议地址。通过IP地址标识互联网上的计算机，工作原理和邮件上的寄信地址类似。</p>
-<p>现在的IP地址分为两种，示例：<br>    &emsp;IPv4：192.168.1.1（局域网）<br>    &emsp;IPv6：2001:db8:0:1234:0:567:8:1</p>
-<p>由技术标准化组织IETF tools.ietf.org 制定IP协议公认标准。<a href="https://tools.ietf.org/html/rfc791" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc791</a><br>由IANA <a href="http://www.iana.org" target="_blank" rel="noopener">www.iana.org</a> 负责管理和分配IP地址，一般是IANA把IP给ISP（网络服务提供商，如阿里云），然后ISP分配给个人（服务器）。</p>
-<h1 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h1><p>HTTP是客户端和服务端之间请求和应答的通讯协议，是为了Web浏览器和Web服务器之间的通信而设计的一个应用层协议。<br>主要通过传输层协议TCP或者是TLS（加密的TCP）来发送。<br>http相对于https的缺点主要是被窃听被篡改，https基本原理见我去年的文章：<br><a href="https://blog.csdn.net/u012628581/article/details/99441535" target="_blank" rel="noopener">https://blog.csdn.net/u012628581/article/details/99441535</a></p>
-<p>HTTP由万维网协会W3C和ietf共同制定的公认标准。 <a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2616</a></p>
-<p>支持HTTP协议的软件有：浏览器、web服务器软件、curl、wget，或是各个语言自己实现的库等等。<br>HTTP请求示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">GET &#x2F; HTTP&#x2F;1.1</span><br><span class="line">Host: www.baidu.com</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Cache-Control: no-cache</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent: Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;84.0.4147.105 Safari&#x2F;537.36</span><br><span class="line">Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,image&#x2F;webp,image&#x2F;apng,*&#x2F;*;q&#x3D;0.8,application&#x2F;signed-exchange;v&#x3D;b3;q&#x3D;0.9</span><br><span class="line">Sec-Fetch-Site: none</span><br><span class="line">Sec-Fetch-Mode: navigate</span><br><span class="line">Sec-Fetch-User: ?1</span><br><span class="line">Sec-Fetch-Dest: document</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.9,ja;q&#x3D;0.8,en;q&#x3D;0.7</span><br><span class="line">Cookie: BIDUPSID&#x3D;331D37CA...</span><br></pre></td></tr></table></figure>
+<p>ES下载后运行bin目录下的elasticsearch可执行文件。</p>
+<p>思路：用 scout 做 es 和 mysql 的同步，初步也使用scout做搜索请求，如果有复杂的搜索条件则单独用es原生PHP包。</p>
+<p>初始化laravel框架并安装所需库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo &#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.2.22&#x2F;bin&#x2F;php &#x2F;usr&#x2F;local&#x2F;bin&#x2F;composer create-project laravel&#x2F;laravel learnes</span><br><span class="line"></span><br><span class="line">php composer require laravel&#x2F;scout&#x3D;v8.6.0 -vvv</span><br><span class="line">php composer require elasticsearch&#x2F;elasticsearch&#x3D;7.11.0 -vvv</span><br><span class="line">php composer require tamayo&#x2F;laravel-scout-elastic&#x3D;8.0.2 -vvv</span><br><span class="line">php composer require ongr&#x2F;elasticsearch-dsl&#x3D;v7.2.1 -vvv</span><br><span class="line"></span><br><span class="line">按照scout文档初始化scout扩展 https:&#x2F;&#x2F;learnku.com&#x2F;docs&#x2F;laravel&#x2F;8.x&#x2F;scout&#x2F;9422 </span><br><span class="line">生成配置文件 config&#x2F;scout.php</span><br><span class="line">php artisan vendor:publish --provider&#x3D;&quot;Laravel\Scout\ScoutServiceProvider&quot;</span><br></pre></td></tr></table></figure>
 
-<p>HTTP响应示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jun@192 ~ % curl -I https:&#x2F;&#x2F;www.baidu.com</span><br><span class="line">HTTP&#x2F;1.1 200 OK</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Length: 277</span><br><span class="line">Content-Type: text&#x2F;html</span><br><span class="line">Date: Mon, 10 Aug 2020 08:07:36 GMT</span><br><span class="line">Etag: &quot;575e1f5c-115&quot;</span><br><span class="line">Last-Modified: Mon, 13 Jun 2016 02:50:04 GMT</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Server: bfe&#x2F;1.0.8.18</span><br></pre></td></tr></table></figure>
+<p>然后在 .env 增加配置：<br>SCOUT_DRIVER=elasticsearch</p>
+<p>然后在 config/scout.php 增加ES的配置：<br>‘elasticsearch’ =&gt; [<br>    ‘index’ =&gt; env(‘ELASTICSEARCH_INDEX’, ‘estest’),//索引名称<br>    ‘hosts’ =&gt; [<br>        env(‘ELASTICSEARCH_HOST’, ‘<a href="http://127.0.0.1:9200&#39;">http://127.0.0.1:9200&#39;</a>),<br>    ],<br>],</p>
+<p>在 mysql 建立一个数据库，建立一张posts表，有title、author、body、created_at、updated_at 字段。</p>
+<p>建立model，并按照scout文档所述，添加trait以保持Model对数据的操作与搜索驱动索引的同步。<br>索引index名称默认为model名称全小写，对于Posts来说，索引名称就是posts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Model;</span><br><span class="line"></span><br><span class="line">use Illuminate\Database\Eloquent\Model;</span><br><span class="line">use Laravel\Scout\Searchable;</span><br><span class="line"></span><br><span class="line">class Posts extends Model</span><br><span class="line">&#123;</span><br><span class="line">    use Searchable;</span><br><span class="line">    protected $primaryKey &#x3D; &#39;id&#39;;</span><br><span class="line">    public $timestamps &#x3D; true;</span><br><span class="line">    protected $guarded &#x3D; [];</span><br><span class="line"></span><br><span class="line">    &#x2F;**</span><br><span class="line">     * 设置导入索引的数据字段</span><br><span class="line">     *</span><br><span class="line">     * @return array</span><br><span class="line">     *&#x2F;</span><br><span class="line">    public function toSearchableArray()</span><br><span class="line">    &#123;</span><br><span class="line">        $array &#x3D; $this-&gt;toArray();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 自定义数组...</span><br><span class="line"></span><br><span class="line">        return $array;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h1 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h1><p>DNS是将域名和IP地址相互映射的一个分布式数据库，全球有一千多台域名服务器在运行。<br>像百度、阿里、Google，都提供了公共DNS服务，就是DNS分布式数据库节点。<br>DNS系统是由各种DNS软件驱动的，如：BIND、OJBDNS、Dnsmasq等等，所以如果感兴趣，自己也可以用DNS软件搭建自己的DNS服务器。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80</a><br><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE</a><br><a href="http://www.blogjava.net/zjusuyong/articles/304788.html" target="_blank" rel="noopener">http://www.blogjava.net/zjusuyong/articles/304788.html</a><br><a href="https://www.cnblogs.com/wanghuaqiang/p/12093563.html" target="_blank" rel="noopener">https://www.cnblogs.com/wanghuaqiang/p/12093563.html</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/HTTP</a></p>
+
+<p>// 向数据库写入数据，并自动同步到索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for ($i&#x3D;1; $i &lt;&#x3D; 20; $i++) &#123; </span><br><span class="line">    Posts::create([</span><br><span class="line">        &#39;title&#39; &#x3D;&gt; &#39;test&#39; . $i,</span><br><span class="line">        &#39;author&#39; &#x3D;&gt; &#39;author&#39; . $i,</span><br><span class="line">        &#39;body&#39; &#x3D;&gt; &#39;body&#39; . $i</span><br><span class="line">    ]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>// 根据条件清除索引数据，但不清除数据库数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Posts::where(&#39;id&#39;, &#39;!&#x3D;&#39;, -1)-&gt;unsearchable();</span><br></pre></td></tr></table></figure>
+
+<p>// 更新并同步到索引</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$post &#x3D; Posts::where(&#39;id&#39;, 82)-&gt;first();</span><br><span class="line">$post-&gt;title &#x3D; &#39;test_update&#39;;</span><br><span class="line">$post-&gt;author &#x3D; &#39;author_update&#39;;</span><br><span class="line">$post-&gt;body &#x3D; &#39;body_update&#39;;</span><br><span class="line">$post-&gt;save();</span><br></pre></td></tr></table></figure>
+
+<p>// 命令行清空该索引下数据<br>curl -X DELETE <a href="http://localhost:9200/posts" target="_blank" rel="noopener">http://localhost:9200/posts</a></p>
+<p>几个命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 导入所有已存在的记录到搜索索引</span><br><span class="line">php artisan scout:import &quot;App\Model\Posts&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 从搜索索引中删除所有模型的记录</span><br><span class="line">php artisan scout:flush &quot;App\Model\Posts&quot;</span><br></pre></td></tr></table></figure>
+
+<p>// 搜索，由于scout提供的搜索功能很简单，所以复杂查询用es官方提供的php包和一个DSL查询构造器的包组合使用。</p>
+<p>若操作ES报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index [.async-search] blocked by: [TOO_MANY_REQUESTS&#x2F;12&#x2F;disk usage exceeded flood-stage watermark, index has read-only-allow-delete block];</span><br></pre></td></tr></table></figure>
+<p>解决方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -XPUT -H &quot;Content-Type: application&#x2F;json&quot; http:&#x2F;&#x2F;localhost:9200&#x2F;_cluster&#x2F;settings -d &#39;&#123; &quot;transient&quot;: &#123; &quot;cluster.routing.allocation.disk.threshold_enabled&quot;: false &#125; &#125;&#39;</span><br><span class="line"></span><br><span class="line">curl -XPUT -H &quot;Content-Type: application&#x2F;json&quot; http:&#x2F;&#x2F;localhost:9200&#x2F;_all&#x2F;_settings -d &#39;&#123;&quot;index.blocks.read_only_allow_delete&quot;: null&#125;&#39;</span><br><span class="line"></span><br><span class="line">参考：https:&#x2F;&#x2F;selleo.com&#x2F;til&#x2F;posts&#x2F;esrgfyxjee-how-to-fix-elasticsearch-forbidden12index-read-only</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>scout文档：<a href="https://learnku.com/docs/laravel/8.x/scout/9422" target="_blank" rel="noopener">https://learnku.com/docs/laravel/8.x/scout/9422</a><br>参考：<a href="https://learnku.com/articles/30812" target="_blank" rel="noopener">https://learnku.com/articles/30812</a><br><a href="https://learnku.com/articles/48630" target="_blank" rel="noopener">https://learnku.com/articles/48630</a></p>
+<p>论坛升级</p>
 
     </div>
 
@@ -255,9 +277,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/IP/" rel="tag"># IP</a>
-              <a href="/tags/HTTP/" rel="tag"># HTTP</a>
-              <a href="/tags/DNS/" rel="tag"># DNS</a>
+              <a href="/tags/PHP/" rel="tag"># PHP</a>
+              <a href="/tags/ElasticSearch/" rel="tag"># ElasticSearch</a>
           </div>
 
         
@@ -266,13 +287,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/08/06/php-learn-1/" rel="prev" title="PHP执行原理学习：词法语法分析">
-      <i class="fa fa-chevron-left"></i> PHP执行原理学习：词法语法分析
+    <a href="/2021/03/16/%E6%88%91%E5%B8%8C%E6%9C%9B/" rel="prev" title="我希望">
+      <i class="fa fa-chevron-left"></i> 我希望
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/08/11/RabbitMQ-learn/" rel="next" title="RabbitMQ笔记">
-      RabbitMQ笔记 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -331,7 +349,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">1.</span> <span class="nav-text">IP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTTP"><span class="nav-number">2.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DNS"><span class="nav-number">3.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

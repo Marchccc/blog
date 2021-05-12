@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-03-16T11:52:46.837Z</updated>
+  <updated>2021-03-30T02:12:05.249Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel&amp;es</title>
+    <link href="https://marchccc.top/2021/03/21/laravel-es/"/>
+    <id>https://marchccc.top/2021/03/21/laravel-es/</id>
+    <published>2021-03-21T10:01:02.000Z</published>
+    <updated>2021-03-30T02:12:05.249Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于最近需求有要用到ES，所以重新熟悉一下PHP和ES之间的调用。&lt;br&gt;PHP框架：laravel 7.29&lt;br&gt;ES：7.11.2&lt;br&gt;Kibana：7.11.2&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
+    
+      <category term="ElasticSearch" scheme="https://marchccc.top/tags/ElasticSearch/"/>
+    
+  </entry>
   
   <entry>
     <title>我希望</title>
@@ -47,11 +70,11 @@
     <link href="https://marchccc.top/2021/03/12/react/"/>
     <id>https://marchccc.top/2021/03/12/react/</id>
     <published>2021-03-12T01:58:46.000Z</published>
-    <updated>2021-03-16T11:52:49.341Z</updated>
+    <updated>2021-04-19T06:14:20.978Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;React：一个javascript库，DOM的一个抽象层&lt;br&gt;JSX：React的语法糖&lt;br&gt;react bootstrap：react版的bootstrap&lt;br&gt;formik：Form辅助库，Helper&lt;br&gt;redux：组件间状态变化时的处理中心？&lt;br&gt;route：处理路由&lt;/p&gt;
+      &lt;p&gt;React：一个javascript库，DOM的一个抽象层&lt;br&gt;JSX：React的语法糖&lt;br&gt;react bootstrap：react版的bootstrap&lt;br&gt;formik：Form辅助库，Helper&lt;br&gt;redux：组件间状态变化时的处理中心&lt;br&gt;route：处理路由&lt;/p&gt;
     
     </summary>
     
@@ -68,7 +91,7 @@
     <link href="https://marchccc.top/2021/02/25/2021-book/"/>
     <id>https://marchccc.top/2021/02/25/2021-book/</id>
     <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-02-25T07:07:27.197Z</updated>
+    <updated>2021-03-21T11:08:18.087Z</updated>
     
     <summary type="html">
     
@@ -462,28 +485,6 @@
       <category term="curl" scheme="https://marchccc.top/tags/curl/"/>
     
       <category term="openssl" scheme="https://marchccc.top/tags/openssl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bypass Medium</title>
-    <link href="https://marchccc.top/2020/06/09/bypass-Medium/"/>
-    <id>https://marchccc.top/2020/06/09/bypass-Medium/</id>
-    <published>2020-06-09T09:39:00.000Z</published>
-    <updated>2020-08-05T06:36:46.932Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://medium.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://medium.com/&lt;/a&gt;&lt;br&gt;英文写作平台。内容质量高、体验好。&lt;br&gt;付费文章有五角星标志，每账号每月只能免费阅读几次付费文章。&lt;/p&gt;
-&lt;p&gt;当我们不想付费又想阅读，怎么办呢？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="bypass" scheme="https://marchccc.top/categories/bypass/"/>
-    
-    
-      <category term="白嫖" scheme="https://marchccc.top/tags/%E7%99%BD%E5%AB%96/"/>
     
   </entry>
   
