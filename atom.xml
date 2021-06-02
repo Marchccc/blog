@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-05-12T02:28:23.699Z</updated>
+  <updated>2021-06-02T07:15:45.042Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,73 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel8 throttle</title>
+    <link href="https://marchccc.top/2021/06/02/laravel8-throttle/"/>
+    <id>https://marchccc.top/2021/06/02/laravel8-throttle/</id>
+    <published>2021-06-02T07:07:13.000Z</published>
+    <updated>2021-06-02T07:15:45.042Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 laravel8 的 RateLimiter 对部分API做访问速率限制，记录了定义规则和在路由文件中使用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP安装mcrypt扩展</title>
+    <link href="https://marchccc.top/2021/05/25/php-install-plug/"/>
+    <id>https://marchccc.top/2021/05/25/php-install-plug/</id>
+    <published>2021-05-25T04:50:11.000Z</published>
+    <updated>2021-05-25T04:53:28.367Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;虽然已经很熟悉了，但还是记录一下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>composer2</title>
+    <link href="https://marchccc.top/2021/05/24/composer2/"/>
+    <id>https://marchccc.top/2021/05/24/composer2/</id>
+    <published>2021-05-24T07:25:20.000Z</published>
+    <updated>2021-05-25T04:05:00.518Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;迁移到composer2版本：composer self-update –2&lt;br&gt;回到composer1版本：composer self-update
+        
+      
+    
+    </summary>
+    
+    
+      <category term="php" scheme="https://marchccc.top/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://marchccc.top/tags/php/"/>
+    
+      <category term="composer" scheme="https://marchccc.top/tags/composer/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel&amp;es</title>
@@ -87,6 +154,27 @@
   </entry>
   
   <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-11T03:21:20.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021阅读书单</title>
     <link href="https://marchccc.top/2021/02/25/2021-book/"/>
     <id>https://marchccc.top/2021/02/25/2021-book/</id>
@@ -108,27 +196,6 @@
       <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
@@ -410,81 +477,6 @@
       <category term="mq" scheme="https://marchccc.top/tags/mq/"/>
     
       <category term="RabbitMQ" scheme="https://marchccc.top/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IP-HTTP-DNS杂谈</title>
-    <link href="https://marchccc.top/2020/08/10/ip-http-dns/"/>
-    <id>https://marchccc.top/2020/08/10/ip-http-dns/</id>
-    <published>2020-08-10T06:47:00.000Z</published>
-    <updated>2020-08-10T09:18:56.520Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;用户键入网址并回车&lt;/li&gt;
-&lt;li&gt;DNS解析出IP&lt;/li&gt;
-&lt;li&gt;建立传输层连接&lt;/li&gt;
-&lt;li&gt;向Web服务器发出HTTP请求&lt;/li&gt;
-&lt;li&gt;Web服务器返回响应内容&lt;/li&gt;
-&lt;li&gt;Web服务器关闭TCP连接（若请求头包含 Connection: keep-alive 则服务器此时不关闭TCP连接）&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="HTTP" scheme="https://marchccc.top/categories/HTTP/"/>
-    
-    
-      <category term="IP" scheme="https://marchccc.top/tags/IP/"/>
-    
-      <category term="HTTP" scheme="https://marchccc.top/tags/HTTP/"/>
-    
-      <category term="DNS" scheme="https://marchccc.top/tags/DNS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP执行原理学习：词法语法分析</title>
-    <link href="https://marchccc.top/2020/08/06/php-learn-1/"/>
-    <id>https://marchccc.top/2020/08/06/php-learn-1/</id>
-    <published>2020-08-06T07:33:04.000Z</published>
-    <updated>2020-08-10T04:59:34.855Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;PHP就像是一个乐高搭建出来的城堡，把城堡拆开，就是一个一个小零件，当我们把它重新按照不同的方式组装起来，就能创造另一个东西。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="php" scheme="https://marchccc.top/categories/php/"/>
-    
-    
-      <category term="php" scheme="https://marchccc.top/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记 - curl请求raw.githubusercontent.com提示sslv3 alert handshake failure</title>
-    <link href="https://marchccc.top/2020/08/06/curl-sslv3-alert-handshake-failure/"/>
-    <id>https://marchccc.top/2020/08/06/curl-sslv3-alert-handshake-failure/</id>
-    <published>2020-08-06T03:45:00.000Z</published>
-    <updated>2020-08-06T03:52:42.484Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;jun@192 ~ % curl https:&amp;#x2F;&amp;#x2F;raw.githubusercontent.com                             &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;curl: (35) SSL peer handshake failed, the server most likely requires a client certificate to connect&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="curl" scheme="https://marchccc.top/categories/curl/"/>
-    
-    
-      <category term="curl" scheme="https://marchccc.top/tags/curl/"/>
-    
-      <category term="openssl" scheme="https://marchccc.top/tags/openssl/"/>
     
   </entry>
   
