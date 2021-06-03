@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-06-02T07:15:45.042Z</updated>
+  <updated>2021-06-03T03:16:25.923Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>es多词模糊搜索</title>
+    <link href="https://marchccc.top/2021/06/03/es-dsl/"/>
+    <id>https://marchccc.top/2021/06/03/es-dsl/</id>
+    <published>2021-06-03T03:01:08.000Z</published>
+    <updated>2021-06-03T03:16:25.923Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;and里放or，使用wildcard做keyword模糊匹配，示意：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bool&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#x2F;&amp;#x2F; and&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    must&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#x2F;&amp;#x2F; 条件1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bool&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#x2F;&amp;#x2F; or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            should&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#x2F;&amp;#x2F; 模糊匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                ..wildcard&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#x2F;&amp;#x2F; 条件2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        bool&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#x2F;&amp;#x2F; or&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            should&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#x2F;&amp;#x2F; 模糊匹配&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                ..wildcard&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#x2F;&amp;#x2F; 条件N&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ..&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;代码：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
+    
+      <category term="ElasticSearch" scheme="https://marchccc.top/tags/ElasticSearch/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel8 throttle</title>
@@ -450,33 +475,6 @@
       <category term="服务器测速" scheme="https://marchccc.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E9%80%9F/"/>
     
       <category term="iperf3" scheme="https://marchccc.top/tags/iperf3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ笔记</title>
-    <link href="https://marchccc.top/2020/08/11/RabbitMQ-learn/"/>
-    <id>https://marchccc.top/2020/08/11/RabbitMQ-learn/</id>
-    <published>2020-08-11T02:31:58.000Z</published>
-    <updated>2020-08-13T07:34:17.513Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;RabbitMQ是一个消息中间件，负责接收和转发消息，本篇主要梳理了交换机的direct、topic、fanout三种最常用的模式。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="消息中间件" scheme="https://marchccc.top/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    
-    
-      <category term="消息队列" scheme="https://marchccc.top/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
-    
-      <category term="消息中间件" scheme="https://marchccc.top/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    
-      <category term="mq" scheme="https://marchccc.top/tags/mq/"/>
-    
-      <category term="RabbitMQ" scheme="https://marchccc.top/tags/RabbitMQ/"/>
     
   </entry>
   
