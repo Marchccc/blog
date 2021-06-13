@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-06-03T03:16:25.923Z</updated>
+  <updated>2021-06-13T13:36:15.429Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel orm代码片段</title>
+    <link href="https://marchccc.top/2021/06/13/laravel-orm/"/>
+    <id>https://marchccc.top/2021/06/13/laravel-orm/</id>
+    <published>2021-06-13T13:31:16.000Z</published>
+    <updated>2021-06-13T13:36:15.429Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;with、when、where多条件闭包、orwhereHas闭包&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
+    
+      <category term="ORM" scheme="https://marchccc.top/tags/ORM/"/>
+    
+  </entry>
   
   <entry>
     <title>es多词模糊搜索</title>
@@ -452,29 +477,6 @@
     
     
       <category term="线路" scheme="https://marchccc.top/tags/%E7%BA%BF%E8%B7%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试两台服务器之间的带宽</title>
-    <link href="https://marchccc.top/2020/08/13/iperf3/"/>
-    <id>https://marchccc.top/2020/08/13/iperf3/</id>
-    <published>2020-08-13T07:53:18.000Z</published>
-    <updated>2020-08-18T02:41:53.667Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于某些原因，需要一个国内大带宽端口来转发我海外服务器的流量。&lt;br&gt;一开始用阿里云1M小水管试了下，速度可以，带宽太小，看了下弹性IP按量算也略贵。&lt;br&gt;然后就找有没有国内大带宽端口合租的，还真找到个论坛，专门是这类的合租信息（需要的可发邮件），然后找到一个合租帖，安徽联通端口出租10r/月不断流，看价格就很香，果断加卖家TG。&lt;br&gt;然后卖家要IP和端口进行测速，才了解到iperf3这个软件。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="服务器测速" scheme="https://marchccc.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E9%80%9F/"/>
-    
-    
-      <category term="服务器测速" scheme="https://marchccc.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E9%80%9F/"/>
-    
-      <category term="iperf3" scheme="https://marchccc.top/tags/iperf3/"/>
     
   </entry>
   
