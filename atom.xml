@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2021-06-25T03:21:21.494Z</updated>
+  <updated>2022-05-20T08:53:46.323Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>solana make nft</title>
+    <link href="https://marchccc.top/2022/05/20/solana-nft/"/>
+    <id>https://marchccc.top/2022/05/20/solana-nft/</id>
+    <published>2022-05-20T03:32:26.000Z</published>
+    <updated>2022-05-20T08:53:46.323Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SPL是solana的代币协议，可以利用solana提供的 spl-token 在cli中创建代币。 &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="solana" scheme="https://marchccc.top/categories/solana/"/>
+    
+    
+      <category term="solana" scheme="https://marchccc.top/tags/solana/"/>
+    
+      <category term="NFT" scheme="https://marchccc.top/tags/NFT/"/>
+    
+  </entry>
   
   <entry>
     <title>首屏箭头示意向下滚动动画（有弹跳效果）</title>
@@ -179,32 +202,6 @@
   </entry>
   
   <entry>
-    <title>我希望</title>
-    <link href="https://marchccc.top/2021/03/16/%E6%88%91%E5%B8%8C%E6%9C%9B/"/>
-    <id>https://marchccc.top/2021/03/16/%E6%88%91%E5%B8%8C%E6%9C%9B/</id>
-    <published>2021-03-16T11:26:33.000Z</published>
-    <updated>2021-03-16T11:52:46.837Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;我希望有那么一天，用任意一台连接互联网的电脑都可以打开google.com&lt;/p&gt;
-&lt;p&gt;我希望有那么一天，所有办公电脑都不再需要安装杀毒软件&lt;/p&gt;
-&lt;p&gt;我希望有那么一天，能彻底使用低能耗高收益的机器来种植农作物&lt;/p&gt;
-&lt;p&gt;我希望有一天，大部分人都能够树立良好的价值
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>react学习笔记</title>
     <link href="https://marchccc.top/2021/03/12/react/"/>
     <id>https://marchccc.top/2021/03/12/react/</id>
@@ -222,6 +219,27 @@
     
     
       <category term="react" scheme="https://marchccc.top/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-11T03:21:20.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
@@ -247,27 +265,6 @@
       <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
