@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2022-05-20T08:53:46.323Z</updated>
+  <updated>2022-11-23T03:06:49.890Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派安装Windows10</title>
+    <link href="https://marchccc.top/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/"/>
+    <id>https://marchccc.top/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/</id>
+    <published>2022-11-23T03:00:46.000Z</published>
+    <updated>2022-11-23T03:06:49.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在uupdump.net下载Windows镜像,用worproject软件写入镜像到存储卡。&lt;/p&gt;
+&lt;p&gt;参考:&lt;br&gt;&lt;a href=&quot;https://www.worproject.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="树莓派" scheme="https://marchccc.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+    
+      <category term="树莓派" scheme="https://marchccc.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>solana make nft</title>
@@ -223,27 +251,6 @@
   </entry>
   
   <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2021阅读书单</title>
     <link href="https://marchccc.top/2021/02/25/2021-book/"/>
     <id>https://marchccc.top/2021/02/25/2021-book/</id>
@@ -265,6 +272,27 @@
       <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-11T03:21:20.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
@@ -447,29 +475,6 @@
       <category term="Mysql" scheme="https://marchccc.top/tags/Mysql/"/>
     
       <category term="Join" scheme="https://marchccc.top/tags/Join/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Linux服务器离线下载种子</title>
-    <link href="https://marchccc.top/2020/09/21/transmission/"/>
-    <id>https://marchccc.top/2020/09/21/transmission/</id>
-    <published>2020-09-21T02:23:52.000Z</published>
-    <updated>2020-09-21T03:53:20.634Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在mac-torrent-download.net下载的种子，百度网盘和迅雷都下不动，由于资源是海外资源，就试试用海外服务器下载试下。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="杂" scheme="https://marchccc.top/categories/%E6%9D%82/"/>
-    
-    
-      <category term="transmission" scheme="https://marchccc.top/tags/transmission/"/>
-    
-      <category term="离线下载" scheme="https://marchccc.top/tags/%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   
