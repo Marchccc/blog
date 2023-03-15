@@ -251,6 +251,27 @@
   </entry>
   
   <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-11T03:21:20.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021阅读书单</title>
     <link href="https://marchccc.top/2021/02/25/2021-book/"/>
     <id>https://marchccc.top/2021/02/25/2021-book/</id>
@@ -272,27 +293,6 @@
       <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
@@ -378,9 +378,9 @@
       <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
       <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
+    
+      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
       <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
     
@@ -403,9 +403,9 @@
       <category term="BTC" scheme="https://marchccc.top/categories/BTC/"/>
     
     
-      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
       <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
+    
+      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
   </entry>
   
