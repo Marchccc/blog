@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2022-11-23T03:06:49.890Z</updated>
+  <updated>2023-04-01T09:49:30.111Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Debian 安装 Gitlab CE</title>
+    <link href="https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/"/>
+    <id>https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/</id>
+    <published>2023-04-01T09:11:20.000Z</published>
+    <updated>2023-04-01T09:49:30.111Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;搭建 Gitlab CE，利用其issue、任务指派、@群组成员等功能，尝试替代 Tower 。&lt;br&gt;搭建环境：Debian&lt;/p&gt;
+&lt;p&gt;具体操作：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://marchccc.top/categories/Linux/"/>
+    
+    
+      <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
+    
+      <category term="linux" scheme="https://marchccc.top/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派安装Windows10</title>
@@ -378,9 +402,9 @@
       <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
     
     
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
-    
       <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
       <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
     
@@ -403,9 +427,9 @@
       <category term="BTC" scheme="https://marchccc.top/categories/BTC/"/>
     
     
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
-    
       <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
   </entry>
   
@@ -452,29 +476,6 @@
       <category term="php" scheme="https://marchccc.top/tags/php/"/>
     
       <category term="面向对象" scheme="https://marchccc.top/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql中要掌握的基础sql语法</title>
-    <link href="https://marchccc.top/2020/09/22/mysql-join/"/>
-    <id>https://marchccc.top/2020/09/22/mysql-join/</id>
-    <published>2020-09-22T01:35:45.000Z</published>
-    <updated>2020-09-22T02:50:40.944Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于一直不喜欢数据库，像mysql这种，一般除了迫不得否则不会主动了解这块，但是发现，基础的一些东西还是要掌握的，所以特地学习梳理mysql的基础要掌握的sql语句。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Mysql" scheme="https://marchccc.top/categories/Mysql/"/>
-    
-    
-      <category term="Mysql" scheme="https://marchccc.top/tags/Mysql/"/>
-    
-      <category term="Join" scheme="https://marchccc.top/tags/Join/"/>
     
   </entry>
   
