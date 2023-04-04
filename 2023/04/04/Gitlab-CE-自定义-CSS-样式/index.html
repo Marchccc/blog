@@ -20,22 +20,24 @@
     var CONFIG = {"hostname":"marchccc.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="虽然已经很熟悉了，但还是记录一下。">
+  <meta name="description" content="通过 nginx 配置替换返回结果实现全局引入一个css文件，通过css样式来隐藏 Gitlab 一些不需要的功能。 具体操作：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP安装mcrypt扩展">
-<meta property="og:url" content="https://marchccc.top/2021/05/25/php-install-plug/index.html">
+<meta property="og:title" content="Gitlab CE 自定义 CSS 样式">
+<meta property="og:url" content="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="虽然已经很熟悉了，但还是记录一下。">
+<meta property="og:description" content="通过 nginx 配置替换返回结果实现全局引入一个css文件，通过css样式来隐藏 Gitlab 一些不需要的功能。 具体操作：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-25T04:50:11.000Z">
-<meta property="article:modified_time" content="2021-05-25T04:53:28.367Z">
+<meta property="og:image" content="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/WX20230404-100044@2x.png">
+<meta property="og:image" content="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/WechatIMG432.png">
+<meta property="article:published_time" content="2023-04-04T01:50:14.000Z">
+<meta property="article:modified_time" content="2023-04-04T02:03:05.446Z">
 <meta property="article:author" content="Marchccc">
-<meta property="article:tag" content="Marchccc">
-<meta property="article:tag" content=" PHP">
-<meta property="article:tag" content=" 博客">
+<meta property="article:tag" content="gitlab">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/WX20230404-100044@2x.png">
 
-<link rel="canonical" href="https://marchccc.top/2021/05/25/php-install-plug/">
+<link rel="canonical" href="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/">
 
 
 <script id="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>PHP安装mcrypt扩展 | Marchccc</title>
+  <title>Gitlab CE 自定义 CSS 样式 | Marchccc</title>
   
 
 
@@ -175,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2021/05/25/php-install-plug/">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -188,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PHP安装mcrypt扩展
+          Gitlab CE 自定义 CSS 样式
         </h1>
 
         <div class="post-meta">
@@ -199,7 +201,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-25 12:50:11 / 修改时间：12:53:28" itemprop="dateCreated datePublished" datetime="2021-05-25T12:50:11+08:00">2021-05-25</time>
+              <time title="创建时间：2023-04-04 09:50:14 / 修改时间：10:03:05" itemprop="dateCreated datePublished" datetime="2023-04-04T09:50:14+08:00">2023-04-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
             </span>
 
           
@@ -213,12 +224,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>虽然已经很熟悉了，但还是记录一下。</p>
+        <p>通过 nginx 配置替换返回结果实现全局引入一个css文件，通过css样式来隐藏 Gitlab 一些不需要的功能。</p>
+<p>具体操作：</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jun@192 ~ % php -i|grep php.ini</span><br><span class="line">Configuration File (php.ini) Path &#x3D;&gt; &#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.3.24&#x2F;conf</span><br><span class="line">Loaded Configuration File &#x3D;&gt; &#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.3.24&#x2F;conf&#x2F;php.ini</span><br></pre></td></tr></table></figure>
-<p>wget <a href="http://pecl.php.net/get/mcrypt-1.0.4.tgz" target="_blank" rel="noopener">http://pecl.php.net/get/mcrypt-1.0.4.tgz</a><br>解压并进入目录<br>/Applications/MAMP/bin/php/php7.3.24/bin/phpize<br>./configure –with-php-config=/Applications/MAMP/bin/php/php7.3.24/bin/php-config<br>make<br>make install<br>打开ini文件加入 extension=mcrypt.so</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jun@192 ~ % php -i|grep mcrypt</span><br><span class="line">Registered Stream Filters &#x3D;&gt; zlib.*, bzip2.*, convert.iconv.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, mcrypt.*, mdecrypt.*</span><br><span class="line">mcrypt</span><br><span class="line">mcrypt support &#x3D;&gt; enabled</span><br><span class="line">mcrypt_filter support &#x3D;&gt; enabled</span><br><span class="line">mcrypt.algorithms_dir &#x3D;&gt; no value &#x3D;&gt; no value</span><br><span class="line">mcrypt.modes_dir &#x3D;&gt; no value &#x3D;&gt; no value</span><br></pre></td></tr></table></figure>
+<h3 id="nginx-配置-sub-filter-过滤器"><a href="#nginx-配置-sub-filter-过滤器" class="headerlink" title="nginx 配置 sub_filter 过滤器"></a>nginx 配置 sub_filter 过滤器</h3><p>sub_filter 函数属于 ngx_http_sub_module 模块，该模块是一个过滤器，它通过将一个指定的字符串替换为另一个来修改响应。</p>
+<p>句法：    sub_filter [string] [replacement];<br>语境：    http, server, location</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F;</span><br><span class="line">&#123;</span><br><span class="line">	...</span><br><span class="line"></span><br><span class="line">    sub_filter &#39;&lt;&#x2F;head&gt;&#39; &#39;\n&lt;link rel&#x3D;&quot;stylesheet&quot; media&#x3D;&quot;all&quot; href&#x3D;&quot;https:&#x2F;&#x2F;your domain.com&#x2F;gitlab-custom-ui-custom.css?t&#x3D;$msec&quot; type&#x3D;&quot;text&#x2F;css&quot; &#x2F;&gt;\n&lt;&#x2F;head&gt;&#39;;</span><br><span class="line"></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中 $msec 为 nginx 全局时间戳，用于测试期间清除缓存。</p>
+<p>我的 gitlab-custom-ui-custom.css 内容为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">.issue-details .js-issue-widgets .gl-mt-4,.gl-card,.emoji-block&#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">[data-track-label&#x3D;&quot;service_desk&quot;] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">[data-track-label&#x3D;&quot;milestones&quot;] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">[data-track-label&#x3D;&quot;snippets_menu&quot;] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">[data-track-label&#x3D;&quot;milestones_menu&quot;] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">[data-track-label&#x3D;&quot;merge_requests_menu&quot;] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.issuable-sidebar .milestone,.with-sub-blocks,.js-issuable-move-block,.confidentiality,.time-tracking &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.user-counter .dashboard-shortcuts-merge_requests &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.header-help .header-help-dropdown-toggle&#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.container-fluid .navbar-collapse, .header-new .header-new-dropdown-toggle&#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.header-search-new &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.project-repo-buttons &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><img src="/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/WX20230404-100044@2x.png" width="80%/">
+<img src="/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/WechatIMG432.png" width="80%/">
+
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://nginx.org/en/docs/http/ngx_http_sub_module.html" target="_blank" rel="noopener">http://nginx.org/en/docs/http/ngx_http_sub_module.html</a><br><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/15199" target="_blank" rel="noopener">https://gitlab.com/gitlab-org/gitlab/-/issues/15199</a><br><a href="https://macteo.it/2019/02/23/customize-gitlab-interface" target="_blank" rel="noopener">https://macteo.it/2019/02/23/customize-gitlab-interface</a></p>
+
     </div>
 
     
@@ -226,6 +249,10 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/gitlab/" rel="tag"># gitlab</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
 
         
 
@@ -233,13 +260,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/05/24/composer2/" rel="prev" title="composer2">
-      <i class="fa fa-chevron-left"></i> composer2
+    <a href="/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/" rel="prev" title="Debian 安装 Gitlab CE">
+      <i class="fa fa-chevron-left"></i> Debian 安装 Gitlab CE
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/06/02/laravel8-throttle/" rel="next" title="laravel8 throttle">
-      laravel8 throttle <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -298,6 +322,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-配置-sub-filter-过滤器"><span class="nav-number">1.</span> <span class="nav-text">nginx 配置 sub_filter 过滤器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">2.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
