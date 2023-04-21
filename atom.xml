@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-04-19T03:14:39.553Z</updated>
+  <updated>2023-04-20T08:43:51.382Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flarum扩展开发记录</title>
+    <link href="https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
+    <id>https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-04-20T08:18:49.000Z</published>
+    <updated>2023-04-20T08:43:51.382Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;扩展要实现的功能：输入 ‘ / ‘ 时列出同 group 的用户以供@&lt;/p&gt;
+&lt;p&gt;基于 flarum/core ^1.7&lt;/p&gt;
+&lt;p&gt;最终实现：&lt;a href=&quot;https://github.com/Marchccc/flarum-ext-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/Marchccc/flarum-ext-mentions-group-users&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;讨论：&lt;a href=&quot;https://discuss.flarum.org/d/32768-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://discuss.flarum.org/d/32768-mentions-group-users&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Flarum" scheme="https://marchccc.top/categories/Flarum/"/>
+    
+    
+      <category term="Flarum" scheme="https://marchccc.top/tags/Flarum/"/>
+    
+      <category term="Composer" scheme="https://marchccc.top/tags/Composer/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitlab CE Webhook</title>
@@ -455,29 +481,6 @@
       <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
       <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>比特币（bitcoin）</title>
-    <link href="https://marchccc.top/2020/12/11/btc/"/>
-    <id>https://marchccc.top/2020/12/11/btc/</id>
-    <published>2020-12-11T03:34:50.000Z</published>
-    <updated>2020-12-16T03:14:34.559Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;08年中本聪提出BTC白皮书，一种基于区块链的P2P电子现金系统，通过网络节点和共识算法记录比特币的流动，BTC是算力和电力资源的另一种价值形态，这种价值的流通不受现实世界中心化部门的约束，有望以去中心化加密货币的方式来取代现代的货币系统控制权，往大了说可以说是一场货币革命。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="BTC" scheme="https://marchccc.top/categories/BTC/"/>
-    
-    
-      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
     
   </entry>
   
