@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-04-20T08:43:51.382Z</updated>
+  <updated>2023-05-03T11:28:02.105Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>haproxy配置TCP多目标流量转发</title>
+    <link href="https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/"/>
+    <id>https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/</id>
+    <published>2023-05-03T11:22:01.000Z</published>
+    <updated>2023-05-03T11:28:02.105Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;apt install haproxy&lt;/p&gt;
+&lt;p&gt;cat /lib/systemd/system/haproxy.service&lt;br&gt;得到配置文件位置：/etc/haproxy/haproxy.cfg&lt;/p&gt;
+&lt;p&gt;vim
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://marchccc.top/categories/Linux/"/>
+    
+    
+      <category term="haproxy" scheme="https://marchccc.top/tags/haproxy/"/>
+    
+  </entry>
   
   <entry>
     <title>Flarum扩展开发记录</title>
@@ -349,6 +378,27 @@
   </entry>
   
   <entry>
+    <title>2021KPI</title>
+    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
+    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-11T03:21:20.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
+    
+    
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2021阅读书单</title>
     <link href="https://marchccc.top/2021/02/25/2021-book/"/>
     <id>https://marchccc.top/2021/02/25/2021-book/</id>
@@ -370,27 +420,6 @@
       <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
@@ -456,31 +485,6 @@
     
     
       <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>区块链共识机制</title>
-    <link href="https://marchccc.top/2020/12/13/powpos/"/>
-    <id>https://marchccc.top/2020/12/13/powpos/</id>
-    <published>2020-12-13T11:24:41.000Z</published>
-    <updated>2020-12-16T08:29:26.685Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;区块链由区块和链组成，没有中心机构，一个新区块在接到链上之前，需要每个节点确认（达成共识）这个新区块内容是否合法，这个确认规则就是共识机制，目前主流有PoW和PoS两种共识机制。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="区块链" scheme="https://marchccc.top/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-    
-      <category term="区块链" scheme="https://marchccc.top/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
-    
-      <category term="BTC" scheme="https://marchccc.top/tags/BTC/"/>
-    
-      <category term="共识机制" scheme="https://marchccc.top/tags/%E5%85%B1%E8%AF%86%E6%9C%BA%E5%88%B6/"/>
     
   </entry>
   
