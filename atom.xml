@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-05-03T11:28:02.105Z</updated>
+  <updated>2023-05-04T07:50:54.131Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/"/>
     <id>https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/</id>
     <published>2023-05-03T11:22:01.000Z</published>
-    <updated>2023-05-03T11:28:02.105Z</updated>
+    <updated>2023-05-04T07:50:54.131Z</updated>
     
     <summary type="html">
     
@@ -50,7 +50,7 @@
     <link href="https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
     <id>https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</id>
     <published>2023-04-20T08:18:49.000Z</published>
-    <updated>2023-04-20T08:43:51.382Z</updated>
+    <updated>2023-05-05T07:33:21.254Z</updated>
     
     <summary type="html">
     
@@ -58,6 +58,7 @@
 &lt;p&gt;基于 flarum/core ^1.7&lt;/p&gt;
 &lt;p&gt;最终实现：&lt;a href=&quot;https://github.com/Marchccc/flarum-ext-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/Marchccc/flarum-ext-mentions-group-users&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;讨论：&lt;a href=&quot;https://discuss.flarum.org/d/32768-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://discuss.flarum.org/d/32768-mentions-group-users&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;extiverse：&lt;a href=&quot;https://extiverse.com/extension/marchccc/flarum-ext-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://extiverse.com/extension/marchccc/flarum-ext-mentions-group-users&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
