@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-05-08T04:25:25.223Z</updated>
+  <updated>2023-05-22T06:59:26.498Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>dompdf生成指定尺寸PDF</title>
+    <link href="https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/"/>
+    <id>https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/</id>
+    <published>2023-05-22T06:27:41.000Z</published>
+    <updated>2023-05-22T06:59:26.498Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在官方说明可以了解到，要通过 setPaper 来设置尺寸。&lt;br&gt;&lt;a href=&quot;https://github.com/dompdf/dompdf#quick-start&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/dompdf/dompdf#quick-start&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但文档并没有指出如何设置指定宽高的PDF，那么看下 setPaper 这个方法的实现：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dompdf 使用字体</title>
+    <link href="https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/"/>
+    <id>https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/</id>
+    <published>2023-05-22T06:15:25.000Z</published>
+    <updated>2023-05-22T06:26:51.547Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;例如，要在 index.blade.php 文件中使用 OPPOSans-R 和 Arial-Regular 两种字体。&lt;/p&gt;
+&lt;p&gt;把 OPPOSans-R.ttf 和 Arial-Regular.ttf 放到项目根目录的fonts目录内，执行：&lt;br&gt;php ./load_font.php ‘OPPOSans-R’ fonts/OPPOSans-R.ttf&lt;/p&gt;
+&lt;p&gt;然后打开 storage/fonts/dompdf_font_family_cache.php 把 OPPOSans-R 部分数组复制备份。&lt;/p&gt;
+&lt;p&gt;再安装 Arial-Regular 字体： &lt;/p&gt;
+&lt;p&gt;php ./load_font.php ‘Arial-Regular’ fonts/Arial-Regular.ttf &lt;/p&gt;
+&lt;p&gt;打开 storage/fonts/dompdf_font_family_cache.php 发现 OPPOSans-R 部分内容丢失，只需要把之前复制的备份粘贴过来，就可以了。&lt;/p&gt;
+&lt;p&gt;在 index.blade.php 文件内这样使用&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>squid服务端HTTP代理</title>
     <link href="https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/"/>
     <id>https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/</id>
     <published>2023-05-08T03:55:34.000Z</published>
-    <updated>2023-05-08T04:25:25.223Z</updated>
+    <updated>2023-05-09T04:51:31.512Z</updated>
     
     <summary type="html">
     
@@ -400,31 +449,6 @@
   </entry>
   
   <entry>
-    <title>2021阅读书单</title>
-    <link href="https://marchccc.top/2021/02/25/2021-book/"/>
-    <id>https://marchccc.top/2021/02/25/2021-book/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-21T11:08:18.087Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;为人还是很生硬，希望在2021读一些社交技巧、感情更充沛，自我觉醒。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="阅读" scheme="https://marchccc.top/categories/%E9%98%85%E8%AF%BB/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
-    
-      <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>2021KPI</title>
     <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
     <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
@@ -446,15 +470,17 @@
   </entry>
   
   <entry>
-    <title>各类书籍阅读摘抄&amp;&amp;笔记</title>
-    <link href="https://marchccc.top/2021/01/02/read/"/>
-    <id>https://marchccc.top/2021/01/02/read/</id>
-    <published>2021-01-02T05:07:13.000Z</published>
-    <updated>2021-01-02T07:15:45.187Z</updated>
+    <title>2021阅读书单</title>
+    <link href="https://marchccc.top/2021/02/25/2021-book/"/>
+    <id>https://marchccc.top/2021/02/25/2021-book/</id>
+    <published>2021-02-25T02:45:28.000Z</published>
+    <updated>2021-03-21T11:08:18.087Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;通过阅读让自己不再生硬，记录所有阅读过的书，大部分片段摘抄，小部分个人笔记。&lt;br&gt;&lt;a href=&quot;https://book.douban.com/people/rockjun/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://book.douban.com/people/rockjun/&lt;/a&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;为人还是很生硬，希望在2021读一些社交技巧、感情更充沛，自我觉醒。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -462,30 +488,9 @@
       <category term="阅读" scheme="https://marchccc.top/categories/%E9%98%85%E8%AF%BB/"/>
     
     
+      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
+    
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站接入海外第三方社交登录</title>
-    <link href="https://marchccc.top/2020/12/24/abroad-oauth/"/>
-    <id>https://marchccc.top/2020/12/24/abroad-oauth/</id>
-    <published>2020-12-24T06:45:11.000Z</published>
-    <updated>2023-04-14T08:28:33.458Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;接入海外第三方登录，服务器需要与海外应用通信，服务器解决方式为：国内流量由国内服务器处理，国外流量由国外服务器处理，通过域名解析线路实现。&lt;br&gt;如果域名使用了CDN并且设置了全球加速，则需要把全球加速关闭，改为仅加速国内，否则国外DNS可能会解析到CDN，而CDN又回源到国内服务器了。&lt;br&gt;如果www前缀有设置CNAME，则需要再设置一条境外的。&lt;br&gt;国内访问  -&amp;gt;   DNS解析  -&amp;gt;   国内服务器&lt;br&gt;海外访问  -&amp;gt;   DNS解析  -&amp;gt;   海外服务器&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://marchccc.top/categories/web/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-      <category term="web" scheme="https://marchccc.top/tags/web/"/>
     
   </entry>
   
