@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-05-22T07:54:16.777Z</updated>
+  <updated>2023-06-01T03:01:14.553Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel批量生成sitemap</title>
+    <link href="https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/"/>
+    <id>https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/</id>
+    <published>2023-06-01T02:56:05.000Z</published>
+    <updated>2023-06-01T03:01:14.553Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;生成product详情页的sitemap，放到public目录下，3w条一个sitemap，例如 sitemap1.xml sitemap2.xml ..&lt;/p&gt;
+&lt;p&gt;php artisan make:command GenerateSitemap&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+    
+    
+      <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
+    
+      <category term="SEO" scheme="https://marchccc.top/tags/SEO/"/>
+    
+  </entry>
   
   <entry>
     <title>dompdf生成指定尺寸PDF</title>
@@ -445,27 +469,6 @@
     
     
       <category term="react" scheme="https://marchccc.top/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021KPI</title>
-    <link href="https://marchccc.top/2021/02/25/2021-kpi/"/>
-    <id>https://marchccc.top/2021/02/25/2021-kpi/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-11T03:21:20.105Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;·读 8 本书&lt;br&gt;·为flarum开发一个手机验证码登录扩展&lt;br&gt;·野外活动 8 次&lt;br&gt;·理财 +2w&lt;br&gt;·Rust做一个小东西&lt;br&gt;·维护一个社区&lt;br&gt;·输出 8 篇技术博文&lt;br&gt;·去体验店或网络租赁方式，体验一下音乐播放器（索尼黑砖之类）&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/categories/%E8%AE%A1%E5%88%92/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
