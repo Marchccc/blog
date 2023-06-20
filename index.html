@@ -179,6 +179,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">embedding学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-16 15:32:46" itemprop="dateCreated datePublished" datetime="2023-06-16T15:32:46+08:00">2023-06-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-20 10:31:04" itemprop="dateModified" datetime="2023-06-20T10:31:04+08:00">2023-06-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>embedding 是一种把文本转换为更低维的数据（向量）的方法。</p>
+<p>我在 azure 新建了一个 embedding 模型，这里尝试调用获取一个词的向量数据：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">embedding1 &#x3D; openai.Embedding.create(</span><br><span class="line">    input&#x3D;&quot;苹果&quot;, engine&#x3D;model</span><br><span class="line">)[&quot;data&quot;][0][&quot;embedding&quot;]</span><br><span class="line">print(embedding1)</span><br></pre></td></tr></table></figure>
+<p>发现返回的向量列表数据比较多，是因为“苹果”有很多不同的语义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0.011903401464223862, -0.023080304265022278, -0.0015027695335447788, -0.020565500482916832, 0.005127404350787401, ...省略..., 0.037833817303180695, -0.013489124365150928, -0.005326492711901665, 0.008648128248751163, 0.010219880379736423]</span><br></pre></td></tr></table></figure>
+
+<p>可以通过 np.dot 方法计算两个向量间的关联性，数值越高表示关联性越近。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(np.dot(embedding1, embedding2))</span><br><span class="line"># 0.8823086919469535</span><br></pre></td></tr></table></figure>
+
+<p>可以用这种技术来做相关性推荐，比如YouTube的视频推荐、Twitter的timeline、Spotify的歌曲推荐。</p>
+<p>也就是：内容降维向量、计算向量相关性、推荐高相关性数据。</p>
+<p>然而也可以尝试用来做聊天机器人（因为如果用微调训练模型，训练一次成本也不低，最后有可能训练出来的新模型不尽人意还要再次调整数据进行训练），思路：用户提出问题 - 搜索相似向量 - 提取向量对应文本 - 让GPT润色 - 得到结果。</p>
+<img src="/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/WX20230616-170900@2x.png" width="80%/">
+
+<p>当接收到用户问题，就把问题转换成向量，然后在向量数据库中寻找相似值，找到后，再找到对应的数据，然后取出来请求GPT API让润色，返回润色结果给用户。</p>
+<p>例如这个项目，就是一个很好的例子：<a href="https://github.com/GanymedeNil/document.ai" target="_blank" rel="noopener">https://github.com/GanymedeNil/document.ai</a></p>
+<p>但注意，数据源需要是文本，例如文章那种数据。如果是数字比较多的，例如XX编号的那种常规业务数据，不太容易精准查询到。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -901,76 +991,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Marchccc">
-      <meta itemprop="description" content="编程技术交流">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marchccc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/" class="post-title-link" itemprop="url">树莓派安装Windows10</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-11-23 11:00:46 / 修改时间：11:06:49" itemprop="dateCreated datePublished" datetime="2022-11-23T11:00:46+08:00">2022-11-23</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/" itemprop="url" rel="index"><span itemprop="name">树莓派</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在uupdump.net下载Windows镜像,用worproject软件写入镜像到存储卡。</p>
-<p>参考:<br><a href="https://www.worproject.com/" target="_blank" rel="noopener">https://www.worproject.com/</a><br><a href="https://uupdump.net/?lang=zh-cn&amp;dark=1" target="_blank" rel="noopener">https://uupdump.net/?lang=zh-cn&amp;dark=1</a><br><a href="https://www.bilibili.com/video/BV1fX4y137GQ" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1fX4y137GQ</a><br><a href="https://www.youtube.com/watch?v=UqbKgtxuyao" target="_blank" rel="noopener">https://www.youtube.com/watch?v=UqbKgtxuyao</a></p>
-<p>调整UEFI启动顺序，避免检查ipv4连接等动作，耗费等待时间。<br>启动显示Logo后：Boot Maintenance Manager→Boot Options→Change Boot Order<br>将UEFI设为第一启动项<br>参考资料:<br><a href="https://blog.csdn.net/benandpao/article/details/123927373" target="_blank" rel="noopener">https://blog.csdn.net/benandpao/article/details/123927373</a><br><a href="https://forums.developer.nvidia.com/t/how-to-disable-network-bootup-scan-from-uefi-on-jetpack5-0-2/227034/7" target="_blank" rel="noopener">https://forums.developer.nvidia.com/t/how-to-disable-network-bootup-scan-from-uefi-on-jetpack5-0-2/227034/7</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1041,18 +1061,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

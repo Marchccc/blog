@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-06-01T03:01:14.553Z</updated>
+  <updated>2023-06-20T02:31:04.377Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>embedding学习</title>
+    <link href="https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-16T07:32:46.000Z</published>
+    <updated>2023-06-20T02:31:04.377Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;embedding 是一种把文本转换为更低维的数据（向量）的方法。&lt;/p&gt;
+&lt;p&gt;我在 azure 新建了一个 embedding 模型，这里尝试调用获取一个词的向量数据：&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://marchccc.top/categories/AI/"/>
+    
+    
+      <category term="AI" scheme="https://marchccc.top/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel批量生成sitemap</title>
@@ -469,31 +498,6 @@
     
     
       <category term="react" scheme="https://marchccc.top/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021阅读书单</title>
-    <link href="https://marchccc.top/2021/02/25/2021-book/"/>
-    <id>https://marchccc.top/2021/02/25/2021-book/</id>
-    <published>2021-02-25T02:45:28.000Z</published>
-    <updated>2021-03-21T11:08:18.087Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;为人还是很生硬，希望在2021读一些社交技巧、感情更充沛，自我觉醒。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="阅读" scheme="https://marchccc.top/categories/%E9%98%85%E8%AF%BB/"/>
-    
-    
-      <category term="计划" scheme="https://marchccc.top/tags/%E8%AE%A1%E5%88%92/"/>
-    
-      <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
