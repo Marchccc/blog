@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-06-20T02:32:45.901Z</updated>
+  <updated>2023-06-27T08:42:37.054Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MQTT 生产端电子秤与消费端laravel集成</title>
+    <link href="https://marchccc.top/2023/06/27/MQTT-%E7%94%9F%E4%BA%A7%E7%AB%AF%E7%94%B5%E5%AD%90%E7%A7%A4%E4%B8%8E%E6%B6%88%E8%B4%B9%E7%AB%AFlaravel%E9%9B%86%E6%88%90/"/>
+    <id>https://marchccc.top/2023/06/27/MQTT-%E7%94%9F%E4%BA%A7%E7%AB%AF%E7%94%B5%E5%AD%90%E7%A7%A4%E4%B8%8E%E6%B6%88%E8%B4%B9%E7%AB%AFlaravel%E9%9B%86%E6%88%90/</id>
+    <published>2023-06-27T07:50:47.000Z</published>
+    <updated>2023-06-27T08:42:37.054Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;利用MQTT协议，实现物联网数据通讯。&lt;/p&gt;
+&lt;p&gt;MQTT服务器软件选择RabbitMQ。&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>embedding学习</title>
@@ -469,27 +487,6 @@
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
     
       <category term="ElasticSearch" scheme="https://marchccc.top/tags/ElasticSearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>react学习笔记</title>
-    <link href="https://marchccc.top/2021/03/12/react/"/>
-    <id>https://marchccc.top/2021/03/12/react/</id>
-    <published>2021-03-12T01:58:46.000Z</published>
-    <updated>2021-04-19T06:14:20.978Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;React：一个javascript库，DOM的一个抽象层&lt;br&gt;JSX：React的语法糖&lt;br&gt;react bootstrap：react版的bootstrap&lt;br&gt;formik：Form辅助库，Helper&lt;br&gt;redux：组件间状态变化时的处理中心&lt;br&gt;route：处理路由&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="react" scheme="https://marchccc.top/categories/react/"/>
-    
-    
-      <category term="react" scheme="https://marchccc.top/tags/react/"/>
     
   </entry>
   
