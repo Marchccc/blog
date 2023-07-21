@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-06-27T08:42:37.054Z</updated>
+  <updated>2023-07-21T02:43:40.398Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>socks5代理协议服务端搭建</title>
+    <link href="https://marchccc.top/2023/07/17/socks5/"/>
+    <id>https://marchccc.top/2023/07/17/socks5/</id>
+    <published>2023-07-17T07:33:23.000Z</published>
+    <updated>2023-07-21T02:43:40.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;所用项目：&lt;a href=&quot;https://github.com/Lozy/danted/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="socks5" scheme="https://marchccc.top/categories/socks5/"/>
+    
+    
+      <category term="socks5" scheme="https://marchccc.top/tags/socks5/"/>
+    
+  </entry>
   
   <entry>
     <title>MQTT 生产端电子秤与消费端laravel集成</title>
@@ -464,29 +491,6 @@
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
     
       <category term="composer" scheme="https://marchccc.top/tags/composer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>laravel&amp;es</title>
-    <link href="https://marchccc.top/2021/03/21/laravel-es/"/>
-    <id>https://marchccc.top/2021/03/21/laravel-es/</id>
-    <published>2021-03-21T10:01:02.000Z</published>
-    <updated>2021-05-12T02:28:23.699Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于最近需求有要用到ES，所以重新熟悉一下PHP和ES之间的调用。&lt;br&gt;PHP框架：laravel 7.29&lt;br&gt;ES：7.11.2&lt;br&gt;Kibana：7.11.2&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-      <category term="ElasticSearch" scheme="https://marchccc.top/tags/ElasticSearch/"/>
     
   </entry>
   
