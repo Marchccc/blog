@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-07-21T02:43:40.398Z</updated>
+  <updated>2023-07-30T13:48:49.890Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓电视安装KODI</title>
+    <link href="https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/"/>
+    <id>https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/</id>
+    <published>2023-07-30T13:07:42.000Z</published>
+    <updated>2023-07-30T13:48:49.890Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;文件传输到电视方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;电视安装【小白文件管理器】，使用其中的【多屏互动-快速传输】，来实现电脑传送文件到电视。&lt;/li&gt;
+&lt;li&gt;如果没有【小白文件管理器】，如果有【悟空遥控器】，可以安装【悟空遥控器】后在该软件应用市场安装【小白文件管理器】&lt;/l
+        
+      
+    
+    </summary>
+    
+    
+      <category term="KODI" scheme="https://marchccc.top/categories/KODI/"/>
+    
+    
+      <category term="KODI" scheme="https://marchccc.top/tags/KODI/"/>
+    
+  </entry>
   
   <entry>
     <title>socks5代理协议服务端搭建</title>
@@ -462,35 +492,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>composer2</title>
-    <link href="https://marchccc.top/2021/05/24/composer2/"/>
-    <id>https://marchccc.top/2021/05/24/composer2/</id>
-    <published>2021-05-24T07:25:20.000Z</published>
-    <updated>2023-04-14T08:28:08.614Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;迁移到composer2版本：composer self-update –2&lt;br&gt;回到composer1版本：composer self-update
-        
-      
-    
-    </summary>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-      <category term="composer" scheme="https://marchccc.top/tags/composer/"/>
     
   </entry>
   
