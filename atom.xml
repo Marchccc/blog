@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-07-30T13:48:49.890Z</updated>
+  <updated>2023-09-07T08:15:16.310Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>create-react-app使用CDN引入库</title>
+    <link href="https://marchccc.top/2023/09/07/create-react-app%E4%BD%BF%E7%94%A8CDN%E5%BC%95%E5%85%A5%E5%BA%93/"/>
+    <id>https://marchccc.top/2023/09/07/create-react-app%E4%BD%BF%E7%94%A8CDN%E5%BC%95%E5%85%A5%E5%BA%93/</id>
+    <published>2023-09-07T08:08:05.000Z</published>
+    <updated>2023-09-07T08:15:16.310Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在 package.json 文件删除antd依赖。&lt;/p&gt;
+&lt;p&gt;在 &lt;a href=&quot;https://www.jsdelivr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jsdelivr.com/&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://marchccc.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="React" scheme="https://marchccc.top/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
     <title>安卓电视安装KODI</title>
     <link href="https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/"/>
     <id>https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/</id>
     <published>2023-07-30T13:07:42.000Z</published>
-    <updated>2023-07-30T13:48:49.890Z</updated>
+    <updated>2023-09-07T08:26:09.767Z</updated>
     
     <summary type="html">
     
@@ -39,7 +67,7 @@
     </summary>
     
     
-      <category term="KODI" scheme="https://marchccc.top/categories/KODI/"/>
+      <category term="娱乐" scheme="https://marchccc.top/categories/%E5%A8%B1%E4%B9%90/"/>
     
     
       <category term="KODI" scheme="https://marchccc.top/tags/KODI/"/>
@@ -51,7 +79,7 @@
     <link href="https://marchccc.top/2023/07/17/socks5/"/>
     <id>https://marchccc.top/2023/07/17/socks5/</id>
     <published>2023-07-17T07:33:23.000Z</published>
-    <updated>2023-07-21T02:43:40.398Z</updated>
+    <updated>2023-09-07T08:29:15.394Z</updated>
     
     <summary type="html">
     
@@ -66,7 +94,7 @@
     </summary>
     
     
-      <category term="socks5" scheme="https://marchccc.top/categories/socks5/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="socks5" scheme="https://marchccc.top/tags/socks5/"/>
@@ -96,7 +124,7 @@
     <link href="https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/"/>
     <id>https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/</id>
     <published>2023-06-16T07:32:46.000Z</published>
-    <updated>2023-06-20T02:32:45.901Z</updated>
+    <updated>2023-09-07T08:09:51.154Z</updated>
     
     <summary type="html">
     
@@ -105,7 +133,7 @@
     </summary>
     
     
-      <category term="AI" scheme="https://marchccc.top/categories/AI/"/>
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="AI" scheme="https://marchccc.top/tags/AI/"/>
@@ -117,7 +145,7 @@
     <link href="https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/"/>
     <id>https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/</id>
     <published>2023-06-01T02:56:05.000Z</published>
-    <updated>2023-06-01T03:01:14.553Z</updated>
+    <updated>2023-09-07T08:27:57.655Z</updated>
     
     <summary type="html">
     
@@ -127,7 +155,7 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
@@ -141,7 +169,7 @@
     <link href="https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/"/>
     <id>https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/</id>
     <published>2023-05-22T06:27:41.000Z</published>
-    <updated>2023-05-22T07:54:16.777Z</updated>
+    <updated>2023-09-07T08:09:44.547Z</updated>
     
     <summary type="html">
     
@@ -151,7 +179,7 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
@@ -163,7 +191,7 @@
     <link href="https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/"/>
     <id>https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/</id>
     <published>2023-05-22T06:15:25.000Z</published>
-    <updated>2023-05-22T06:26:51.547Z</updated>
+    <updated>2023-09-07T08:09:11.688Z</updated>
     
     <summary type="html">
     
@@ -178,7 +206,7 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
@@ -190,7 +218,7 @@
     <link href="https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/"/>
     <id>https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/</id>
     <published>2023-05-08T03:55:34.000Z</published>
-    <updated>2023-05-09T04:51:31.512Z</updated>
+    <updated>2023-09-07T08:29:35.512Z</updated>
     
     <summary type="html">
     
@@ -199,7 +227,7 @@
     </summary>
     
     
-      <category term="proxy" scheme="https://marchccc.top/categories/proxy/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
@@ -240,7 +268,7 @@
     <link href="https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
     <id>https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</id>
     <published>2023-04-20T08:18:49.000Z</published>
-    <updated>2023-05-05T07:33:21.254Z</updated>
+    <updated>2023-09-07T08:10:06.198Z</updated>
     
     <summary type="html">
     
@@ -253,7 +281,7 @@
     </summary>
     
     
-      <category term="Flarum" scheme="https://marchccc.top/categories/Flarum/"/>
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="Flarum" scheme="https://marchccc.top/tags/Flarum/"/>
@@ -267,7 +295,7 @@
     <link href="https://marchccc.top/2023/04/14/Gitlab-CE-webhook/"/>
     <id>https://marchccc.top/2023/04/14/Gitlab-CE-webhook/</id>
     <published>2023-04-14T08:18:29.000Z</published>
-    <updated>2023-04-19T03:14:39.553Z</updated>
+    <updated>2023-09-07T08:27:14.859Z</updated>
     
     <summary type="html">
     
@@ -277,7 +305,7 @@
     </summary>
     
     
-      <category term="Gitlab" scheme="https://marchccc.top/categories/Gitlab/"/>
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
@@ -291,7 +319,7 @@
     <link href="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/"/>
     <id>https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/</id>
     <published>2023-04-04T01:50:14.000Z</published>
-    <updated>2023-04-17T05:42:23.054Z</updated>
+    <updated>2023-09-07T08:27:09.211Z</updated>
     
     <summary type="html">
     
@@ -301,7 +329,7 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://marchccc.top/categories/Linux/"/>
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
@@ -315,7 +343,7 @@
     <link href="https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/"/>
     <id>https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/</id>
     <published>2023-04-01T09:11:20.000Z</published>
-    <updated>2023-04-14T08:16:02.676Z</updated>
+    <updated>2023-09-07T08:09:32.299Z</updated>
     
     <summary type="html">
     
@@ -325,7 +353,7 @@
     </summary>
     
     
-      <category term="Linux" scheme="https://marchccc.top/categories/Linux/"/>
+      <category term="服务器" scheme="https://marchccc.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
       <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
@@ -367,7 +395,7 @@
     <link href="https://marchccc.top/2022/05/20/solana-nft/"/>
     <id>https://marchccc.top/2022/05/20/solana-nft/</id>
     <published>2022-05-20T03:32:26.000Z</published>
-    <updated>2022-05-20T08:53:46.323Z</updated>
+    <updated>2023-09-07T08:29:22.280Z</updated>
     
     <summary type="html">
     
@@ -375,8 +403,6 @@
     
     </summary>
     
-    
-      <category term="solana" scheme="https://marchccc.top/categories/solana/"/>
     
     
       <category term="solana" scheme="https://marchccc.top/tags/solana/"/>
@@ -390,7 +416,7 @@
     <link href="https://marchccc.top/2021/06/25/css3arrow/"/>
     <id>https://marchccc.top/2021/06/25/css3arrow/</id>
     <published>2021-06-25T03:18:24.000Z</published>
-    <updated>2021-06-25T03:21:21.494Z</updated>
+    <updated>2023-09-07T08:09:18.987Z</updated>
     
     <summary type="html">
     
@@ -400,7 +426,7 @@
     </summary>
     
     
-      <category term="css" scheme="https://marchccc.top/categories/css/"/>
+      <category term="前端" scheme="https://marchccc.top/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
       <category term="css" scheme="https://marchccc.top/tags/css/"/>
@@ -412,7 +438,7 @@
     <link href="https://marchccc.top/2021/06/13/laravel-orm/"/>
     <id>https://marchccc.top/2021/06/13/laravel-orm/</id>
     <published>2021-06-13T13:31:16.000Z</published>
-    <updated>2021-06-13T13:36:15.429Z</updated>
+    <updated>2023-09-07T08:27:48.878Z</updated>
     
     <summary type="html">
     
@@ -423,7 +449,7 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
@@ -437,7 +463,7 @@
     <link href="https://marchccc.top/2021/06/03/es-dsl/"/>
     <id>https://marchccc.top/2021/06/03/es-dsl/</id>
     <published>2021-06-03T03:01:08.000Z</published>
-    <updated>2021-06-03T03:16:25.923Z</updated>
+    <updated>2023-09-07T08:09:59.469Z</updated>
     
     <summary type="html">
     
@@ -448,7 +474,7 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
@@ -462,7 +488,7 @@
     <link href="https://marchccc.top/2021/06/02/laravel8-throttle/"/>
     <id>https://marchccc.top/2021/06/02/laravel8-throttle/</id>
     <published>2021-06-02T07:07:13.000Z</published>
-    <updated>2021-06-02T07:15:45.042Z</updated>
+    <updated>2023-09-07T08:27:52.771Z</updated>
     
     <summary type="html">
     
@@ -471,27 +497,10 @@
     </summary>
     
     
-      <category term="PHP" scheme="https://marchccc.top/categories/PHP/"/>
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
       <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP安装mcrypt扩展</title>
-    <link href="https://marchccc.top/2021/05/25/php-install-plug/"/>
-    <id>https://marchccc.top/2021/05/25/php-install-plug/</id>
-    <published>2021-05-25T04:50:11.000Z</published>
-    <updated>2021-05-25T04:53:28.367Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;虽然已经很熟悉了，但还是记录一下。&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
