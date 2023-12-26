@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2023-11-16T13:08:40.759Z</updated>
+  <updated>2023-12-26T07:45:05.914Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Translatepress Custom Language Switcher</title>
+    <link href="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/"/>
+    <id>https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/</id>
+    <published>2023-12-26T07:32:16.000Z</published>
+    <updated>2023-12-26T07:45:05.914Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;自定义 Wordpress Translatepress 语言切换菜单。&lt;/p&gt;
+&lt;p&gt;主题模板用的:&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="Wordpress" scheme="https://marchccc.top/tags/Wordpress/"/>
+    
+  </entry>
   
   <entry>
     <title>误删mysql一条数据后的恢复</title>
@@ -486,31 +514,6 @@
     
     
       <category term="css" scheme="https://marchccc.top/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>laravel orm代码片段</title>
-    <link href="https://marchccc.top/2021/06/13/laravel-orm/"/>
-    <id>https://marchccc.top/2021/06/13/laravel-orm/</id>
-    <published>2021-06-13T13:31:16.000Z</published>
-    <updated>2023-09-07T08:27:48.878Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;with、when、where多条件闭包、orwhereHas闭包&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
-    
-      <category term="ORM" scheme="https://marchccc.top/tags/ORM/"/>
     
   </entry>
   

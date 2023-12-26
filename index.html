@@ -179,6 +179,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/12/26/translatepress-Custom-Language-Switcher/" class="post-title-link" itemprop="url">Translatepress Custom Language Switcher</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-12-26 15:32:16 / 修改时间：15:45:05" itemprop="dateCreated datePublished" datetime="2023-12-26T15:32:16+08:00">2023-12-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>自定义 Wordpress Translatepress 语言切换菜单。</p>
+<p>主题模板用的:<br><a href="https://themeforest.net/item/optime-logistics-transportation-wordpress-theme/24380838" target="_blank" rel="noopener">https://themeforest.net/item/optime-logistics-transportation-wordpress-theme/24380838</a><br>由于官方只兼容了WPML和自己的语言切换器，未兼容 Translatepress ，所以需要自己加上。</p>
+<p>编辑主题文件，找到function.php 加入:<br>ref: <a href="https://translatepress.com/docs/developers/custom-language-switcher/" target="_blank" rel="noopener">https://translatepress.com/docs/developers/custom-language-switcher/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function trpc_custom_language_switcher()</span><br><span class="line">&#123;</span><br><span class="line">    if (apply_filters(&#39;trp_allow_tp_to_run&#39;, true)) &#123;</span><br><span class="line">        $html &#x3D; &#39;&lt;div class&#x3D;&quot;language-dropdow&quot;&gt;&#39;;</span><br><span class="line">        $languages &#x3D; trp_custom_language_switcher();</span><br><span class="line">        $html .&#x3D; &quot;&lt;ul data-no-translation&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;li class&#x3D;&quot;lang-item&quot;&gt;&#39;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;a class&#x3D;&quot;lang-sel&quot;&gt;&#39; . get_locale() . &quot;&lt;&#x2F;a&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;ul class&#x3D;&quot;lang-submenu&quot;&gt;&#39;;</span><br><span class="line">        foreach ($languages as $name &#x3D;&gt; $item) &#123;</span><br><span class="line">            $html .&#x3D; &#39;&lt;li class&#x3D;&quot;lang-item&quot;&gt;&#39;;</span><br><span class="line">            $html .&#x3D; &quot;&lt;a href&#x3D;&#39;&#123;$item[&#39;current_page_url&#39;]&#125;&#39;&gt;&quot;;</span><br><span class="line">            $html .&#x3D; &quot;&lt;span&gt;&#123;$item[&#39;language_code&#39;]&#125;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;ul&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;li&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;ul&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;div&gt;&quot;;</span><br><span class="line">        return $html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开 template-parts/header-layout.php 在判断语言菜单处加入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;?php &#125; elseif ( class_exists(&#39;TRP_Translate_Press&#39;) ) &#123; ?&gt;</span><br><span class="line">	&lt;?php echo trpc_custom_language_switcher(); ?&gt;   </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/11/16/%E8%AF%AF%E5%88%A0mysql%E4%B8%80%E6%9D%A1%E6%95%B0%E6%8D%AE%E5%90%8E%E7%9A%84%E6%81%A2%E5%A4%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -867,93 +943,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Marchccc">
-      <meta itemprop="description" content="编程技术交流">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marchccc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/" class="post-title-link" itemprop="url">dompdf 使用字体</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-22 14:15:25" itemprop="dateCreated datePublished" datetime="2023-05-22T14:15:25+08:00">2023-05-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-07 16:09:11" itemprop="dateModified" datetime="2023-09-07T16:09:11+08:00">2023-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>例如，要在 index.blade.php 文件中使用 OPPOSans-R 和 Arial-Regular 两种字体。</p>
-<p>把 OPPOSans-R.ttf 和 Arial-Regular.ttf 放到项目根目录的fonts目录内，执行：<br>php ./load_font.php ‘OPPOSans-R’ fonts/OPPOSans-R.ttf</p>
-<p>然后打开 storage/fonts/dompdf_font_family_cache.php 把 OPPOSans-R 部分数组复制备份。</p>
-<p>再安装 Arial-Regular 字体： </p>
-<p>php ./load_font.php ‘Arial-Regular’ fonts/Arial-Regular.ttf </p>
-<p>打开 storage/fonts/dompdf_font_family_cache.php 发现 OPPOSans-R 部分内容丢失，只需要把之前复制的备份粘贴过来，就可以了。</p>
-<p>在 index.blade.php 文件内这样使用</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1024,7 +1013,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1035,7 +1024,7 @@
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-count">52</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

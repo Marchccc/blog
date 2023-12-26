@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"marchccc.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "gjl00v3rti");
+</script>
+  <meta name="description" content="自定义 Wordpress Translatepress 语言切换菜单。 主题模板用的:https:&#x2F;&#x2F;themeforest.net&#x2F;item&#x2F;optime-logistics-transportation-wordpress-theme&#x2F;24380838由于官方只兼容了WPML和自己的语言切换器，未兼容 Translatepress ，所以需要自己加上。 编辑主题文件，找到function.p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Translatepress Custom Language Switcher">
+<meta property="og:url" content="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/index.html">
+<meta property="og:site_name" content="Marchccc">
+<meta property="og:description" content="自定义 Wordpress Translatepress 语言切换菜单。 主题模板用的:https:&#x2F;&#x2F;themeforest.net&#x2F;item&#x2F;optime-logistics-transportation-wordpress-theme&#x2F;24380838由于官方只兼容了WPML和自己的语言切换器，未兼容 Translatepress ，所以需要自己加上。 编辑主题文件，找到function.p">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-26T07:32:16.000Z">
+<meta property="article:modified_time" content="2023-12-26T07:45:05.914Z">
+<meta property="article:author" content="Marchccc">
+<meta property="article:tag" content="Wordpress">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Translatepress Custom Language Switcher | Marchccc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Marchccc" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Marchccc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">编程技术交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-网站状态">
+
+    <a href="https://stats.uptimerobot.com/x2EnvUJ20j" rel="noopener" target="_blank"><i class=" fa-fw"></i>网站状态</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Translatepress Custom Language Switcher
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-12-26 15:32:16 / 修改时间：15:45:05" itemprop="dateCreated datePublished" datetime="2023-12-26T15:32:16+08:00">2023-12-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>自定义 Wordpress Translatepress 语言切换菜单。</p>
+<p>主题模板用的:<br><a href="https://themeforest.net/item/optime-logistics-transportation-wordpress-theme/24380838" target="_blank" rel="noopener">https://themeforest.net/item/optime-logistics-transportation-wordpress-theme/24380838</a><br>由于官方只兼容了WPML和自己的语言切换器，未兼容 Translatepress ，所以需要自己加上。</p>
+<p>编辑主题文件，找到function.php 加入:<br>ref: <a href="https://translatepress.com/docs/developers/custom-language-switcher/" target="_blank" rel="noopener">https://translatepress.com/docs/developers/custom-language-switcher/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function trpc_custom_language_switcher()</span><br><span class="line">&#123;</span><br><span class="line">    if (apply_filters(&#39;trp_allow_tp_to_run&#39;, true)) &#123;</span><br><span class="line">        $html &#x3D; &#39;&lt;div class&#x3D;&quot;language-dropdow&quot;&gt;&#39;;</span><br><span class="line">        $languages &#x3D; trp_custom_language_switcher();</span><br><span class="line">        $html .&#x3D; &quot;&lt;ul data-no-translation&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;li class&#x3D;&quot;lang-item&quot;&gt;&#39;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;a class&#x3D;&quot;lang-sel&quot;&gt;&#39; . get_locale() . &quot;&lt;&#x2F;a&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &#39;&lt;ul class&#x3D;&quot;lang-submenu&quot;&gt;&#39;;</span><br><span class="line">        foreach ($languages as $name &#x3D;&gt; $item) &#123;</span><br><span class="line">            $html .&#x3D; &#39;&lt;li class&#x3D;&quot;lang-item&quot;&gt;&#39;;</span><br><span class="line">            $html .&#x3D; &quot;&lt;a href&#x3D;&#39;&#123;$item[&#39;current_page_url&#39;]&#125;&#39;&gt;&quot;;</span><br><span class="line">            $html .&#x3D; &quot;&lt;span&gt;&#123;$item[&#39;language_code&#39;]&#125;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;ul&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;li&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;ul&gt;&quot;;</span><br><span class="line">        $html .&#x3D; &quot;&lt;&#x2F;div&gt;&quot;;</span><br><span class="line">        return $html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>打开 template-parts/header-layout.php 在判断语言菜单处加入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&lt;?php &#125; elseif ( class_exists(&#39;TRP_Translate_Press&#39;) ) &#123; ?&gt;</span><br><span class="line">	&lt;?php echo trpc_custom_language_switcher(); ?&gt;   </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Wordpress/" rel="tag"># Wordpress</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/16/%E8%AF%AF%E5%88%A0mysql%E4%B8%80%E6%9D%A1%E6%95%B0%E6%8D%AE%E5%90%8E%E7%9A%84%E6%81%A2%E5%A4%8D/" rel="prev" title="误删mysql一条数据后的恢复">
+      <i class="fa fa-chevron-left"></i> 误删mysql一条数据后的恢复
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Marchccc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Marchccc</p>
+  <div class="site-description" itemprop="description">编程技术交流</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">52</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Marchccc" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Marchccc" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/zez" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;zez" rel="noopener" target="_blank"><i class="gitee fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:0x00gc@gmail.com" title="E-Mail → mailto:0x00gc@gmail.com" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/rockjun3" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;rockjun3" rel="noopener" target="_blank"><i class="twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.meowdan.com/" title="https:&#x2F;&#x2F;blog.meowdan.com&#x2F;" rel="noopener" target="_blank">超时空蛋蛋</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://annatarhe.github.io/" title="https:&#x2F;&#x2F;annatarhe.github.io&#x2F;" rel="noopener" target="_blank">AnnatarHe</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.imalan.cn/" title="https:&#x2F;&#x2F;blog.imalan.cn&#x2F;" rel="noopener" target="_blank">失眠海峡</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="http://beian.miit.gov.cn/" rel="noopener" target="_blank">冀ICP备2021005125号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Marchccc</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
