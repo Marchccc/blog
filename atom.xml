@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-01-08T07:13:15.711Z</updated>
+  <updated>2024-01-17T03:59:25.514Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx域名转发内网端口配置</title>
+    <link href="https://marchccc.top/2024/01/17/nginx%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE/"/>
+    <id>https://marchccc.top/2024/01/17/nginx%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE/</id>
+    <published>2024-01-17T03:51:49.000Z</published>
+    <updated>2024-01-17T03:59:25.514Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;例如转发到服务器3002端口，域名Nginx配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="nginx" scheme="https://marchccc.top/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx限定IP段访问</title>
@@ -498,27 +526,6 @@
     
     
       <category term="树莓派" scheme="https://marchccc.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>solana make nft</title>
-    <link href="https://marchccc.top/2022/05/20/solana-nft/"/>
-    <id>https://marchccc.top/2022/05/20/solana-nft/</id>
-    <published>2022-05-20T03:32:26.000Z</published>
-    <updated>2023-09-07T08:29:22.280Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;SPL是solana的代币协议，可以利用solana提供的 spl-token 在cli中创建代币。 &lt;/p&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="solana" scheme="https://marchccc.top/tags/solana/"/>
-    
-      <category term="NFT" scheme="https://marchccc.top/tags/NFT/"/>
     
   </entry>
   
