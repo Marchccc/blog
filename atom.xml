@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-01-17T03:59:25.514Z</updated>
+  <updated>2024-04-25T09:02:23.602Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本地电子邮件测试工具-MailHog</title>
+    <link href="https://marchccc.top/2024/04/25/%E6%9C%AC%E5%9C%B0%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-MailHog/"/>
+    <id>https://marchccc.top/2024/04/25/%E6%9C%AC%E5%9C%B0%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-MailHog/</id>
+    <published>2024-04-25T08:12:47.000Z</published>
+    <updated>2024-04-25T09:02:23.602Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过MailHog，可以在浏览器中查看本机发的邮件内容，而无需发送到外网。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mailhog/MailHog&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/mailhog/MailHog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在 macOS 环境下，下载文件后:&lt;br&gt;添加可执行权限:chmod +x MailHog_darwin_amd64&lt;br&gt;运行:./MailHog_darwin_amd64&lt;br&gt;浏览器打开查看邮件:&lt;a href=&quot;http://0.0.0.0:8025/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://0.0.0.0:8025/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Laravel 发送邮件到 MailHog 使用例子：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="邮件" scheme="https://marchccc.top/tags/%E9%82%AE%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>nginx域名转发内网端口配置</title>
@@ -498,34 +522,6 @@
       <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
     
       <category term="linux" scheme="https://marchccc.top/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派安装Windows10</title>
-    <link href="https://marchccc.top/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/"/>
-    <id>https://marchccc.top/2022/11/23/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%AE%89%E8%A3%85Windows10/</id>
-    <published>2022-11-23T03:00:46.000Z</published>
-    <updated>2022-11-23T03:06:49.890Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在uupdump.net下载Windows镜像,用worproject软件写入镜像到存储卡。&lt;/p&gt;
-&lt;p&gt;参考:&lt;br&gt;&lt;a href=&quot;https://www.worproject.com/&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="树莓派" scheme="https://marchccc.top/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-    
-      <category term="树莓派" scheme="https://marchccc.top/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
   </entry>
   
