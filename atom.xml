@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-04-25T09:02:23.602Z</updated>
+  <updated>2024-08-14T07:20:19.958Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,131 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>部署 QQ AI聊天机器人</title>
+    <link href="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/"/>
+    <id>https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/</id>
+    <published>2024-08-13T09:37:39.000Z</published>
+    <updated>2024-08-14T07:20:19.958Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;目的：部署一个 QQ AI聊天机器人。&lt;/p&gt;
+&lt;p&gt;用到两个开源项目，NapCatQQ 和 Koishi。&lt;/p&gt;
+&lt;p&gt;NapCatQQ 实现了QQ登录，能够通过程序收发QQ消息，提供了onebot协议支持。&lt;br&gt;Koishi 是个机器人框架，具备丰富插件系统。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="ChatGPT" scheme="https://marchccc.top/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ClashX.Meta配置hy2线路</title>
+    <link href="https://marchccc.top/2024/08/12/ClashX-Meta%E9%85%8D%E7%BD%AEhy2%E7%BA%BF%E8%B7%AF/"/>
+    <id>https://marchccc.top/2024/08/12/ClashX-Meta%E9%85%8D%E7%BD%AEhy2%E7%BA%BF%E8%B7%AF/</id>
+    <published>2024-08-12T10:23:39.000Z</published>
+    <updated>2024-08-12T10:24:32.565Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;下载 &lt;a href=&quot;https://github.com/MetaCubeX/ClashX.Meta&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>oracle linux安装hy2</title>
+    <link href="https://marchccc.top/2024/08/10/oracle-linux%E5%AE%89%E8%A3%85hy2/"/>
+    <id>https://marchccc.top/2024/08/10/oracle-linux%E5%AE%89%E8%A3%85hy2/</id>
+    <published>2024-08-10T10:13:28.000Z</published>
+    <updated>2024-08-14T07:06:38.124Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;切换到root，关闭防火墙，关闭安全模式。&lt;/p&gt;
+&lt;p&gt;sudo -i&lt;br&gt;sudo service firewalld stop&lt;/p&gt;
+&lt;p&gt;vim
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm、yarn更换源</title>
+    <link href="https://marchccc.top/2024/08/06/npm%E3%80%81yarn%E6%9B%B4%E6%8D%A2%E6%BA%90/"/>
+    <id>https://marchccc.top/2024/08/06/npm%E3%80%81yarn%E6%9B%B4%E6%8D%A2%E6%BA%90/</id>
+    <published>2024-08-06T05:03:12.000Z</published>
+    <updated>2024-08-14T07:07:09.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;npm config set registry &lt;a href=&quot;https://registry.npmmirror.com&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://marchccc.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2024 阅读书单</title>
+    <link href="https://marchccc.top/2024/05/07/books-i-read-in-2024/"/>
+    <id>https://marchccc.top/2024/05/07/books-i-read-in-2024/</id>
+    <published>2024-05-07T06:49:01.000Z</published>
+    <updated>2024-05-21T08:54:33.196Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;持久的精力投入到工作和生活，发觉思维越来越空，这对健康的发展非常不利。&lt;br&gt;所以记录分享 2024 年读过的书，来时时提醒自己要继续阅读。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="阅读" scheme="https://marchccc.top/categories/%E9%98%85%E8%AF%BB/"/>
+    
+    
+      <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>本地电子邮件测试工具-MailHog</title>
@@ -394,134 +519,6 @@
     
     
       <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>haproxy配置TCP多目标流量转发</title>
-    <link href="https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/"/>
-    <id>https://marchccc.top/2023/05/03/haproxy%E9%85%8D%E7%BD%AETCP%E5%A4%9A%E7%9B%AE%E6%A0%87%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91/</id>
-    <published>2023-05-03T11:22:01.000Z</published>
-    <updated>2023-05-04T07:50:54.131Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;apt install haproxy&lt;/p&gt;
-&lt;p&gt;cat /lib/systemd/system/haproxy.service&lt;br&gt;得到配置文件位置：/etc/haproxy/haproxy.cfg&lt;/p&gt;
-&lt;p&gt;vim
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://marchccc.top/categories/Linux/"/>
-    
-    
-      <category term="haproxy" scheme="https://marchccc.top/tags/haproxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flarum扩展开发记录</title>
-    <link href="https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/"/>
-    <id>https://marchccc.top/2023/04/20/Flarum%E6%89%A9%E5%B1%95%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</id>
-    <published>2023-04-20T08:18:49.000Z</published>
-    <updated>2023-09-07T08:10:06.198Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;扩展要实现的功能：输入 ‘ / ‘ 时列出同 group 的用户以供@&lt;/p&gt;
-&lt;p&gt;基于 flarum/core ^1.7&lt;/p&gt;
-&lt;p&gt;最终实现：&lt;a href=&quot;https://github.com/Marchccc/flarum-ext-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/Marchccc/flarum-ext-mentions-group-users&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;讨论：&lt;a href=&quot;https://discuss.flarum.org/d/32768-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://discuss.flarum.org/d/32768-mentions-group-users&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;extiverse：&lt;a href=&quot;https://extiverse.com/extension/marchccc/flarum-ext-mentions-group-users&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://extiverse.com/extension/marchccc/flarum-ext-mentions-group-users&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Flarum" scheme="https://marchccc.top/tags/Flarum/"/>
-    
-      <category term="Composer" scheme="https://marchccc.top/tags/Composer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitlab CE Webhook</title>
-    <link href="https://marchccc.top/2023/04/14/Gitlab-CE-webhook/"/>
-    <id>https://marchccc.top/2023/04/14/Gitlab-CE-webhook/</id>
-    <published>2023-04-14T08:18:29.000Z</published>
-    <updated>2023-09-07T08:27:14.859Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;处理 Gitlab Issue 的事件，使用微信公众号的模板消息，提醒项目成员。&lt;/p&gt;
-&lt;p&gt;使用 Laravel 框架来接收 Gitlab 的事件，通过 gitlab 用户 email 和该用户的公众号 openid 的map，用公众号 push 模板消息 推送给对应的 openid&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitlab CE 自定义 CSS 样式</title>
-    <link href="https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/"/>
-    <id>https://marchccc.top/2023/04/04/Gitlab-CE-%E8%87%AA%E5%AE%9A%E4%B9%89-CSS-%E6%A0%B7%E5%BC%8F/</id>
-    <published>2023-04-04T01:50:14.000Z</published>
-    <updated>2023-09-07T08:27:09.211Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;通过 nginx 配置替换返回结果实现全局引入一个css文件，通过css样式来隐藏 Gitlab 一些不需要的功能。&lt;/p&gt;
-&lt;p&gt;具体操作：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
-    
-      <category term="css" scheme="https://marchccc.top/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Debian 安装 Gitlab CE</title>
-    <link href="https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/"/>
-    <id>https://marchccc.top/2023/04/01/debian%E5%AE%89%E8%A3%85gitlab-ce/</id>
-    <published>2023-04-01T09:11:20.000Z</published>
-    <updated>2023-09-07T08:09:32.299Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;搭建 Gitlab CE，利用其issue、任务指派、@群组成员等功能，尝试替代 Tower 。&lt;br&gt;搭建环境：Debian&lt;/p&gt;
-&lt;p&gt;具体操作：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="服务器" scheme="https://marchccc.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-    
-      <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
-    
-      <category term="linux" scheme="https://marchccc.top/tags/linux/"/>
     
   </entry>
   
