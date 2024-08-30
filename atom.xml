@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-08-27T09:02:44.418Z</updated>
+  <updated>2024-08-30T09:53:39.941Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Supervisor守护进程</title>
+    <link href="https://marchccc.top/2024/08/30/%E4%BD%BF%E7%94%A8Supervisor%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/"/>
+    <id>https://marchccc.top/2024/08/30/%E4%BD%BF%E7%94%A8Supervisor%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/</id>
+    <published>2024-08-30T09:14:55.000Z</published>
+    <updated>2024-08-30T09:53:39.941Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;queue:work进程老是因为各种原因停止，需要一个进程守护工具。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>部署 QQ AI聊天机器人</title>
@@ -498,27 +519,6 @@
     
     
       <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>squid服务端HTTP代理</title>
-    <link href="https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/"/>
-    <id>https://marchccc.top/2023/05/08/squid%E6%9C%8D%E5%8A%A1%E7%AB%AFHTTP%E4%BB%A3%E7%90%86/</id>
-    <published>2023-05-08T03:55:34.000Z</published>
-    <updated>2023-09-07T08:29:35.512Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;服务器有多个外网IP，客户端通过 IP1 连接 HTTP 代理，则服务器用 IP1 代理客户访问网络&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="proxy" scheme="https://marchccc.top/tags/proxy/"/>
     
   </entry>
   

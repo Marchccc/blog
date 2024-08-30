@@ -174,6 +174,89 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2021/06/03/es-dsl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/03/es-dsl/" class="post-title-link" itemprop="url">es多词模糊搜索</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-03 11:01:08" itemprop="dateCreated datePublished" datetime="2021-06-03T11:01:08+08:00">2021-06-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-07 16:09:59" itemprop="dateModified" datetime="2023-09-07T16:09:59+08:00">2023-09-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>and里放or，使用wildcard做keyword模糊匹配，示意：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">bool</span><br><span class="line">    &#x2F;&#x2F; and</span><br><span class="line">    must</span><br><span class="line">        &#x2F;&#x2F; 条件1</span><br><span class="line">        bool</span><br><span class="line">            &#x2F;&#x2F; or</span><br><span class="line">            should</span><br><span class="line">                &#x2F;&#x2F; 模糊匹配</span><br><span class="line">                ..wildcard</span><br><span class="line">        &#x2F;&#x2F; 条件2</span><br><span class="line">        bool</span><br><span class="line">            &#x2F;&#x2F; or</span><br><span class="line">            should</span><br><span class="line">                &#x2F;&#x2F; 模糊匹配</span><br><span class="line">                ..wildcard</span><br><span class="line">        &#x2F;&#x2F; 条件N</span><br><span class="line">        ..</span><br></pre></td></tr></table></figure>
+<p>代码：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/06/03/es-dsl/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://marchccc.top/2021/06/02/laravel8-throttle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -278,10 +361,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-05-25 12:50:11 / 修改时间：12:53:28" itemprop="dateCreated datePublished" datetime="2021-05-25T12:50:11+08:00">2021-05-25</time>
+              <time title="创建时间：2021-05-25 12:50:11" itemprop="dateCreated datePublished" datetime="2021-05-25T12:50:11+08:00">2021-05-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-08-30 17:16:01" itemprop="dateModified" datetime="2024-08-30T17:16:01+08:00">2024-08-30</time>
+              </span>
 
           
 
@@ -294,15 +383,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>虽然已经很熟悉了，但还是记录一下。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/25/php-install-plug/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jun@192 ~ % php -i|grep php.ini</span><br><span class="line">Configuration File (php.ini) Path &#x3D;&gt; &#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.3.24&#x2F;conf</span><br><span class="line">Loaded Configuration File &#x3D;&gt; &#x2F;Applications&#x2F;MAMP&#x2F;bin&#x2F;php&#x2F;php7.3.24&#x2F;conf&#x2F;php.ini</span><br></pre></td></tr></table></figure>
+<p>wget <a href="http://pecl.php.net/get/mcrypt-1.0.4.tgz" target="_blank" rel="noopener">http://pecl.php.net/get/mcrypt-1.0.4.tgz</a><br>解压并进入目录<br>/Applications/MAMP/bin/php/php7.3.24/bin/phpize<br>./configure –with-php-config=/Applications/MAMP/bin/php/php7.3.24/bin/php-config<br>make<br>make install<br>打开ini文件加入 extension=mcrypt.so</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">jun@192 ~ % php -i|grep mcrypt</span><br><span class="line">Registered Stream Filters &#x3D;&gt; zlib.*, bzip2.*, convert.iconv.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, mcrypt.*, mdecrypt.*</span><br><span class="line">mcrypt</span><br><span class="line">mcrypt support &#x3D;&gt; enabled</span><br><span class="line">mcrypt_filter support &#x3D;&gt; enabled</span><br><span class="line">mcrypt.algorithms_dir &#x3D;&gt; no value &#x3D;&gt; no value</span><br><span class="line">mcrypt.modes_dir &#x3D;&gt; no value &#x3D;&gt; no value</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -875,85 +958,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2020/12/24/Tezos/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Marchccc">
-      <meta itemprop="description" content="编程技术交流">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marchccc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/24/Tezos/" class="post-title-link" itemprop="url">Tezos</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-12-24 14:44:15 / 修改时间：17:00:34" itemprop="dateCreated datePublished" datetime="2020-12-24T14:44:15+08:00">2020-12-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url" rel="index"><span itemprop="name">区块链</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Tezos是一个基于PoS共识机制的区块链与智能合约平台，利益相关者可以就协议的修正案进行投票，用户可以在其上建立去中心化的应用程序（Dapps）。<br>它特点是支持智能合约，拥有自己创建的智能合约语言，首次提出了通过数学证明的代码自制交易和网络共识机制，以解决目前棘手的网络升级分叉问题。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/24/Tezos/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1020,7 +1028,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
