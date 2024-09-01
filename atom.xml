@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-08-30T09:53:39.941Z</updated>
+  <updated>2024-09-01T02:56:26.520Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cloudflare反代docker hub</title>
+    <link href="https://marchccc.top/2024/09/01/Cloudflare%E5%8F%8D%E4%BB%A3docker-hub/"/>
+    <id>https://marchccc.top/2024/09/01/Cloudflare%E5%8F%8D%E4%BB%A3docker-hub/</id>
+    <published>2024-09-01T02:31:08.000Z</published>
+    <updated>2024-09-01T02:56:26.520Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;控制台面板 -&amp;gt; 左侧 Workers 和 Pages  -&amp;gt;  创建应用程序  -&amp;gt; 创建 Worker -&amp;gt;  点击保存 -&amp;gt; 点击完成 -&amp;gt; 编辑代码&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Supervisor守护进程</title>
@@ -42,7 +63,7 @@
     <link href="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/"/>
     <id>https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/</id>
     <published>2024-08-13T09:37:39.000Z</published>
-    <updated>2024-08-27T09:02:44.418Z</updated>
+    <updated>2024-09-01T08:34:11.271Z</updated>
     
     <summary type="html">
     
@@ -484,33 +505,6 @@
     
       &lt;p&gt;在官方说明可以了解到，要通过 setPaper 来设置尺寸。&lt;br&gt;&lt;a href=&quot;https://github.com/dompdf/dompdf#quick-start&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/dompdf/dompdf#quick-start&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;但文档并没有指出如何设置指定宽高的PDF，那么看下 setPaper 这个方法的实现：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dompdf 使用字体</title>
-    <link href="https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/"/>
-    <id>https://marchccc.top/2023/05/22/dompdf-%E4%BD%BF%E7%94%A8%E5%AD%97%E4%BD%93/</id>
-    <published>2023-05-22T06:15:25.000Z</published>
-    <updated>2023-09-07T08:09:11.688Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;例如，要在 index.blade.php 文件中使用 OPPOSans-R 和 Arial-Regular 两种字体。&lt;/p&gt;
-&lt;p&gt;把 OPPOSans-R.ttf 和 Arial-Regular.ttf 放到项目根目录的fonts目录内，执行：&lt;br&gt;php ./load_font.php ‘OPPOSans-R’ fonts/OPPOSans-R.ttf&lt;/p&gt;
-&lt;p&gt;然后打开 storage/fonts/dompdf_font_family_cache.php 把 OPPOSans-R 部分数组复制备份。&lt;/p&gt;
-&lt;p&gt;再安装 Arial-Regular 字体： &lt;/p&gt;
-&lt;p&gt;php ./load_font.php ‘Arial-Regular’ fonts/Arial-Regular.ttf &lt;/p&gt;
-&lt;p&gt;打开 storage/fonts/dompdf_font_family_cache.php 发现 OPPOSans-R 部分内容丢失，只需要把之前复制的备份粘贴过来，就可以了。&lt;/p&gt;
-&lt;p&gt;在 index.blade.php 文件内这样使用&lt;/p&gt;
     
     </summary>
     
