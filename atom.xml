@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-09-01T02:56:26.520Z</updated>
+  <updated>2024-10-21T07:17:45.954Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac photoshop弹窗Sorry, this Adobe app is not available、This unlicensed Adobe app has been disabled 解决办法</title>
+    <link href="https://marchccc.top/2024/10/21/Mac-photoshop%E5%BC%B9%E7%AA%97Sorry-this-Adobe-app-is-not-available%E3%80%81This-unlicensed-Adobe-app-has-been-disabled-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>https://marchccc.top/2024/10/21/Mac-photoshop%E5%BC%B9%E7%AA%97Sorry-this-Adobe-app-is-not-available%E3%80%81This-unlicensed-Adobe-app-has-been-disabled-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2024-10-21T07:13:05.000Z</published>
+    <updated>2024-10-21T07:17:45.954Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;启动 PS 后，通过【活动监视器】强制退出 &lt;a href=&quot;http://www.adobe.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.adobe.com&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Cloudflare反代docker hub</title>
     <link href="https://marchccc.top/2024/09/01/Cloudflare%E5%8F%8D%E4%BB%A3docker-hub/"/>
     <id>https://marchccc.top/2024/09/01/Cloudflare%E5%8F%8D%E4%BB%A3docker-hub/</id>
     <published>2024-09-01T02:31:08.000Z</published>
-    <updated>2024-09-01T02:56:26.520Z</updated>
+    <updated>2024-09-27T08:53:07.622Z</updated>
     
     <summary type="html">
     
@@ -63,7 +88,7 @@
     <link href="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/"/>
     <id>https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/</id>
     <published>2024-08-13T09:37:39.000Z</published>
-    <updated>2024-09-10T07:37:31.576Z</updated>
+    <updated>2024-10-12T01:12:13.836Z</updated>
     
     <summary type="html">
     
@@ -491,28 +516,6 @@
       <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
     
       <category term="SEO" scheme="https://marchccc.top/tags/SEO/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dompdf生成指定尺寸PDF</title>
-    <link href="https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/"/>
-    <id>https://marchccc.top/2023/05/22/dompdf%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%B0%BA%E5%AF%B8PDF/</id>
-    <published>2023-05-22T06:27:41.000Z</published>
-    <updated>2023-09-07T08:09:44.547Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在官方说明可以了解到，要通过 setPaper 来设置尺寸。&lt;br&gt;&lt;a href=&quot;https://github.com/dompdf/dompdf#quick-start&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/dompdf/dompdf#quick-start&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;但文档并没有指出如何设置指定宽高的PDF，那么看下 setPaper 这个方法的实现：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="PHP" scheme="https://marchccc.top/tags/PHP/"/>
     
   </entry>
   
