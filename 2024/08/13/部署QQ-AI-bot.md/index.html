@@ -34,11 +34,14 @@
 <meta property="og:site_name" content="Marchccc">
 <meta property="og:description" content="目的：部署一个 QQ AI聊天机器人。 用到两个开源项目，NapCatQQ 和 Koishi。 NapCatQQ 实现了QQ登录，能够通过程序收发QQ消息，提供了onebot协议支持。Koishi 是个机器人框架，具备丰富插件系统。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/http.png">
+<meta property="og:image" content="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/ws.png">
 <meta property="article:published_time" content="2024-08-13T09:37:39.000Z">
-<meta property="article:modified_time" content="2024-10-12T01:12:13.836Z">
+<meta property="article:modified_time" content="2024-11-29T11:22:01.507Z">
 <meta property="article:author" content="Marchccc">
 <meta property="article:tag" content="ChatGPT">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/http.png">
 
 <link rel="canonical" href="https://marchccc.top/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/">
 
@@ -205,7 +208,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-12 09:12:13" itemprop="dateModified" datetime="2024-10-12T09:12:13+08:00">2024-10-12</time>
+                <time title="修改时间：2024-11-29 19:22:01" itemprop="dateModified" datetime="2024-11-29T19:22:01+08:00">2024-11-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,26 +242,31 @@
 <h1 id="24年9月部署到国内服务器记录"><a href="#24年9月部署到国内服务器记录" class="headerlink" title="24年9月部署到国内服务器记录"></a>24年9月部署到国内服务器记录</h1><p>注意docker hub加速域名用x.com隐藏代替了，需要请自行搭建，参考：Cloudflare反代docker hub</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull x.com&#x2F;mlikiowa&#x2F;napcat-docker:latest</span><br><span class="line">docker pull x.com&#x2F;koishijs&#x2F;koishi:latest</span><br></pre></td></tr></table></figure>
 
-<h2 id="启动-koishi-容器-映射容器5140到888端口"><a href="#启动-koishi-容器-映射容器5140到888端口" class="headerlink" title="启动 koishi 容器,映射容器5140到888端口"></a>启动 koishi 容器,映射容器5140到888端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 888:5140 --name koishi --mac-address&#x3D;02:42:ac:11:00:98 koishijs&#x2F;koishi</span><br></pre></td></tr></table></figure>
+<h2 id="启动-koishi-容器-映射容器5140到888端口"><a href="#启动-koishi-容器-映射容器5140到888端口" class="headerlink" title="启动 koishi 容器,映射容器5140到888端口"></a>启动 koishi 容器,映射容器5140到888端口</h2><p>提前创建好/root/koishi_data目录。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 999:5140 -v &#x2F;root&#x2F;koishi_data:&#x2F;koishi --name koishi --mac-address&#x3D;02:42:ac:11:00:98 koishijs&#x2F;koishi:latest</span><br></pre></td></tr></table></figure>
 
-<p>可以查看容器运行输出内容<br>docker logs koishi</p>
-<p>浏览器访问888端口，通过koishi web控制台进行配置。<br>在 插件配置-market，配置插件市场和插件npm源。<br>依赖管理全部更新。<br>配置auth插件，设置管理员密码。<br>安装插件:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">chatluna</span><br><span class="line">chatluna-qwen-adapter</span><br><span class="line">adapter-onebot</span><br><span class="line">adapter-wechat4u</span><br><span class="line">chatluna-openai-like-adapter</span><br><span class="line">api-handler</span><br></pre></td></tr></table></figure>
+<p>查看容器运行输出内容<br>docker logs koishi</p>
+<p>浏览器访问999端口，通过koishi web控制台进行配置。<br>在 插件配置-market，配置插件市场和插件npm源。<br>依赖管理全部更新。<br>配置auth插件，设置管理员密码。<br>安装插件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chatluna</span><br><span class="line">chatluna-qwen-adapter</span><br><span class="line">adapter-onebot</span><br><span class="line">chatluna-openai-like-adapter</span><br><span class="line">api-handler</span><br></pre></td></tr></table></figure>
 
-<h2 id="启动-napcat-容器-把容器6099端口映射到本机8087端口"><a href="#启动-napcat-容器-把容器6099端口映射到本机8087端口" class="headerlink" title="启动 napcat 容器,把容器6099端口映射到本机8087端口"></a>启动 napcat 容器,把容器6099端口映射到本机8087端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">-e ACCOUNT&#x3D;&quot;机器人BOTQQ&quot; \</span><br><span class="line">-e NAPCAT_GID&#x3D;0 \</span><br><span class="line">-e NAPCAT_UID&#x3D;0 \</span><br><span class="line">-e MESSAGE_POST_FORMAT&#x3D;&quot;string&quot; \</span><br><span class="line">-e WSR_ENABLE&#x3D;true \</span><br><span class="line">-e WS_URLS&#x3D;&#39;[&quot;ws:&#x2F;&#x2F;公网IP:888&#x2F;onebot&quot;]&#39; \</span><br><span class="line">-e HTTP_ENABLE&#x3D;true \</span><br><span class="line">-e HTTP_PORT&#x3D;3000 \</span><br><span class="line">-e F2U_ENABLE&#x3D;true \</span><br><span class="line">-p 8087:6099 \</span><br><span class="line">-p 8089:3000 \</span><br><span class="line">--name napcat \</span><br><span class="line">--restart&#x3D;always \</span><br><span class="line">--mac-address&#x3D;02:42:ac:11:00:99 \</span><br><span class="line">mlikiowa&#x2F;napcat-docker:latest</span><br></pre></td></tr></table></figure>
+<h2 id="启动-napcat-容器-把容器6099端口映射到本机8087端口"><a href="#启动-napcat-容器-把容器6099端口映射到本机8087端口" class="headerlink" title="启动 napcat 容器,把容器6099端口映射到本机8087端口"></a>启动 napcat 容器,把容器6099端口映射到本机8087端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">-e ACCOUNT&#x3D;&quot;机器人BOTQQ&quot; \</span><br><span class="line">-e NAPCAT_GID&#x3D;0 \</span><br><span class="line">-e NAPCAT_UID&#x3D;0 \</span><br><span class="line">-p 8087:6099 \</span><br><span class="line">-p 8089:3000 \</span><br><span class="line">--name napcat \</span><br><span class="line">--restart&#x3D;always \</span><br><span class="line">--mac-address&#x3D;02:42:ac:11:00:99 \</span><br><span class="line">mlikiowa&#x2F;napcat-docker:latest</span><br></pre></td></tr></table></figure>
 
-<p>参照 <a href="https://napneko.github.io/zh-CN/guide/integration" target="_blank" rel="noopener">https://napneko.github.io/zh-CN/guide/integration</a> 连接到koishi。</p>
 <p>查看napcat输出内容，扫码登录。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs napcat</span><br></pre></td></tr></table></figure>
 
+<p>打开 http://服务器IP:8087/webui/#/webui 使用token登录。（启动后可在启动日志中看到形如 [WebUi] Login Token is xxxx 的token信息)<br>在网络配置，配置koishi和http。</p>
+<img src="./http.png" width="50%/">
+<img src="/2024/08/13/%E9%83%A8%E7%BD%B2QQ-AI-bot.md/ws.png" width="50%/">
+
+
+
+<p>参照 <a href="https://napneko.github.io/use/integration#koishi" target="_blank" rel="noopener">https://napneko.github.io/use/integration#koishi</a> 连接到koishi。</p>
 <p>可通过IP:8090来调用 <a href="https://napneko.github.io/zh-CN/develop/compatibility/api#napcat-api" target="_blank" rel="noopener">https://napneko.github.io/zh-CN/develop/compatibility/api#napcat-api</a> 的API</p>
-<p>docker配置参数：<a href="https://github.com/NapNeko/NapCat-Docker/blob/main/entrypoint.sh" target="_blank" rel="noopener">https://github.com/NapNeko/NapCat-Docker/blob/main/entrypoint.sh</a></p>
-<h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">列出正在运行的容器</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">停止容器</span><br><span class="line">docker stop 容器名</span><br><span class="line"></span><br><span class="line">删除容器</span><br><span class="line">docker rm 容器名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查看容器输出log</span><br><span class="line">docker logs 容器名</span><br></pre></td></tr></table></figure>
+<h2 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">列出正在运行的容器</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">停止容器</span><br><span class="line">docker stop 容器名</span><br><span class="line"></span><br><span class="line">删除容器</span><br><span class="line">docker rm 容器名</span><br><span class="line"></span><br><span class="line">查看容器输出log</span><br><span class="line">docker logs 容器名</span><br><span class="line"></span><br><span class="line">进入docker容器shell</span><br><span class="line">docker exec -it koishi &#x2F;bin&#x2F;sh</span><br></pre></td></tr></table></figure>
 
 <p>–24.9.2更新</p>
 <p>wechat在线不稳定，尝试另一种方案：</p>
-<p>docker pull x.com/hmllsnow/escape-wechat</p>
-<p>docker run -d -p 7777:443 -p 1234:8080  -e API_KEY=”yourapikey” -e LOGIN_PWD=”your_login_password” –name escape-wechat-container hmllsnow/escape-wechat</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull x.com&#x2F;hmllsnow&#x2F;escape-wechat</span><br><span class="line"></span><br><span class="line">docker run -d -p 7777:443 -p 1234:8080  -e API_KEY&#x3D;&quot;yourapikey&quot; -e LOGIN_PWD&#x3D;&quot;your_login_password&quot; --name escape-wechat-container hmllsnow&#x2F;escape-wechat</span><br></pre></td></tr></table></figure>
 <p>访问 <a href="http://IP:1234/" target="_blank" rel="noopener">http://IP:1234/</a> 完成配置。<br>注意修改配置在最底部点击保存配置，然后要在顶部重启一下，配置才生效。</p>
 <h1 id="NapCatQQ"><a href="#NapCatQQ" class="headerlink" title="NapCatQQ"></a>NapCatQQ</h1><p><a href="https://napneko.github.io/zh-CN/guide/getting-started" target="_blank" rel="noopener">https://napneko.github.io/zh-CN/guide/getting-started</a></p>
 <p>选择通过Linux一键脚本安装。</p>
