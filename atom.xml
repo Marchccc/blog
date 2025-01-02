@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2024-10-21T07:17:45.954Z</updated>
+  <updated>2025-01-02T09:17:25.275Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>htop交互式进程管理工具</title>
+    <link href="https://marchccc.top/2025/01/02/htop%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
+    <id>https://marchccc.top/2025/01/02/htop%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</id>
+    <published>2025-01-02T09:16:11.000Z</published>
+    <updated>2025-01-02T09:17:25.275Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;htop,Linux可视化管理进程工具，查看实时进程与CPU内存情况。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发、管理、常用工具推荐" scheme="https://marchccc.top/categories/%E5%BC%80%E5%8F%91%E3%80%81%E7%AE%A1%E7%90%86%E3%80%81%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Mac photoshop弹窗Sorry, this Adobe app is not available、This unlicensed Adobe app has been disabled 解决办法</title>
@@ -492,30 +518,6 @@
     
     
       <category term="AI" scheme="https://marchccc.top/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>laravel批量生成sitemap</title>
-    <link href="https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/"/>
-    <id>https://marchccc.top/2023/06/01/laravel%E6%89%B9%E9%87%8F%E7%94%9F%E6%88%90sitemap/</id>
-    <published>2023-06-01T02:56:05.000Z</published>
-    <updated>2023-09-07T08:27:57.655Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;生成product详情页的sitemap，放到public目录下，3w条一个sitemap，例如 sitemap1.xml sitemap2.xml ..&lt;/p&gt;
-&lt;p&gt;php artisan make:command GenerateSitemap&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
-    
-      <category term="SEO" scheme="https://marchccc.top/tags/SEO/"/>
     
   </entry>
   
