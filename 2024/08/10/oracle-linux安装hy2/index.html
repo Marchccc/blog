@@ -27,15 +27,15 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "gjl00v3rti");
 </script>
-  <meta name="description" content="切换到root，关闭防火墙，关闭安全模式。 sudo -isudo service firewalld stop vim &#x2F;etc&#x2F;selinux&#x2F;config找到SELINUX&#x3D;enforcing，修改为SELINUX&#x3D;disabled 通过一键脚本安装hy2服务 1bash &lt;(wget -qO- https:&#x2F;&#x2F;raw.githubusercontent.com&amp;#">
+  <meta name="description" content="切换到root，关闭防火墙，关闭安全模式。 sudo -isudo service firewalld stop vim &#x2F;etc&#x2F;selinux&#x2F;config找到SELINUX&#x3D;enforcing，修改为SELINUX&#x3D;disabled 如果机器内存比较小，加交换分区： 1234fallocate -l 2G &#x2F;swapfilechmod 777 &#x2F;swapfilemkswa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="oracle linux安装hy2">
 <meta property="og:url" content="https://marchccc.top/2024/08/10/oracle-linux%E5%AE%89%E8%A3%85hy2/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="切换到root，关闭防火墙，关闭安全模式。 sudo -isudo service firewalld stop vim &#x2F;etc&#x2F;selinux&#x2F;config找到SELINUX&#x3D;enforcing，修改为SELINUX&#x3D;disabled 通过一键脚本安装hy2服务 1bash &lt;(wget -qO- https:&#x2F;&#x2F;raw.githubusercontent.com&amp;#">
+<meta property="og:description" content="切换到root，关闭防火墙，关闭安全模式。 sudo -isudo service firewalld stop vim &#x2F;etc&#x2F;selinux&#x2F;config找到SELINUX&#x3D;enforcing，修改为SELINUX&#x3D;disabled 如果机器内存比较小，加交换分区： 1234fallocate -l 2G &#x2F;swapfilechmod 777 &#x2F;swapfilemkswa">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-10T10:13:28.000Z">
-<meta property="article:modified_time" content="2024-11-04T08:49:23.717Z">
+<meta property="article:modified_time" content="2025-01-04T13:25:51.173Z">
 <meta property="article:author" content="Marchccc">
 <meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
@@ -205,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-11-04 16:49:23" itemprop="dateModified" datetime="2024-11-04T16:49:23+08:00">2024-11-04</time>
+                <time title="修改时间：2025-01-04 21:25:51" itemprop="dateModified" datetime="2025-01-04T21:25:51+08:00">2025-01-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,11 +231,19 @@
         <p>切换到root，关闭防火墙，关闭安全模式。</p>
 <p>sudo -i<br>sudo service firewalld stop</p>
 <p>vim /etc/selinux/config<br>找到SELINUX=enforcing，修改为SELINUX=disabled</p>
+<p>如果机器内存比较小，加交换分区：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fallocate -l 2G &#x2F;swapfile</span><br><span class="line">chmod 777 &#x2F;swapfile</span><br><span class="line">mkswap &#x2F;swapfile</span><br><span class="line">swapon &#x2F;swapfile</span><br></pre></td></tr></table></figure>
+
 <p>通过一键脚本安装hy2服务</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(wget -qO- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;yonggekkk&#x2F;sing-box-yg&#x2F;main&#x2F;sb.sh)</span><br></pre></td></tr></table></figure>
 
 <p>项目:<a href="https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality" target="_blank" rel="noopener">https://github.com/yonggekkk/sing-box_hysteria2_tuic_argo_reality</a></p>
 <p>安装后得到 hysteria2://.. 节点链接</p>
+<p>卸载交换分区命令(内存很小的话可以不卸载，保持使用交换分区):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">swapoff &#x2F;swapfile</span><br><span class="line">rm &#x2F;swapfile</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
 
