@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-01-02T09:17:25.275Z</updated>
+  <updated>2025-01-10T08:31:53.328Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用n8n自动上传邮件附件到服务器</title>
+    <link href="https://marchccc.top/2025/01/10/Automatically-upload-email-attachments-to-the-server-using-n8n/"/>
+    <id>https://marchccc.top/2025/01/10/Automatically-upload-email-attachments-to-the-server-using-n8n/</id>
+    <published>2025-01-10T07:58:56.000Z</published>
+    <updated>2025-01-10T08:31:53.328Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用n8n工作流，监测邮箱指定类型邮件，处理该邮件内容，最后上传邮件附件到服务器，并发送HTTP Callback。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>htop交互式进程管理工具</title>
@@ -497,27 +518,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>embedding学习</title>
-    <link href="https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://marchccc.top/2023/06/16/embedding%E5%AD%A6%E4%B9%A0/</id>
-    <published>2023-06-16T07:32:46.000Z</published>
-    <updated>2023-09-07T08:09:51.154Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;embedding 是一种把文本转换为更低维的数据（向量）的方法。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="AI" scheme="https://marchccc.top/tags/AI/"/>
     
   </entry>
   
