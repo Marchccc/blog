@@ -49,13 +49,14 @@
     <link href="https://marchccc.top/2025/01/15/Mac-mini%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%9B%BE%E5%83%8F%E6%A8%A1%E5%9E%8B/"/>
     <id>https://marchccc.top/2025/01/15/Mac-mini%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C%E6%96%87%E6%9C%AC%E6%A8%A1%E5%9E%8B%E5%92%8C%E5%9B%BE%E5%83%8F%E6%A8%A1%E5%9E%8B/</id>
     <published>2025-01-15T09:39:07.000Z</published>
-    <updated>2025-01-15T10:56:07.508Z</updated>
+    <updated>2025-02-10T01:35:04.437Z</updated>
     
     <summary type="html">
     
       &lt;h1 id=&quot;文本模型&quot;&gt;&lt;a href=&quot;#文本模型&quot; class=&quot;headerlink&quot; title=&quot;文本模型&quot;&gt;&lt;/a&gt;文本模型&lt;/h1&gt;&lt;p&gt;环境为Mac mini M4 16GB版本。&lt;/p&gt;
 &lt;p&gt;用 LM Studio 客户端作为前端，在 huggingface 下载文本模型 phi-4-gguf 版本。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://huggingface.co/lmstudio-community/phi-4-GGUF/tree/main&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://huggingface.co/lmstudio-community/phi-4-GGUF/tree/main&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;模型名称，Q指的是Quantization，可以理解为压缩，值越小，模型智商越低。&lt;br&gt;值越大，模型体积越大，运行所需资源越多。&lt;/p&gt;
 &lt;p&gt;注意模型要放在模型文件夹的二级目录内。&lt;br&gt;在models文件夹内的路径：microsoft/phi-4/phi-4-Q4-K_M.gguf&lt;/p&gt;
     
     </summary>
