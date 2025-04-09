@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-01-21T10:18:45.914Z</updated>
+  <updated>2025-04-09T14:21:50.999Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>n8n Microsoft Teams 集成：解决 Need admin approval 问题</title>
+    <link href="https://marchccc.top/2025/04/09/n8n-Microsoft-Teams-%E9%9B%86%E6%88%90%EF%BC%9A%E8%A7%A3%E5%86%B3-Need-admin-approval-%E9%97%AE%E9%A2%98/"/>
+    <id>https://marchccc.top/2025/04/09/n8n-Microsoft-Teams-%E9%9B%86%E6%88%90%EF%BC%9A%E8%A7%A3%E5%86%B3-Need-admin-approval-%E9%97%AE%E9%A2%98/</id>
+    <published>2025-04-09T14:07:59.000Z</published>
+    <updated>2025-04-09T14:21:50.999Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;报错内容:&lt;/p&gt;
+&lt;p&gt;Need admin approval&lt;br&gt;unverified&lt;br&gt;needs permission to access resources in your organization that only an admin can
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="n8n" scheme="https://marchccc.top/tags/n8n/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python环境虚拟化</title>
+    <link href="https://marchccc.top/2025/03/25/Python%E7%8E%AF%E5%A2%83%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    <id>https://marchccc.top/2025/03/25/Python%E7%8E%AF%E5%A2%83%E8%99%9A%E6%8B%9F%E5%8C%96/</id>
+    <published>2025-03-25T07:51:29.000Z</published>
+    <updated>2025-04-09T14:05:31.439Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;// 创建虚拟环境&lt;br&gt;python3 -m venv sqlrag&lt;/p&gt;
+&lt;p&gt;// 激活虚拟环境&lt;br&gt;source sqlrag/bin/activate&lt;/p&gt;
+&lt;p&gt;// 进入项目目录&lt;br&gt;cd
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="https://marchccc.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>如何创建大量文章用于被搜索引擎收录</title>
@@ -72,7 +129,7 @@
     <link href="https://marchccc.top/2025/01/10/Automatically-upload-email-attachments-to-the-server-using-n8n/"/>
     <id>https://marchccc.top/2025/01/10/Automatically-upload-email-attachments-to-the-server-using-n8n/</id>
     <published>2025-01-10T07:58:56.000Z</published>
-    <updated>2025-01-10T08:31:53.328Z</updated>
+    <updated>2025-04-09T14:09:11.765Z</updated>
     
     <summary type="html">
     
@@ -84,7 +141,7 @@
       <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="技术" scheme="https://marchccc.top/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="n8n" scheme="https://marchccc.top/tags/n8n/"/>
     
   </entry>
   
@@ -466,64 +523,6 @@
       <category term="Laravel" scheme="https://marchccc.top/tags/Laravel/"/>
     
       <category term="ORM" scheme="https://marchccc.top/tags/ORM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>create-react-app使用CDN引入库</title>
-    <link href="https://marchccc.top/2023/09/07/create-react-app%E4%BD%BF%E7%94%A8CDN%E5%BC%95%E5%85%A5%E5%BA%93/"/>
-    <id>https://marchccc.top/2023/09/07/create-react-app%E4%BD%BF%E7%94%A8CDN%E5%BC%95%E5%85%A5%E5%BA%93/</id>
-    <published>2023-09-07T08:08:05.000Z</published>
-    <updated>2023-09-07T08:15:16.310Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在 package.json 文件删除antd依赖。&lt;/p&gt;
-&lt;p&gt;在 &lt;a href=&quot;https://www.jsdelivr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.jsdelivr.com/&lt;/a&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="前端" scheme="https://marchccc.top/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="React" scheme="https://marchccc.top/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IPTV电视直播软件</title>
-    <link href="https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/"/>
-    <id>https://marchccc.top/2023/07/30/%E5%AE%89%E5%8D%93%E7%94%B5%E8%A7%86%E5%AE%89%E8%A3%85KODI/</id>
-    <published>2023-07-30T13:07:42.000Z</published>
-    <updated>2023-12-03T10:58:15.905Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;文件传输到电视方式：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;电视安装【小白文件管理器】，使用其中的【多屏互动-快速传输】，来实现电脑传送文件到电视。&lt;/li&gt;
-&lt;li&gt;如果没有【小白文件管理器】，如果有【悟空遥控器】，可以安装【悟空遥控器】后在该软件应用市场安装【小白文件管理器】&lt;/l
-        
-      
-    
-    </summary>
-    
-    
-      <category term="娱乐" scheme="https://marchccc.top/categories/%E5%A8%B1%E4%B9%90/"/>
-    
-    
-      <category term="KODI" scheme="https://marchccc.top/tags/KODI/"/>
     
   </entry>
   
