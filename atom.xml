@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-04-28T02:50:55.695Z</updated>
+  <updated>2025-05-20T08:56:46.820Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dify docker安装配置</title>
+    <link href="https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+    <id>https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
+    <published>2025-05-20T08:51:31.000Z</published>
+    <updated>2025-05-20T08:56:46.820Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git clone https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;langgenius&amp;#x2F;dify.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd dify&amp;#x2F;docker&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;docker/nginx/ssl/ 放入你自己的域名证书&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;dify.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dify.key&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;.env开启https&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;NGINX_HTTPS_ENABLED&amp;#x3D;true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;在后台启动 docker-compose.yml 中定义的所有容器服务。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker compose up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker compose ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;无需配置域名，解析到服务器，直接访问域名打开dify。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="服务器" scheme="https://marchccc.top/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="dify" scheme="https://marchccc.top/tags/dify/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode Copilot Proxy</title>
@@ -489,34 +521,6 @@
     
     
       <category term="nginx" scheme="https://marchccc.top/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Translatepress Custom Language Switcher</title>
-    <link href="https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/"/>
-    <id>https://marchccc.top/2023/12/26/translatepress-Custom-Language-Switcher/</id>
-    <published>2023-12-26T07:32:16.000Z</published>
-    <updated>2023-12-26T07:45:05.914Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;自定义 Wordpress Translatepress 语言切换菜单。&lt;/p&gt;
-&lt;p&gt;主题模板用的:&lt;br&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="Wordpress" scheme="https://marchccc.top/tags/Wordpress/"/>
     
   </entry>
   
