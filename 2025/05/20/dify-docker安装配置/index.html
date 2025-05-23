@@ -35,7 +35,7 @@
 <meta property="og:description" content="123git clone https:&#x2F;&#x2F;github.com&#x2F;langgenius&#x2F;dify.gitcd dify&#x2F;dockercp .env.example .env  docker&#x2F;nginx&#x2F;ssl&#x2F; 放入你自己的域名证书 12dify.crtdify.key  .env开启https 1NGINX_HTTPS_ENABLED&#x3D;t">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-20T08:51:31.000Z">
-<meta property="article:modified_time" content="2025-05-21T09:23:56.831Z">
+<meta property="article:modified_time" content="2025-05-23T10:09:00.088Z">
 <meta property="article:author" content="Marchccc">
 <meta property="article:tag" content="dify">
 <meta name="twitter:card" content="summary">
@@ -205,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-05-21 17:23:56" itemprop="dateModified" datetime="2025-05-21T17:23:56+08:00">2025-05-21</time>
+                <time title="修改时间：2025-05-23 18:09:00" itemprop="dateModified" datetime="2025-05-23T18:09:00+08:00">2025-05-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -251,8 +251,14 @@
 
 <p>附docker命令：<br>docker exec -it docker-web-1 sh  #进入docker-web-1容器<br>exit # 退出容器</p>
 <p>替换iframe的Powered by Logo:</p>
-<p>cd /root/dify/web/public/logo<br>替换logo.svg</p>
-<p>docker cp ./logo.svg docker-web-1:/app/web/public/logo/</p>
+<p>cd /root/dify/web/public/logo</p>
+<p>放入自己的logo.png和logo.svg</p>
+<p>用命令替换掉：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for file in *.svg; do</span><br><span class="line">  if [ &quot;$file&quot; !&#x3D; &quot;logo.svg&quot; ]; then</span><br><span class="line">    cp -f logo.svg &quot;$file&quot;</span><br><span class="line">  fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for file in *.png; do</span><br><span class="line">  if [ &quot;$file&quot; !&#x3D; &quot;logo.png&quot; ]; then</span><br><span class="line">    cp -f logo.png &quot;$file&quot;</span><br><span class="line">  fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>cd ../<br>docker cp ./logo docker-web-1:/app/web/public/</p>
 <p>即可生效。</p>
 
     </div>
