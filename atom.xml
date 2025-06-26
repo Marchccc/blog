@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-06-11T05:29:49.101Z</updated>
+  <updated>2025-06-26T06:26:02.559Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
     <id>https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
     <published>2025-05-20T08:51:31.000Z</published>
-    <updated>2025-06-11T05:29:49.101Z</updated>
+    <updated>2025-06-26T06:26:02.559Z</updated>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;dify.crt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;dify.key&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;.env开启https&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;NGINX_HTTPS_ENABLED&amp;#x3D;true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;NGINX_HTTPS_ENABLED&amp;#x3D;true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TOP_K_MAX_VALUE&amp;#x3D;30 &amp;#x2F;&amp;#x2F; 这项目是topk也要设置大一点&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;在后台启动 docker-compose.yml 中定义的所有容器服务。&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;docker compose up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;docker compose ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

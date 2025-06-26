@@ -27,15 +27,15 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "gjl00v3rti");
 </script>
-  <meta name="description" content="123git clone https:&#x2F;&#x2F;github.com&#x2F;langgenius&#x2F;dify.gitcd dify&#x2F;dockercp .env.example .env  docker&#x2F;nginx&#x2F;ssl&#x2F; 放入你自己的域名证书 12dify.crtdify.key  .env开启https 1NGINX_HTTPS_ENABLED&#x3D;t">
+  <meta name="description" content="123git clone https:&#x2F;&#x2F;github.com&#x2F;langgenius&#x2F;dify.gitcd dify&#x2F;dockercp .env.example .env  docker&#x2F;nginx&#x2F;ssl&#x2F; 放入你自己的域名证书 12dify.crtdify.key  .env开启https 12NGINX_HTTPS_ENABLED&#x3D;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dify docker安装配置">
 <meta property="og:url" content="https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Marchccc">
-<meta property="og:description" content="123git clone https:&#x2F;&#x2F;github.com&#x2F;langgenius&#x2F;dify.gitcd dify&#x2F;dockercp .env.example .env  docker&#x2F;nginx&#x2F;ssl&#x2F; 放入你自己的域名证书 12dify.crtdify.key  .env开启https 1NGINX_HTTPS_ENABLED&#x3D;t">
+<meta property="og:description" content="123git clone https:&#x2F;&#x2F;github.com&#x2F;langgenius&#x2F;dify.gitcd dify&#x2F;dockercp .env.example .env  docker&#x2F;nginx&#x2F;ssl&#x2F; 放入你自己的域名证书 12dify.crtdify.key  .env开启https 12NGINX_HTTPS_ENABLED&#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-20T08:51:31.000Z">
-<meta property="article:modified_time" content="2025-06-11T05:29:49.101Z">
+<meta property="article:modified_time" content="2025-06-26T06:26:02.559Z">
 <meta property="article:author" content="Marchccc">
 <meta property="article:tag" content="dify">
 <meta name="twitter:card" content="summary">
@@ -205,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-06-11 13:29:49" itemprop="dateModified" datetime="2025-06-11T13:29:49+08:00">2025-06-11</time>
+                <time title="修改时间：2025-06-26 14:26:02" itemprop="dateModified" datetime="2025-06-26T14:26:02+08:00">2025-06-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,7 +234,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dify.crt</span><br><span class="line">dify.key</span><br></pre></td></tr></table></figure>
 
 <p>.env开启https</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NGINX_HTTPS_ENABLED&#x3D;true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NGINX_HTTPS_ENABLED&#x3D;true</span><br><span class="line">TOP_K_MAX_VALUE&#x3D;30 &#x2F;&#x2F; 这项目是topk也要设置大一点</span><br></pre></td></tr></table></figure>
 
 <p>在后台启动 docker-compose.yml 中定义的所有容器服务。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker compose up -d</span><br><span class="line">docker compose ps</span><br></pre></td></tr></table></figure>
@@ -252,8 +252,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd dify&#x2F;docker</span><br><span class="line">docker compose down</span><br><span class="line">git pull origin main</span><br><span class="line">docker compose pull</span><br><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
 
 <p>附docker命令：<br>docker exec -it docker-web-1 sh  #进入docker-web-1容器<br>exit # 退出容器</p>
-<p>替换iframe的Powered by Logo:</p>
-<p>cd /root/dify/web/public/logo</p>
+<h2 id="替换iframe的Powered-by-Logo"><a href="#替换iframe的Powered-by-Logo" class="headerlink" title="替换iframe的Powered by Logo"></a>替换iframe的Powered by Logo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;root&#x2F;dify&#x2F;web&#x2F;public&#x2F;logo</span><br></pre></td></tr></table></figure>
+
 <p>放入自己的logo.png和logo.svg</p>
 <p>用命令替换掉：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for file in *.svg; do</span><br><span class="line">  if [ &quot;$file&quot; !&#x3D; &quot;logo.svg&quot; ]; then</span><br><span class="line">    cp -f logo.svg &quot;$file&quot;</span><br><span class="line">  fi</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
@@ -262,6 +262,23 @@
 
 <p>cd ../<br>docker cp ./logo docker-web-1:/app/web/public/</p>
 <p>即可生效。</p>
+<h2 id="修改chat源代码"><a href="#修改chat源代码" class="headerlink" title="修改chat源代码"></a>修改chat源代码</h2><p>例如修改chat中回复“引用的文件”部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web&#x2F;app&#x2F;components&#x2F;base&#x2F;chat&#x2F;chat&#x2F;citation&#x2F;index.tsx</span><br></pre></td></tr></table></figure>
+<p>我这里是要实现点击后不弹出，而是打开某个地址。代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  resources.map((res, index) &#x3D;&gt; (</span><br><span class="line">    &lt;div</span><br><span class="line">      key&#x3D;&#123;index&#125;</span><br><span class="line">      className&#x3D;&#39;absolute left-0 top-0 -z-10 mb-1 mr-1 h-7 w-auto max-w-[240px] whitespace-nowrap pl-7 pr-2 text-xs opacity-0&#39;</span><br><span class="line">      ref&#x3D;&#123;(ele: any) &#x3D;&gt; (elesRef.current[index] &#x3D; ele!)&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      &#123;res.documentName&#125;</span><br><span class="line">      &#123;&#x2F;* &lt;a</span><br><span class="line">        href&#x3D;&#123;&#96;https:&#x2F;&#x2F;***.com&#x2F;viewer?doc_id&#x3D;$&#123;res.documentId&#125;&#96;&#125;</span><br><span class="line">        target&#x3D;&quot;_blank&quot;</span><br><span class="line">        rel&#x3D;&quot;noopener noreferrer&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &#123;res.documentName&#125;</span><br><span class="line">      &lt;&#x2F;a&gt; *&#x2F;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  ))</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  resources.slice(0, showMore ? resourcesLength : limitNumberInOneLine).map((res, index) &#x3D;&gt; (</span><br><span class="line">    &lt;div key&#x3D;&#123;index&#125; className&#x3D;&#39;mb-1 mr-1 cursor-pointer&#39;&gt;</span><br><span class="line">      &#123;&#x2F;* &lt;Popup</span><br><span class="line">        data&#x3D;&#123;res&#125;</span><br><span class="line">        showHitInfo&#x3D;&#123;showHitInfo&#125;</span><br><span class="line">      &#x2F;&gt; *&#x2F;&#125;</span><br><span class="line">      &lt;a</span><br><span class="line">        href&#x3D;&#123;&#96;https:&#x2F;&#x2F;***.com&#x2F;viewer?doc_id&#x3D;$&#123;res.documentId&#125;&#96;&#125;</span><br><span class="line">        target&#x3D;&quot;_blank&quot;</span><br><span class="line">        rel&#x3D;&quot;noopener noreferrer&quot;</span><br><span class="line">        className&#x3D;&quot;inline-block h-7 px-3 py-1 rounded bg-blue-100 text-blue-800 text-xs hover:underline&quot;</span><br><span class="line">      &gt;</span><br><span class="line">        &#123;res.documentName&#125;</span><br><span class="line">      &lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  ))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>编译:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd web</span><br><span class="line">修改.env.local里的域名为线上域名。</span><br><span class="line">pnpm install</span><br><span class="line">pnpm run build</span><br><span class="line"></span><br><span class="line">删除 .next&#x2F;cache 编译缓存文件夹。</span><br><span class="line">注意编译的dify版本需要与docker部署一致。</span><br></pre></td></tr></table></figure>
+
+
+<p>进入正在运行的 Docker 容器，备份默认.next文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker exec -u root -it docker-web-1 &#x2F;bin&#x2F;sh</span><br><span class="line">mv .next .next0626</span><br></pre></td></tr></table></figure>
+
+
+<p>替换容器.next文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在容器外部执行，如果已进入容器要退出。</span><br><span class="line"></span><br><span class="line">cd web</span><br><span class="line">docker cp .&#x2F;.next&#x2F; docker-web-1:&#x2F;app&#x2F;web&#x2F;.next&#x2F;</span><br><span class="line"></span><br><span class="line">cd ..&#x2F;docker</span><br><span class="line">docker-compose restart web</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
 
@@ -361,6 +378,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换iframe的Powered-by-Logo"><span class="nav-number">1.</span> <span class="nav-text">替换iframe的Powered by Logo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改chat源代码"><span class="nav-number">2.</span> <span class="nav-text">修改chat源代码</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
