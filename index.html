@@ -174,6 +174,99 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2025/09/08/gitlab%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Marchccc">
+      <meta itemprop="description" content="编程技术交流">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Marchccc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/09/08/gitlab%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">gitlab安全防护配置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-09-08 18:51:00" itemprop="dateCreated datePublished" datetime="2025-09-08T18:51:00+08:00">2025-09-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-10-30 15:15:29" itemprop="dateModified" datetime="2025-10-30T15:15:29+08:00">2025-10-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>关闭公开可见性。<br>管理员-设置-通用-可见性与访问控制，限制可见性级别勾选【公开】项。</li>
+</ol>
+<p>–如果选中，则只有管理员能够创建公开群组、项目和片段。此外，个人资料仅对经过身份验证的用户可见。</p>
+<ol start="2">
+<li><p>登录失败速率限制。<br> /etc/gitlab/gitlab.rb</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gitlab_rails[&#39;rack_attack_enabled&#39;] &#x3D; true</span><br><span class="line"></span><br><span class="line">gitlab_rails[&#39;rack_attack_git_basic_auth&#39;] &#x3D; &#123;</span><br><span class="line">  &#39;enabled&#39; &#x3D;&gt; true,</span><br><span class="line">  &#39;ip_whitelist&#39; &#x3D;&gt; [&quot;127.0.0.1&quot;],</span><br><span class="line">  &#39;maxretry&#39; &#x3D;&gt; 2, # 最大允许失败尝试次数</span><br><span class="line">  &#39;findtime&#39; &#x3D;&gt; 12000, # 时间窗口（秒），在此时间内统计失败尝试</span><br><span class="line">  &#39;bantime&#39; &#x3D;&gt; 3600 # 账户锁定的持续时间（秒）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 限制同一个IP 3小时内只能登录失败两次。</p>
+<p> sudo gitlab-ctl reconfigure // 重载配置<br> sudo gitlab-ctl restart // 重启服务</p>
+</li>
+</ol>
+<ol start="3">
+<li>对多次尝试的IP段封禁。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jq -r &#39;select(.path&#x3D;&#x3D;&quot;&#x2F;users&#x2F;sign_in&quot;) | .remote_ip&#39; &#x2F;var&#x2F;log&#x2F;gitlab&#x2F;gitlab-rails&#x2F;production_json.log   | sort | uniq -c | sort -nr</span><br></pre></td></tr></table></figure>
+<p>对统计出来的IP，筛选出可疑IP，通过IP段封禁。</p>
+<p>或者直接取消锁定配置<br>    编辑 /opt/gitlab/embedded/service/gitlab-rails/config/initializers/8_devise.rb （可能是其他数字前缀）<br>    将 unlock_strategy 设为 :none<br>    lock_strategy 设为 :none</p>
+<pre><code>这样就不会爆破后Lock并下线，可以强制用户开2FA。
+
+sudo gitlab-ctl reconfigure // 重载配置
+sudo gitlab-ctl restart // 重启服务</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -205,7 +298,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-06-26 14:26:02" itemprop="dateModified" datetime="2025-06-26T14:26:02+08:00">2025-06-26</time>
+                <time title="修改时间：2025-10-30 15:17:04" itemprop="dateModified" datetime="2025-10-30T15:17:04+08:00">2025-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -872,74 +965,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://marchccc.top/2024/10/21/Mac-photoshop%E5%BC%B9%E7%AA%97Sorry-this-Adobe-app-is-not-available%E3%80%81This-unlicensed-Adobe-app-has-been-disabled-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Marchccc">
-      <meta itemprop="description" content="编程技术交流">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Marchccc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/21/Mac-photoshop%E5%BC%B9%E7%AA%97Sorry-this-Adobe-app-is-not-available%E3%80%81This-unlicensed-Adobe-app-has-been-disabled-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="post-title-link" itemprop="url">Mac photoshop弹窗Sorry, this Adobe app is not available、This unlicensed Adobe app has been disabled 解决办法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-10-21 15:13:05 / 修改时间：15:17:45" itemprop="dateCreated datePublished" datetime="2024-10-21T15:13:05+08:00">2024-10-21</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>启动 PS 后，通过【活动监视器】强制退出 <a href="http://www.adobe.com" target="_blank" rel="noopener">www.adobe.com</a> 这个进程即可。<br>不限版本，缺点是每次都需要这样操作。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1010,7 +1035,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

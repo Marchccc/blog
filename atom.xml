@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-06-26T06:26:02.559Z</updated>
+  <updated>2025-10-30T07:15:29.922Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>gitlab安全防护配置</title>
+    <link href="https://marchccc.top/2025/09/08/gitlab%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%85%8D%E7%BD%AE/"/>
+    <id>https://marchccc.top/2025/09/08/gitlab%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%85%8D%E7%BD%AE/</id>
+    <published>2025-09-08T10:51:00.000Z</published>
+    <updated>2025-10-30T07:15:29.922Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;关闭公开可见性。&lt;br&gt;管理员-设置-通用-可见性与访问控制，限制可见性级别勾选【公开】项。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;–如果选中，则只有管理员能够创建公开群组、项目和片段。此外，个人资料仅对经过身份验证的用户可见。&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="gitlab" scheme="https://marchccc.top/tags/gitlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>dify docker安装配置</title>
     <link href="https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
     <id>https://marchccc.top/2025/05/20/dify-docker%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</id>
     <published>2025-05-20T08:51:31.000Z</published>
-    <updated>2025-06-26T06:26:02.559Z</updated>
+    <updated>2025-10-30T07:17:04.967Z</updated>
     
     <summary type="html">
     
@@ -484,33 +515,6 @@
         
           &lt;p&gt;例如转发到服务器3002端口，域名Nginx配置：&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="nginx" scheme="https://marchccc.top/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx限定IP段访问</title>
-    <link href="https://marchccc.top/2024/01/08/nginx%E9%99%90%E5%AE%9AIP%E6%AE%B5%E8%AE%BF%E9%97%AE/"/>
-    <id>https://marchccc.top/2024/01/08/nginx%E9%99%90%E5%AE%9AIP%E6%AE%B5%E8%AE%BF%E9%97%AE/</id>
-    <published>2024-01-08T07:10:11.000Z</published>
-    <updated>2024-01-08T07:13:15.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
