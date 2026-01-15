@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2025-10-30T07:15:29.922Z</updated>
+  <updated>2026-01-15T06:47:39.872Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to use Cloudflared tunnel</title>
+    <link href="https://marchccc.top/2026/01/15/How-to-use-Cloudflared-tunnel/"/>
+    <id>https://marchccc.top/2026/01/15/How-to-use-Cloudflared-tunnel/</id>
+    <published>2026-01-15T06:39:30.000Z</published>
+    <updated>2026-01-15T06:47:39.872Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有时候需要公网访问本地服务的场景，例如工作流调用测试。&lt;br&gt;本文记录创建cloudflared tunnel映射本地域名到公网。&lt;/p&gt;
+&lt;p&gt;比如我本地用的MAMP PRO，本地设置的域名是 apitest.com&lt;/p&gt;
+&lt;h1 id=&quot;临时隧道&quot;&gt;&lt;a href=&quot;#临时隧道&quot; class=&quot;headerlink&quot; title=&quot;临时隧道&quot;&gt;&lt;/a&gt;临时隧道&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cloudflared tunnel --url http:&amp;#x2F;&amp;#x2F;127.0.0.1:80 --http-host-header apitest.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;控制台会输出临时域名，打开访问即可。&lt;/p&gt;
+&lt;h1 id=&quot;持久隧道（和临时隧道2选1）&quot;&gt;&lt;a href=&quot;#持久隧道（和临时隧道2选1）&quot; class=&quot;headerlink&quot; title=&quot;持久隧道（和临时隧道2选1）&quot;&gt;&lt;/a&gt;持久隧道（和临时隧道2选1）&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="tunnel" scheme="https://marchccc.top/tags/tunnel/"/>
+    
+  </entry>
   
   <entry>
     <title>gitlab安全防护配置</title>
@@ -379,7 +405,7 @@
     <link href="https://marchccc.top/2024/08/12/ClashX-Meta%E9%85%8D%E7%BD%AEhy2%E7%BA%BF%E8%B7%AF/"/>
     <id>https://marchccc.top/2024/08/12/ClashX-Meta%E9%85%8D%E7%BD%AEhy2%E7%BA%BF%E8%B7%AF/</id>
     <published>2024-08-12T10:23:39.000Z</published>
-    <updated>2025-11-04T05:09:45.844Z</updated>
+    <updated>2025-12-26T06:53:14.398Z</updated>
     
     <summary type="html">
     
@@ -497,34 +523,6 @@
     
     
       <category term="邮件" scheme="https://marchccc.top/tags/%E9%82%AE%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx域名转发内网端口配置</title>
-    <link href="https://marchccc.top/2024/01/17/nginx%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE/"/>
-    <id>https://marchccc.top/2024/01/17/nginx%E5%9F%9F%E5%90%8D%E8%BD%AC%E5%8F%91%E5%86%85%E7%BD%91%E7%AB%AF%E5%8F%A3%E9%85%8D%E7%BD%AE/</id>
-    <published>2024-01-17T03:51:49.000Z</published>
-    <updated>2024-01-17T03:59:25.514Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;例如转发到服务器3002端口，域名Nginx配置：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="nginx" scheme="https://marchccc.top/tags/nginx/"/>
     
   </entry>
   
