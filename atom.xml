@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://marchccc.top/"/>
-  <updated>2026-01-15T06:47:39.872Z</updated>
+  <updated>2026-01-19T08:07:04.561Z</updated>
   <id>https://marchccc.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS不开TUN模式使用Antigravity</title>
+    <link href="https://marchccc.top/2026/01/19/macOS%E4%B8%8D%E5%BC%80TUN%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8Antigravity/"/>
+    <id>https://marchccc.top/2026/01/19/macOS%E4%B8%8D%E5%BC%80TUN%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8Antigravity/</id>
+    <published>2026-01-19T07:58:51.000Z</published>
+    <updated>2026-01-19T08:07:04.561Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Proxifier 软件配置:&lt;br&gt;Proxies，删掉默认的配置，新建一个配置，端口和类型参考自己的魔法，我的是 7890 socket5&lt;br&gt;Rules，Default默认改为Direct直连。新增Rule，Applications填入：&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://marchccc.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="代理" scheme="https://marchccc.top/tags/%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>How to use Cloudflared tunnel</title>
@@ -499,30 +527,6 @@
     
     
       <category term="阅读" scheme="https://marchccc.top/tags/%E9%98%85%E8%AF%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>本地电子邮件测试工具-MailHog</title>
-    <link href="https://marchccc.top/2024/04/25/%E6%9C%AC%E5%9C%B0%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-MailHog/"/>
-    <id>https://marchccc.top/2024/04/25/%E6%9C%AC%E5%9C%B0%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-MailHog/</id>
-    <published>2024-04-25T08:12:47.000Z</published>
-    <updated>2024-04-25T09:02:23.602Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;通过MailHog，可以在浏览器中查看本机发的邮件内容，而无需发送到外网。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/mailhog/MailHog&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/mailhog/MailHog&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在 macOS 环境下，下载文件后:&lt;br&gt;添加可执行权限:chmod +x MailHog_darwin_amd64&lt;br&gt;运行:./MailHog_darwin_amd64&lt;br&gt;浏览器打开查看邮件:&lt;a href=&quot;http://0.0.0.0:8025/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://0.0.0.0:8025/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Laravel 发送邮件到 MailHog 使用例子：&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="后端" scheme="https://marchccc.top/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-      <category term="邮件" scheme="https://marchccc.top/tags/%E9%82%AE%E4%BB%B6/"/>
     
   </entry>
   
